@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Influence Strategy — Strategy Shepherds</title>
+  <meta name="description" content="Your organisation's AI-era influence strategy, built from evidence in five weeks. $5,000. Risk-free.">
+
+  <!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple:      #361965;
+      --purple-deep: #261050;
+      --gold:        #C9A84C;
+      --off-white:   #FAF8F4;
+      --near-black:  #0D0D0D;
+      --mid-grey:    #6B6B6B;
+      --light-grey:  #E8E4DD;
+      --hero-grad:   linear-gradient(135deg, #261050 0%, #361965 60%, #C9A84C 100%);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--off-white);
+      color: var(--near-black);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+    h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
+    p  { font-size: 1.05rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 6rem 0; }
+    .tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      display: block;
+      margin-bottom: 1rem;
+    }
+    .btn-gold {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--near-black);
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 1rem 2.5rem;
+      border-radius: 3px;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-ghost-white {
+      display: inline-block;
+      border: 1.5px solid rgba(255,255,255,0.45);
+      color: #fff;
+      font-family: 'Jost', sans-serif;
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 0.95rem 2.2rem;
+      border-radius: 3px;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .btn-ghost-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+    /* ── Nav ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(250,248,244,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--light-grey);
+    }
+    .nav-inner {
+      max-width: 1100px; margin: 0 auto; padding: 0 2rem;
+      display: flex; align-items: center; justify-content: space-between; height: 68px;
+    }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--purple); }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
+    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--purple); }
+    .nav-links a.active { color: var(--purple); font-weight: 600; }
+    .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 600 !important; transition: background 0.2s !important; }
+    .nav-cta:hover { background: var(--purple-deep) !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--near-black); border-radius: 2px; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--off-white); border-bottom: 1px solid var(--light-grey); }
+    .mobile-nav a { display: block; padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid var(--light-grey); color: var(--near-black); }
+    .mobile-nav.open { display: flex; }
+
+    /* ── Hero ── */
+    .hero {
+      background: var(--hero-grad);
+      padding: 10rem 0 6rem;
+      position: relative; overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; top: -15%; right: -10%;
+      width: 500px; height: 500px;
+      border: 1px solid rgba(201,168,76,0.18); border-radius: 50%;
+    }
+    .hero-inner { position: relative; z-index: 2; max-width: 720px; }
+    .hero .tag { color: rgba(201,168,76,0.85); }
+    .hero h1 { color: #fff; margin-bottom: 1.4rem; }
+    .hero-sub { font-size: 1.15rem; color: rgba(255,255,255,0.78); margin-bottom: 1.2rem; font-weight: 300; line-height: 1.8; }
+    .hero-meta {
+      display: flex; flex-wrap: wrap; gap: 2rem; margin-bottom: 2.5rem;
+    }
+    .hero-meta-item { display: flex; flex-direction: column; }
+    .hero-meta-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; color: rgba(201,168,76,0.7); margin-bottom: 0.25rem; }
+    .hero-meta-value { font-weight: 600; color: #fff; font-size: 1.05rem; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* ── Urgency ── */
+    .urgency { background: #fff; }
+    .urgency-inner { max-width: 720px; margin: 0 auto; }
+    .urgency-inner h2 { margin-bottom: 1.4rem; }
+    .urgency-inner p { color: var(--mid-grey); margin-bottom: 1rem; line-height: 1.85; }
+    .urgency-callout {
+      border-left: 4px solid var(--gold);
+      padding: 1.8rem 2rem;
+      background: var(--off-white);
+      margin-top: 2rem;
+    }
+    .urgency-callout p {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.18rem;
+      color: var(--near-black);
+      line-height: 1.55;
+    }
+
+    /* ── Who it's for ── */
+    .for-who { background: var(--off-white); }
+    .for-who-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+    .for-who-text h2 { margin-bottom: 1.2rem; }
+    .for-who-text p { color: var(--mid-grey); margin-bottom: 1rem; }
+    .sector-list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+    .sector-list li {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: var(--mid-grey);
+      padding: 0.55rem 0.9rem;
+      border: 1px solid var(--light-grey);
+      background: #fff;
+    }
+    .avatar-card {
+      background: var(--purple);
+      padding: 2.5rem;
+      color: rgba(255,255,255,0.8);
+    }
+    .avatar-card h3 { color: #fff; font-size: 1.1rem; margin-bottom: 1.2rem; }
+    .avatar-item {
+      display: flex; gap: 1rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.93rem; line-height: 1.6;
+    }
+    .avatar-item:last-child { margin-bottom: 0; }
+    .avatar-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      width: 70px;
+      flex-shrink: 0;
+      padding-top: 0.2rem;
+    }
+
+    /* ── Phases ── */
+    .phases { background: #fff; }
+    .phases-header { text-align: center; max-width: 600px; margin: 0 auto 4rem; }
+    .phases-header h2 { margin-bottom: 1rem; }
+    .phases-header p { color: var(--mid-grey); }
+    .phase-list { display: grid; gap: 0; }
+    .phase-block {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 3rem;
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--light-grey);
+      align-items: start;
+    }
+    .phase-block:first-child { padding-top: 0; }
+    .phase-block:last-child { border-bottom: none; }
+    .phase-label-col { padding-top: 0.3rem; }
+    .phase-week {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+    .phase-label-col h3 { color: var(--purple); }
+    .phase-content p { color: var(--mid-grey); margin-bottom: 0.9rem; line-height: 1.82; }
+    .phase-content p:last-child { margin-bottom: 0; }
+    .phase-content ul {
+      list-style: none;
+      margin-top: 1rem;
+    }
+    .phase-content ul li {
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--light-grey);
+      font-size: 0.93rem;
+      color: var(--mid-grey);
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .phase-content ul li::before {
+      content: '';
+      display: block;
+      width: 5px; height: 5px;
+      background: var(--gold);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    /* ── Mandate ── */
+    .mandate { background: var(--off-white); }
+    .mandate-inner { max-width: 800px; }
+    .mandate-inner h2 { margin-bottom: 1.4rem; }
+    .mandate-inner > p { color: var(--mid-grey); margin-bottom: 1.5rem; line-height: 1.85; }
+    .mandate-benefits { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2.5rem; }
+    .mandate-benefit {
+      padding: 2rem;
+      background: #fff;
+      border-top: 3px solid var(--gold);
+    }
+    .mandate-benefit h4 {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      font-size: 0.93rem;
+      margin-bottom: 0.7rem;
+      color: var(--purple);
+    }
+    .mandate-benefit p { font-size: 0.92rem; color: var(--mid-grey); line-height: 1.7; }
+
+    /* ── Risk reversal ── */
+    .risk { background: var(--purple); padding: 5rem 0; }
+    .risk-inner { max-width: 700px; margin: 0 auto; text-align: center; }
+    .risk-inner .tag { color: rgba(201,168,76,0.8); text-align: center; }
+    .risk-inner h2 { color: #fff; margin-bottom: 1.2rem; }
+    .risk-inner p { color: rgba(255,255,255,0.75); line-height: 1.82; font-size: 1.08rem; }
+
+    /* ── Pricing CTA ── */
+    .pricing-cta { background: var(--off-white); }
+    .pricing-inner { max-width: 640px; margin: 0 auto; text-align: center; }
+    .price-display { margin: 2rem 0; }
+    .price-amount {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: var(--purple);
+      line-height: 1;
+    }
+    .price-unit { font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--mid-grey); margin-top: 0.4rem; }
+    .pricing-inner h2 { margin-bottom: 1rem; }
+    .pricing-inner > p { color: var(--mid-grey); margin-bottom: 1rem; font-size: 1.05rem; }
+    .cta-note { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; color: var(--mid-grey); margin-top: 1.2rem; }
+
+    /* ── Footer ── */
+    footer { background: var(--near-black); color: rgba(255,255,255,0.55); padding: 5rem 0 2.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.75; }
+    .footer-col h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul a { font-size: 0.9rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.38); transition: color 0.2s; }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .for-who-grid, .mandate-benefits, .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .phase-block { grid-template-columns: 1fr; gap: 0.8rem; }
+      .sector-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 4rem 0; }
+      .hero { padding: 8rem 0 5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Strategy<span>.</span>Shepherds</a>
+      <ul class="nav-links">
+        <li><a href="influence-strategy.html" class="active">The Influence Strategy</a></li>
+        <li><a href="audit.html">Influence Audit</a></li>
+        <li><a href="influence-school.html">Influence School</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="https://selar.com/influencestrategy" target="_blank" rel="noopener" class="nav-cta">Book Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="influence-strategy.html">The Influence Strategy</a>
+      <a href="audit.html">Influence Audit</a>
+      <a href="influence-school.html">Influence School</a>
+      <a href="about.html">About</a>
+      <a href="https://selar.com/influencestrategy" target="_blank" rel="noopener">Book Now →</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <span class="tag">The Flagship Engagement</span>
+        <h1>Your organisation's AI-era influence strategy, built from evidence in five weeks.</h1>
+        <p class="hero-sub">A done-with-you engagement that produces a complete, board-ready Influence Mandate and the internal case for every investment that follows.</p>
+        <div class="hero-meta">
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Investment</span>
+            <span class="hero-meta-value">$5,000</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Duration</span>
+            <span class="hero-meta-value">5 weeks</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Format</span>
+            <span class="hero-meta-value">Done-with-you</span>
+          </div>
+          <div class="hero-meta-item">
+            <span class="hero-meta-label">Delivery</span>
+            <span class="hero-meta-value">Fully remote</span>
+          </div>
+        </div>
+        <div class="hero-ctas">
+          <a href="https://selar.com/influencestrategy" target="_blank" rel="noopener" class="btn-gold">Book The Influence Strategy — $5,000</a>
+          <a href="audit.html" class="btn-ghost-white">Take the Free Audit First</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGENCY -->
+  <section class="urgency">
+    <div class="container">
+      <div class="urgency-inner">
+        <span class="tag">Why Now</span>
+        <h2>The window is closing.</h2>
+        <p>AI is reorganising how expertise gets discovered, cited, and trusted. Algorithms surface the voices that have built the infrastructure to be found. Organisations that delay this work are falling behind.</p>
+        <p>The window to establish authority before AI-mediated search consolidates around established voices is narrowing. The Influence Strategy is designed for that window.</p>
+        <div class="urgency-callout">
+          <p>"The person who commissions this arrives at the leadership presentation with outside intelligence and a structured case. The document pays for itself by unlocking the budget for everything that follows."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT'S FOR -->
+  <section class="for-who">
+    <div class="container">
+      <div class="for-who-grid">
+        <div class="for-who-text">
+          <span class="tag">Who This Is For</span>
+          <h2>Built for organisations ready to lead.</h2>
+          <p>The Influence Strategy is commissioned by founders, executives, and team leads at African or Africa-facing organisations who are accomplished but not yet the first voice in the room.</p>
+          <p>You have the expertise. You need the infrastructure that makes it legible, trusted, and decisive.</p>
+          <div style="margin-top: 1.8rem;">
+            <p style="font-family:'DM Mono',monospace; font-size:0.72rem; letter-spacing:0.12em; color:var(--mid-grey); margin-bottom:0.8rem;">SECTORS WE WORK IN</p>
+            <ul class="sector-list">
+              <li>Global Health</li>
+              <li>Development Finance</li>
+              <li>Tech · Fintech</li>
+              <li>Energy · Climate</li>
+              <li>Policy</li>
+              <li>Impact · NGO</li>
+            </ul>
+          </div>
+        </div>
+        <div class="avatar-card">
+          <h3>You are the right fit if:</h3>
+          <div class="avatar-item">
+            <span class="avatar-label">Experience</span>
+            <span>8–20 years in your field, with a track record that speaks inside your organisation.</span>
+          </div>
+          <div class="avatar-item">
+            <span class="avatar-label">Gap</span>
+            <span>Known internally. Not yet the first name mentioned externally when your area of expertise comes up.</span>
+          </div>
+          <div class="avatar-item">
+            <span class="avatar-label">Goal</span>
+            <span>To be recognisable, trusted, and influential beyond your current circle, through positioning rather than self-promotion.</span>
+          </div>
+          <div class="avatar-item">
+            <span class="avatar-label">Geography</span>
+            <span>Africa-based or Africa-facing. East African primary context; broader continent welcome.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHASES -->
+  <section class="phases">
+    <div class="container">
+      <div class="phases-header">
+        <span class="tag">How It Works</span>
+        <h2>Four phases. Five weeks. One complete strategy.</h2>
+        <p>The engagement runs fully remote. Stella's team works alongside yours, as collaborators.</p>
+      </div>
+      <div class="phase-list">
+        <div class="phase-block">
+          <div class="phase-label-col">
+            <p class="phase-week">Phase 1 · Week 1</p>
+            <h3>Kickoff</h3>
+          </div>
+          <div class="phase-content">
+            <p>One session. Stella and the commissioning team align on scope, priorities, and the right people to involve. You connect Stella's team with the stakeholders who will be interviewed during the audit.</p>
+            <p>This session establishes the influence hypothesis: what success looks like in your specific context. It produces the interview roster.</p>
+          </div>
+        </div>
+        <div class="phase-block">
+          <div class="phase-label-col">
+            <p class="phase-week">Phase 2 · Weeks 1–2</p>
+            <h3>The Audit</h3>
+          </div>
+          <div class="phase-content">
+            <p>Structured interviews with nominated stakeholders using Stella's proprietary Influence Infrastructure framework. The audit surfaces:</p>
+            <ul>
+              <li>How expertise is actually perceived and carried versus how leadership believes it is</li>
+              <li>Authority gaps: what your organisation is known for versus what it should be known for</li>
+              <li>Trust network assumptions: who is actually carrying expertise forward</li>
+              <li>Absent agenda position: where decisions are being made without your voice</li>
+            </ul>
+          </div>
+        </div>
+        <div class="phase-block">
+          <div class="phase-label-col">
+            <p class="phase-week">Phase 3 · Weeks 3–4</p>
+            <h3>Co-Creation Week</h3>
+          </div>
+          <div class="phase-content">
+            <p>One focused week building the strategy across all three layers with your commissioning team. This is collaborative strategy design, not a presentation of Stella's findings.</p>
+            <ul>
+              <li>Authority: your distinctive point of view, made legible and AI-indexed</li>
+              <li>Trust Network: who carries your expertise forward and how that relationship is structured</li>
+              <li>Agenda Position: which conversations to enter, when, and how to shape them rather than join them</li>
+            </ul>
+          </div>
+        </div>
+        <div class="phase-block">
+          <div class="phase-label-col">
+            <p class="phase-week">Phase 4 · Week 5</p>
+            <h3>The Influence Mandate</h3>
+          </div>
+          <div class="phase-content">
+            <p>Stella produces the complete strategy document and presents it to your top leadership: board, funders, or executive committee, whoever needs to authorise further investment.</p>
+            <p>The Mandate serves two purposes: a complete influence strategy your team owns and can activate immediately, and an evidence-backed internal investment brief that makes the case for what comes next.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE MANDATE -->
+  <section class="mandate">
+    <div class="container">
+      <div class="mandate-inner">
+        <span class="tag">The Deliverable</span>
+        <h2>The Influence Mandate</h2>
+        <p>The final document is not a strategy deck. It is a dual-use artefact: a complete influence strategy your team can activate immediately, and a structured case that makes leadership investment in the next phase obvious.</p>
+        <p>The person who commissions this arrives at the leadership table with outside intelligence, structured recommendations, and the internal argument for why influence infrastructure is the missing link between where you are and where you need to be.</p>
+        <div class="mandate-benefits">
+          <div class="mandate-benefit">
+            <h4>For the commissioning team</h4>
+            <p>A complete, actionable strategy across all three layers (authority, trust network, and agenda position) that you own and can begin implementing immediately.</p>
+          </div>
+          <div class="mandate-benefit">
+            <h4>For leadership</h4>
+            <p>An evidence-backed investment brief that makes the case for authority-building, trust network activation, and agenda-seeding work, including what it costs to fund it.</p>
+          </div>
+          <div class="mandate-benefit">
+            <h4>For funders and boards</h4>
+            <p>Outside intelligence that reframes influence from a "nice to have" to a strategic priority, with sector data to back it.</p>
+          </div>
+          <div class="mandate-benefit">
+            <h4>For implementation</h4>
+            <p>Clear next steps across comms asset development, trust network activation, and agenda-seeding convenings, ready to resource and begin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RISK REVERSAL -->
+  <section class="risk">
+    <div class="container">
+      <div class="risk-inner">
+        <span class="tag">Our Guarantee</span>
+        <h2>You leave with a complete strategy. Full stop.</h2>
+        <p>If your Influence Mandate is not complete and ready to activate at the end of Week 5, the engagement continues at no additional cost until it is. We do not collect and disappear. We deliver.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING CTA -->
+  <section class="pricing-cta">
+    <div class="container">
+      <div class="pricing-inner">
+        <span class="tag" style="text-align:center;">Investment</span>
+        <h2>Ready to build your influence infrastructure?</h2>
+        <div class="price-display">
+          <div class="price-amount">$5,000</div>
+          <div class="price-unit">One engagement · Five weeks · Fully remote · Risk-free guarantee</div>
+        </div>
+        <p>All engagements are processed securely through Selar. Payment links to the product page where you can complete your booking and receive onboarding details.</p>
+        <a href="https://selar.com/influencestrategy" target="_blank" rel="noopener" class="btn-gold" style="margin-top:1.8rem; display:inline-block;">Book The Influence Strategy →</a>
+        <p class="cta-note">Not sure yet? Take the free Influence Audit to see exactly where your gaps are.</p>
+        <a href="audit.html" style="color:var(--purple); font-weight:600; font-size:0.9rem; display:block; margin-top:0.6rem;">Take the Free Audit →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ADVISORY UPSELL -->
+  <section style="background:#fff; padding:5rem 0;">
+    <div class="container">
+      <div style="max-width:720px; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
+        <div>
+          <span class="tag">Beyond The Strategy</span>
+          <h2 style="margin-bottom:1.2rem;">Need help implementing?</h2>
+          <p style="color:var(--mid-grey); line-height:1.85; margin-bottom:1rem;">The Influence Strategy produces a complete mandate. For organisations that want ongoing senior counsel to implement it — authority-building work, trust network activation, agenda-seeding campaigns, communications architecture — we engage at advisory rates.</p>
+          <p style="color:var(--mid-grey); line-height:1.85;">This is the bread and butter of our practice. Stella Njogo Advisory works with a small number of organisations on an ongoing basis. If you want us in the room as you build, let us know.</p>
+          <a href="mailto:stella@stellanjogo.com" style="display:inline-block; margin-top:1.8rem; border:1.5px solid var(--purple); color:var(--purple); font-family:'Jost',sans-serif; font-weight:600; font-size:0.92rem; padding:0.85rem 2rem; border-radius:3px; transition:background 0.2s,color 0.2s;" onmouseover="this.style.background='var(--purple)';this.style.color='#fff'" onmouseout="this.style.background='transparent';this.style.color='var(--purple)'">Talk to Us About Advisory</a>
+        </div>
+        <div style="background:var(--off-white); padding:2.5rem; border-top:4px solid var(--gold);">
+          <p style="font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.14em; color:var(--gold); margin-bottom:1rem;">ADVISORY INCLUDES</p>
+          <ul style="list-style:none;">
+            <li style="padding:0.65rem 0; border-bottom:1px solid var(--light-grey); font-size:0.93rem; color:var(--mid-grey); display:flex; gap:0.8rem; align-items:center;"><span style="display:block;width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Ongoing strategic communications counsel</li>
+            <li style="padding:0.65rem 0; border-bottom:1px solid var(--light-grey); font-size:0.93rem; color:var(--mid-grey); display:flex; gap:0.8rem; align-items:center;"><span style="display:block;width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Authority-building and content strategy</li>
+            <li style="padding:0.65rem 0; border-bottom:1px solid var(--light-grey); font-size:0.93rem; color:var(--mid-grey); display:flex; gap:0.8rem; align-items:center;"><span style="display:block;width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Trust network activation and partnerships</li>
+            <li style="padding:0.65rem 0; border-bottom:1px solid var(--light-grey); font-size:0.93rem; color:var(--mid-grey); display:flex; gap:0.8rem; align-items:center;"><span style="display:block;width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Agenda-seeding and convening strategy</li>
+            <li style="padding:0.65rem 0; font-size:0.93rem; color:var(--mid-grey); display:flex; gap:0.8rem; align-items:center;"><span style="display:block;width:5px;height:5px;background:var(--gold);border-radius:50%;flex-shrink:0;"></span>Executive communications and global-stage prep</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strategy Shepherds</h3>
+          <p>Influence infrastructure for African organisations and Africa-facing institutions. Building the authority, trust networks, and agenda position that turn expertise into impact.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="influence-strategy.html">The Influence Strategy</a></li>
+            <li><a href="audit.html">Influence Audit</a></li>
+            <li><a href="influence-school.html">Influence School</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Stella</a></li>
+            <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="mailto:stella@stellanjogo.com">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Strategy Shepherds. All rights reserved.</span>
+        <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  </script>
+</body>
+</html>
