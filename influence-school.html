@@ -4,9 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Influence School — Strategy Shepherds</title>
-  <meta name="description" content="The most practical influence education for serious African professionals. Monthly membership and drop-in masterclasses.">
+  <meta name="description" content="Build the influence infrastructure your business needs to grow. Three levels. Start with Voice to Leads.">
 
-  <!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -15,7 +14,6 @@
     gtag('config', 'G-XXXXXXXXXX');
   </script>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -38,29 +36,27 @@
     h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
     h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
     h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
-    h3 { font-size: clamp(1.1rem, 2vw, 1.4rem); }
+    h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
     p  { font-size: 1.05rem; }
     .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
     section { padding: 6rem 0; }
     .tag { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
 
-    /* Buttons */
     .btn-gold { display: inline-block; background: var(--gold); color: var(--near-black); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.9rem 2.2rem; border-radius: 3px; transition: opacity 0.2s, transform 0.15s; }
     .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
-    .btn-ghost-white { display: inline-block; border: 1.5px solid rgba(255,255,255,0.45); color: #fff; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 3px; transition: border-color 0.2s, background 0.2s; }
-    .btn-ghost-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
-    .btn-outline { display: inline-block; border: 1.5px solid var(--purple); color: var(--purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; }
-    .btn-outline:hover { background: var(--purple); color: #fff; }
+    .btn-outline { display: inline-block; background: transparent; color: #fff; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.85rem 2.2rem; border-radius: 3px; border: 1.5px solid rgba(255,255,255,0.45); transition: border-color 0.2s, color 0.2s; }
+    .btn-outline:hover { border-color: #fff; color: #fff; }
+    .btn-outline-dark { display: inline-block; background: transparent; color: var(--purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.85rem 2.2rem; border-radius: 3px; border: 1.5px solid var(--purple); transition: background 0.2s, color 0.2s; }
+    .btn-outline-dark:hover { background: var(--purple); color: #fff; }
 
-    /* Nav */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,248,244,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-grey); }
     .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
     .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--purple); }
     .nav-logo span { color: var(--gold); }
-    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
-    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
-    .nav-links a:hover { color: var(--purple); }
-    .nav-links a.active { color: var(--purple); font-weight: 600; }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a { font-size: 0.87rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .nav-links a.active { font-weight: 600; }
     .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 600 !important; }
     .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
     .hamburger span { display: block; width: 22px; height: 2px; background: var(--near-black); border-radius: 2px; }
@@ -68,97 +64,37 @@
     .mobile-nav a { display: block; padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid var(--light-grey); color: var(--near-black); }
     .mobile-nav.open { display: flex; }
 
-    /* Hero */
     .hero { background: var(--hero-grad); padding: 10rem 0 6rem; position: relative; overflow: hidden; }
     .hero::before { content: ''; position: absolute; top: -15%; right: -10%; width: 500px; height: 500px; border: 1px solid rgba(201,168,76,0.15); border-radius: 50%; }
     .hero::after { content: ''; position: absolute; bottom: -25%; right: 5%; width: 320px; height: 320px; border: 1px solid rgba(201,168,76,0.08); border-radius: 50%; }
     .hero-inner { position: relative; z-index: 2; max-width: 680px; }
     .hero .tag { color: rgba(201,168,76,0.85); }
     .hero h1 { color: #fff; margin-bottom: 1.2rem; }
-    .hero-sub { font-size: 1.12rem; color: rgba(255,255,255,0.78); margin-bottom: 2.5rem; font-weight: 300; line-height: 1.8; }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; font-weight: 300; line-height: 1.8; }
 
-    /* Promise bar */
-    .promise-bar { background: var(--purple); padding: 2.5rem 0; }
-    .promise-inner { display: flex; justify-content: center; gap: 4rem; flex-wrap: wrap; }
-    .promise-stat { text-align: center; }
-    .promise-value { font-family: 'Playfair Display', serif; font-size: 2rem; font-weight: 700; color: var(--gold); line-height: 1; }
-    .promise-label { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.6); margin-top: 0.4rem; }
+    .levels { background: #fff; }
+    .levels-intro { max-width: 680px; margin-bottom: 4rem; }
+    .levels-intro h2 { margin-bottom: 1rem; }
+    .levels-intro p { color: var(--mid-grey); line-height: 1.85; }
+    .levels-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .level-card { border: 1.5px solid var(--light-grey); padding: 2.5rem 2rem; }
+    .level-card.open { border-color: var(--gold); }
+    .level-num { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.14em; color: var(--mid-grey); margin-bottom: 0.5rem; }
+    .level-status { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.3rem 0.7rem; border-radius: 2px; margin-bottom: 1.2rem; }
+    .level-status.open { background: rgba(201,168,76,0.15); color: var(--gold); }
+    .level-status.coming { background: rgba(107,107,107,0.1); color: var(--mid-grey); }
+    .level-card h3 { font-size: 1.2rem; color: var(--purple); margin-bottom: 0.4rem; }
+    .level-method { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--mid-grey); margin-bottom: 1rem; }
+    .level-outcome { font-size: 0.97rem; color: var(--near-black); font-weight: 500; margin-bottom: 1rem; line-height: 1.5; }
+    .level-copy { font-size: 0.93rem; color: var(--mid-grey); line-height: 1.75; margin-bottom: 1.5rem; }
 
-    /* Products grid */
-    .products { background: #fff; }
-    .products-header { text-align: center; max-width: 580px; margin: 0 auto 4rem; }
-    .products-header h2 { margin-bottom: 1rem; }
-    .products-header p { color: var(--mid-grey); }
-    .product-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+    .offer-band { background: var(--purple); padding: 5rem 0; }
+    .offer-band-inner { max-width: 720px; }
+    .offer-band .tag { color: rgba(201,168,76,0.85); }
+    .offer-band h2 { color: #fff; margin-bottom: 1.2rem; }
+    .offer-band p { color: rgba(255,255,255,0.75); line-height: 1.85; margin-bottom: 2.5rem; }
+    .offer-ctas { display: flex; gap: 1.2rem; flex-wrap: wrap; }
 
-    .product-card {
-      background: var(--off-white);
-      padding: 3rem 2.5rem;
-      border-top: 4px solid var(--gold);
-      display: flex;
-      flex-direction: column;
-    }
-    .product-card.featured { background: var(--purple); border-top-color: var(--gold); }
-    .product-card .tag { margin-bottom: 0.6rem; }
-    .product-card.featured .tag { color: rgba(201,168,76,0.8); }
-    .product-card h3 { margin-bottom: 0.5rem; }
-    .product-card.featured h3 { color: #fff; }
-    .product-price {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.2rem;
-      font-weight: 700;
-      color: var(--purple);
-      line-height: 1;
-      margin-bottom: 0.3rem;
-    }
-    .product-card.featured .product-price { color: var(--gold); }
-    .product-price-note { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--mid-grey); margin-bottom: 1.5rem; }
-    .product-card.featured .product-price-note { color: rgba(255,255,255,0.5); }
-    .product-card > p { color: var(--mid-grey); margin-bottom: 1.5rem; line-height: 1.75; font-size: 0.97rem; }
-    .product-card.featured > p { color: rgba(255,255,255,0.75); }
-    .product-features { list-style: none; margin-bottom: 2rem; flex: 1; }
-    .product-features li {
-      padding: 0.6rem 0;
-      border-bottom: 1px solid var(--light-grey);
-      font-size: 0.92rem;
-      color: var(--mid-grey);
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-    .product-card.featured .product-features li { border-bottom-color: rgba(255,255,255,0.12); color: rgba(255,255,255,0.7); }
-    .product-features li::before { content: ''; display: block; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
-    .product-card .btn-gold { text-align: center; }
-    .product-card .btn-outline { text-align: center; }
-
-    /* Curriculum preview */
-    .curriculum { background: var(--off-white); }
-    .curriculum-header { max-width: 600px; margin-bottom: 3.5rem; }
-    .curriculum-header h2 { margin-bottom: 1rem; }
-    .curriculum-header p { color: var(--mid-grey); }
-    .topic-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
-    .topic-card {
-      background: #fff;
-      padding: 1.8rem 1.5rem;
-      border-left: 3px solid var(--gold);
-    }
-    .topic-card h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.93rem; color: var(--purple); margin-bottom: 0.5rem; }
-    .topic-card p { font-size: 0.87rem; color: var(--mid-grey); line-height: 1.65; }
-
-    /* Books placeholder */
-    .books { background: #fff; }
-    .books-inner { max-width: 700px; }
-    .books-inner h2 { margin-bottom: 1rem; }
-    .books-inner > p { color: var(--mid-grey); margin-bottom: 1.5rem; line-height: 1.82; }
-    .books-coming {
-      border: 1.5px dashed var(--light-grey);
-      padding: 3rem;
-      text-align: center;
-      background: var(--off-white);
-    }
-    .books-coming p { font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.1em; color: var(--mid-grey); }
-
-    /* Footer */
     footer { background: var(--near-black); color: rgba(255,255,255,0.55); padding: 5rem 0 2.5rem; }
     .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
     .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem; }
@@ -168,48 +104,47 @@
     .footer-col ul li { margin-bottom: 0.65rem; }
     .footer-col ul a { font-size: 0.9rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
     .footer-col ul a:hover { color: var(--gold); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; flex-wrap: wrap; gap: 1rem; }
     .footer-bottom a { color: rgba(255,255,255,0.38); }
     .footer-bottom a:hover { color: var(--gold); }
 
-    @media (max-width: 1024px) {
-      .product-cards { grid-template-columns: 1fr 1fr; }
-    }
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .product-cards, .topic-grid, .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
-      .promise-inner { gap: 2rem; }
+      .levels-grid, .ac-inner, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     }
     @media (max-width: 600px) {
       section { padding: 4rem 0; }
       .hero { padding: 8rem 0 5rem; }
+      .form-card { padding: 2rem; }
+      .offer-ctas { flex-direction: column; }
     }
   </style>
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav>
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Strategy<span>.</span>Shepherds</a>
       <ul class="nav-links">
-        <li><a href="influence-strategy.html">The Influence Strategy</a></li>
-        <li><a href="audit.html">Influence Audit</a></li>
+        <li><a href="influence-strategy.html">Influence Strategy</a></li>
         <li><a href="influence-school.html" class="active">Influence School</a></li>
+        <li><a href="influence-research.html">Influence Research</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="https://selar.com/influenceschoolannual" target="_blank" rel="noopener" class="nav-cta">Join School</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="audit.html" class="nav-cta">Take the Audit</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-nav" id="mobile-nav">
-      <a href="influence-strategy.html">The Influence Strategy</a>
-      <a href="audit.html">Influence Audit</a>
+      <a href="influence-strategy.html">Influence Strategy</a>
       <a href="influence-school.html">Influence School</a>
+      <a href="influence-research.html">Influence Research</a>
       <a href="about.html">About</a>
-      <a href="https://selar.com/influenceschoolannual" target="_blank" rel="noopener">Join School →</a>
+      <a href="contact.html">Contact</a>
+      <a href="audit.html">Take the Audit</a>
     </div>
   </nav>
 
@@ -217,302 +152,68 @@
   <section class="hero">
     <div class="container">
       <div class="hero-inner">
-        <span class="tag">Strategy Shepherds Influence School</span>
-        <h1>The most practical influence education for serious African professionals.</h1>
-        <p class="hero-sub">Learn the Influence Infrastructure Method through live masterclasses designed for professionals with 8+ years of experience who want their expertise to travel further.</p>
-        <div style="display:flex; flex-wrap:wrap; gap:1rem;">
-          <a href="https://selar.com/influenceschoolannual" target="_blank" rel="noopener" class="btn-gold">Join Annual — $500/year</a>
-          <a href="https://selar.com/influenceschooldropin" target="_blank" rel="noopener" class="btn-ghost-white">Drop In for $25</a>
-        </div>
+        <span class="tag">Influence School · Strategy Shepherds</span>
+        <h1>Build the influence infrastructure your business needs to grow.</h1>
+        <p class="hero-sub">Most organisations and professionals already have deep expertise. What they are missing is a system that turns that expertise into authority, trust and qualified opportunity. Influence School is where that system gets built.</p>
+        <a href="#levels" class="btn-gold">Find your level</a>
       </div>
     </div>
   </section>
 
-  <!-- PROMISE BAR -->
-  <section class="promise-bar">
+  <!-- THREE LEVELS -->
+  <section class="levels" id="levels">
     <div class="container">
-      <div class="promise-inner">
-        <div class="promise-stat">
-          <div class="promise-value">3</div>
-          <div class="promise-label">Layers of Influence</div>
-        </div>
-        <div class="promise-stat">
-          <div class="promise-value">Annual</div>
-          <div class="promise-label">Best Value Option</div>
-        </div>
-        <div class="promise-stat">
-          <div class="promise-value">$25</div>
-          <div class="promise-label">Per Drop-In Session</div>
-        </div>
-        <div class="promise-stat">
-          <div class="promise-value">Africa</div>
-          <div class="promise-label">-First Context</div>
-        </div>
+      <div class="levels-intro">
+        <span class="tag">The Three Levels of Influence</span>
+        <h2>Influence is built in layers. You need to know which layer you are on.</h2>
+        <p>These are not personality types. They are infrastructure layers. Most founders, SMEs and expert-led businesses are operating below Level 2 without realising it. Knowing where you are is the first step to building what actually moves the needle.</p>
       </div>
-    </div>
-  </section>
+      <div class="levels-grid">
 
-  <!-- PRODUCTS -->
-  <section class="products">
-    <div class="container">
-      <div class="products-header">
-        <span class="tag">Choose Your Path</span>
-        <h2>Learn at the depth that fits where you are.</h2>
-        <p>Both options run fully online and are processed through Selar. All sessions use the Influence Infrastructure Method, the same framework behind The Influence Strategy engagement.</p>
-      </div>
-      <div class="product-cards">
-
-        <!-- Annual Membership — FEATURED -->
-        <div class="product-card featured">
-          <span class="tag">Best Value</span>
-          <h3>Annual Membership</h3>
-          <div class="product-price">$500</div>
-          <div class="product-price-note">Per year · Full access · Equivalent to $41.67/month</div>
-          <p>The full Influence School experience at the best rate. Pay once, access everything for a year. Equivalent to $41.67/month.</p>
-          <ul class="product-features">
-            <li>Monthly live masterclass with Stella</li>
-            <li>Full session recordings and notes</li>
-            <li>Authority, Trust, and Agenda modules</li>
-            <li>Influence Infrastructure framework in depth</li>
-            <li>Community of Africa-focused professionals</li>
-            <li>Priority access to new sessions and cohorts</li>
-          </ul>
-          <a href="https://selar.com/influenceschoolannual" target="_blank" rel="noopener" class="btn-gold">Join Annually — $500/year →</a>
+        <div class="level-card open">
+          <p class="level-num">Level 1</p>
+          <span class="level-status open">Currently Open</span>
+          <h3>Voice to Leads</h3>
+          <p class="level-method">Public method: Find Your Voice &nbsp;&middot;&nbsp; Strategic layer: Authority System</p>
+          <p class="level-outcome">Your business becomes easier to understand, easier to trust and easier to buy from.</p>
+          <p class="level-copy">Most founders and SMEs are already visible online. Their website exists. They post occasionally. They promote their services. But their online presence is not consistently bringing in the right enquiries. The problem is clarity, not effort. People do not quickly understand what you do, who you help, why it matters, or what they should do next. Voice to Leads fixes that. It is the starting point for every business that wants its expertise to work harder online.</p>
+          <a href="voice-to-leads.html" class="btn-gold" style="font-size:0.88rem; padding:0.75rem 1.6rem;">Learn more about the Voice to Leads Sprint</a>
         </div>
 
-        <!-- Drop-in -->
-        <div class="product-card">
-          <span class="tag">One-Time</span>
-          <h3>Drop-In Session</h3>
-          <div class="product-price" style="color:var(--purple)">$25</div>
-          <div class="product-price-note">Per session · No commitment</div>
-          <p>Join a single live masterclass to experience Stella's teaching and test the method. Each session is complete and standalone.</p>
-          <ul class="product-features">
-            <li>One live masterclass session</li>
-            <li>Session recording included</li>
-            <li>Framework summary and notes</li>
-            <li>Q&amp;A with Stella</li>
-            <li>No subscription required</li>
-          </ul>
-          <a href="https://selar.com/influenceschooldropin" target="_blank" rel="noopener" class="btn-gold">Book a Drop-In — $25 →</a>
+        <div class="level-card">
+          <p class="level-num">Level 2</p>
+          <span class="level-status coming">Coming Next</span>
+          <h3>Community Trust</h3>
+          <p class="level-method">Public method: Gather Your People &nbsp;&middot;&nbsp; Strategic layer: Trust Network</p>
+          <p class="level-outcome">You build deeper trust, stronger relationships, partnerships and community advantage.</p>
+          <p class="level-copy">Once your voice is clear and your lead pathway is working, the next layer is community. Strategic relationships, creator collaborations, built-in advocates and a network that carries your message into rooms you cannot enter alone. This level is not yet open. Join the waitlist to hear first when it does.</p>
+          <a href="contact.html" class="btn-outline-dark" style="font-size:0.88rem; padding:0.75rem 1.6rem;">Join the Level 2 Waitlist</a>
+        </div>
+
+        <div class="level-card">
+          <p class="level-num">Level 3</p>
+          <span class="level-status coming">Advanced Level</span>
+          <h3>Category Shaper</h3>
+          <p class="level-method">Public method: Enter and Shape the Conversation &nbsp;&middot;&nbsp; Strategic layer: Agenda Position</p>
+          <p class="level-outcome">You become known for shaping the conversations that define how your market thinks, buys and decides.</p>
+          <p class="level-copy">The most powerful form of influence is not just being heard. It is being the one who sets the terms of the conversation. Category Shapers drive sector narratives, shape policy conversations and become the reference point their industry measures itself against. This is the advanced level. Details will be shared when Level 2 is open.</p>
+          <p style="font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; color:var(--mid-grey);">Details will be announced when Level 2 opens.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- CURRICULUM PREVIEW -->
-  <section class="curriculum">
+  <!-- CURRENT OFFER BAND -->
+  <section class="offer-band">
     <div class="container">
-      <div class="curriculum-header">
-        <span class="tag">What You'll Learn</span>
-        <h2>The Influence Infrastructure Method in practice.</h2>
-        <p>Each session focuses on a specific skill within one of the three layers. By the end of the programme, you have a working strategy across all three.</p>
-      </div>
-      <div class="topic-grid">
-        <div class="topic-card">
-          <h4>Establishing Your Authority</h4>
-          <p>What makes expertise legible, and how AI now determines whose expertise surfaces first.</p>
-        </div>
-        <div class="topic-card">
-          <h4>The Distinctive Point of View</h4>
-          <p>How to develop a position that earns sustained attention. The difference between an opinion and an authority signal.</p>
-        </div>
-        <div class="topic-card">
-          <h4>Building a Trust Network</h4>
-          <p>Strategic relationships versus transactional networking: who carries your expertise forward and how to design that relationship.</p>
-        </div>
-        <div class="topic-card">
-          <h4>Communication That Moves Decisions</h4>
-          <p>Specific frameworks for high-stakes conversations and how to shift a room without appearing to push.</p>
-        </div>
-        <div class="topic-card">
-          <h4>Agenda Positioning</h4>
-          <p>How to enter sector conversations before the decision window opens. What it costs to arrive after.</p>
-        </div>
-        <div class="topic-card">
-          <h4>Visibility Without Self-Promotion</h4>
-          <p>How to become known for the right things, through positioning rather than broadcasting yourself.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- THE AUTHORITY CHALLENGE -->
-  <section style="background:#fff; padding:6rem 0;">
-    <div class="container">
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:5rem; align-items:start;">
-
-        <!-- Left: product description -->
-        <div>
-          <span class="tag">By Application Only · Quarterly · Limited Cohort</span>
-          <h2 style="margin-bottom:1.2rem;">The Authority Challenge</h2>
-          <p style="color:var(--mid-grey); line-height:1.85; margin-bottom:1rem;">A four-week live cohort for business leaders, executives, and senior professionals who are ready to build their authority online — with clarity, structure, and the right AI tools to make it sustainable.</p>
-          <p style="color:var(--mid-grey); line-height:1.85; margin-bottom:1rem;">This is not a course. Stella works directly with each participant. Over four weeks, the cohort moves from diagnosis to a complete, AI-powered 90-day authority plan — ready to implement on the day the sprint ends. Seats are limited and accepted by application, so every participant is someone we are confident can achieve the outcome.</p>
-
-          <div style="border-left:4px solid var(--gold); padding:1.5rem 2rem; background:var(--off-white); margin:2rem 0;">
-            <p style="font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; color:var(--near-black); line-height:1.5;">"AI is your authority amplifier, not your replacement. The leaders who figure that out first will define the next decade of professional influence."</p>
-          </div>
-
-          <div style="display:grid; gap:0;">
-            <div style="display:flex; gap:1.2rem; padding:1rem 0; border-bottom:1px solid var(--light-grey); align-items:flex-start;">
-              <span style="font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; color:var(--gold); padding-top:0.2rem; white-space:nowrap;">Week 1</span>
-              <div>
-                <p style="font-weight:600; font-size:0.93rem; margin-bottom:0.2rem;">Authority Audit and Clarity</p>
-                <p style="font-size:0.87rem; color:var(--mid-grey);">Where do you stand? What are you uniquely qualified to say? Define your authority position.</p>
-              </div>
-            </div>
-            <div style="display:flex; gap:1.2rem; padding:1rem 0; border-bottom:1px solid var(--light-grey); align-items:flex-start;">
-              <span style="font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; color:var(--gold); padding-top:0.2rem; white-space:nowrap;">Week 2</span>
-              <div>
-                <p style="font-weight:600; font-size:0.93rem; margin-bottom:0.2rem;">Building the Content Architecture</p>
-                <p style="font-size:0.87rem; color:var(--mid-grey);">Turn your position into a structured content system. Topics, formats, channels, and cadence.</p>
-              </div>
-            </div>
-            <div style="display:flex; gap:1.2rem; padding:1rem 0; border-bottom:1px solid var(--light-grey); align-items:flex-start;">
-              <span style="font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; color:var(--gold); padding-top:0.2rem; white-space:nowrap;">Week 3</span>
-              <div>
-                <p style="font-weight:600; font-size:0.93rem; margin-bottom:0.2rem;">AI Tools and Automation</p>
-                <p style="font-size:0.87rem; color:var(--mid-grey);">The specific AI workflows that make your authority system sustainable. Work smarter, publish consistently.</p>
-              </div>
-            </div>
-            <div style="display:flex; gap:1.2rem; padding:1rem 0; align-items:flex-start;">
-              <span style="font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.1em; color:var(--gold); padding-top:0.2rem; white-space:nowrap;">Week 4</span>
-              <div>
-                <p style="font-weight:600; font-size:0.93rem; margin-bottom:0.2rem;">The 90-Day Authority Plan</p>
-                <p style="font-size:0.87rem; color:var(--mid-grey);">Your complete implementation plan: what to publish, where, when, and how to measure traction.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: application card -->
-        <div>
-          <div style="background:var(--purple); padding:3rem; position:relative; overflow:hidden;">
-            <!-- Decorative circle -->
-            <div style="position:absolute; top:-30%; right:-20%; width:300px; height:300px; border:1px solid rgba(201,168,76,0.15); border-radius:50%; pointer-events:none;"></div>
-
-            <p style="font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.14em; color:rgba(201,168,76,0.8); margin-bottom:0.6rem; position:relative; z-index:2;">By Application Only · Limited Cohort</p>
-            <h3 style="color:#fff; font-size:1.6rem; margin-bottom:0.5rem; position:relative; z-index:2;">The Authority Challenge</h3>
-            <div style="font-family:'Playfair Display',serif; font-size:2.5rem; font-weight:700; color:var(--gold); line-height:1; margin-bottom:0.3rem; position:relative; z-index:2;">$525</div>
-            <p style="font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; color:rgba(255,255,255,0.5); margin-bottom:1.5rem; position:relative; z-index:2;">4-week sprint · Live with Stella · Cohort format</p>
-            <p style="color:rgba(255,255,255,0.72); font-size:0.95rem; line-height:1.75; margin-bottom:2rem; position:relative; z-index:2;">Each cohort runs with a small, curated group — seats are limited and not everyone is accepted. We review every application personally to ensure the sprint will deliver the outcome you need.</p>
-
-            <!-- Application Form -->
-            <form id="challenge-waitlist" style="position:relative; z-index:2;" onsubmit="submitWaitlist(event)">
-
-              <!-- Q0: Name -->
-              <label style="display:block; font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-bottom:0.4rem;">Full name</label>
-              <input type="text" id="wl-name" placeholder="Your name" required
-                style="width:100%; padding:0.75rem 1rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-family:'Jost',sans-serif; font-size:0.9rem; margin-bottom:1rem; outline:none; border-radius:2px;"
-                onfocus="this.style.borderColor='rgba(201,168,76,0.7)'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'">
-
-              <!-- Q0: Email -->
-              <label style="display:block; font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-bottom:0.4rem;">Work email</label>
-              <input type="email" id="wl-email" placeholder="you@organisation.com" required
-                style="width:100%; padding:0.75rem 1rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-family:'Jost',sans-serif; font-size:0.9rem; margin-bottom:1rem; outline:none; border-radius:2px;"
-                onfocus="this.style.borderColor='rgba(201,168,76,0.7)'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'">
-
-              <!-- Q1: Role -->
-              <label style="display:block; font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-bottom:0.4rem;">01 · What is your current role and organisation?</label>
-              <input type="text" id="wl-role" placeholder="e.g. Executive Director, Pan-African Climate Fund" required
-                style="width:100%; padding:0.75rem 1rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-family:'Jost',sans-serif; font-size:0.9rem; margin-bottom:1rem; outline:none; border-radius:2px;"
-                onfocus="this.style.borderColor='rgba(201,168,76,0.7)'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'">
-
-              <!-- Q2: Authority goal -->
-              <label style="display:block; font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-bottom:0.4rem;">02 · What is your primary goal for building authority in the next 90 days?</label>
-              <textarea id="wl-goal" rows="2" placeholder="e.g. Be invited to speak at regional policy forums; attract partnership enquiries without cold outreach" required
-                style="width:100%; padding:0.75rem 1rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-family:'Jost',sans-serif; font-size:0.9rem; margin-bottom:1rem; outline:none; border-radius:2px; resize:vertical; line-height:1.6;"
-                onfocus="this.style.borderColor='rgba(201,168,76,0.7)'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'"></textarea>
-
-              <!-- Q3: What's held you back -->
-              <label style="display:block; font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-bottom:0.4rem;">03 · What has held you back from building this so far?</label>
-              <textarea id="wl-barrier" rows="2" placeholder="Be honest — time, clarity, not knowing where to start, impostor syndrome, all valid." required
-                style="width:100%; padding:0.75rem 1rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-family:'Jost',sans-serif; font-size:0.9rem; margin-bottom:1rem; outline:none; border-radius:2px; resize:vertical; line-height:1.6;"
-                onfocus="this.style.borderColor='rgba(201,168,76,0.7)'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'"></textarea>
-
-              <!-- Q4: AI comfort level -->
-              <label style="display:block; font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-bottom:0.4rem;">04 · How are you currently using AI tools in your work?</label>
-              <select id="wl-ai" required
-                style="width:100%; padding:0.75rem 1rem; background:rgba(30,15,70,0.9); border:1px solid rgba(255,255,255,0.2); color:#fff; font-family:'Jost',sans-serif; font-size:0.9rem; margin-bottom:1rem; outline:none; border-radius:2px; cursor:pointer;"
-                onfocus="this.style.borderColor='rgba(201,168,76,0.7)'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'">
-                <option value="" disabled selected style="color:#888;">Select one</option>
-                <option value="active">I use AI tools actively in my workflow</option>
-                <option value="exploring">I'm exploring — tried a few things</option>
-                <option value="curious">I'm curious but haven't started yet</option>
-                <option value="resistant">I'm not sure AI fits my work — open to being convinced</option>
-              </select>
-
-              <!-- Q5: Definition of success -->
-              <label style="display:block; font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-bottom:0.4rem;">05 · What would success look like 90 days after completing the challenge?</label>
-              <textarea id="wl-success" rows="2" placeholder="Be specific. What would you be seeing, hearing, or doing differently?" required
-                style="width:100%; padding:0.75rem 1rem; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.2); color:#fff; font-family:'Jost',sans-serif; font-size:0.9rem; margin-bottom:1.4rem; outline:none; border-radius:2px; resize:vertical; line-height:1.6;"
-                onfocus="this.style.borderColor='rgba(201,168,76,0.7)'" onblur="this.style.borderColor='rgba(255,255,255,0.2)'"></textarea>
-
-              <button type="submit"
-                style="width:100%; padding:1rem; background:var(--gold); color:var(--near-black); font-family:'Jost',sans-serif; font-weight:700; font-size:1rem; border:none; cursor:pointer; border-radius:2px; transition:opacity 0.2s;"
-                onmouseover="this.style.opacity='0.88'" onmouseout="this.style.opacity='1'">
-                Submit My Application
-              </button>
-              <p style="margin-top:0.8rem; font-family:'DM Mono',monospace; font-size:0.62rem; letter-spacing:0.08em; color:rgba(255,255,255,0.35); text-align:center; position:relative; z-index:2;">Applications are reviewed personally. Not every application is accepted.</p>
-
-              <div id="wl-confirm" style="display:none; margin-top:1.4rem; padding:1.2rem; background:rgba(201,168,76,0.12); border:1px solid rgba(201,168,76,0.4); border-radius:2px; text-align:center;">
-                <p style="font-family:'Playfair Display',serif; font-size:1.05rem; color:#fff; margin-bottom:0.5rem; line-height:1.5;">Application received.</p>
-                <p style="font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.08em; color:rgba(201,168,76,0.85); line-height:1.7;">We review every application personally and will be in touch within 5 business days. If you are selected, you will receive details on the next cohort date and how to secure your seat.</p>
-              </div>
-            </form>
-
-          </div>
-          <div style="background:var(--off-white); padding:1.5rem 2rem; border-top:3px solid var(--gold);">
-            <p style="font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.12em; color:var(--mid-grey); margin-bottom:0.8rem;">WHO GETS ACCEPTED</p>
-            <p style="font-size:0.88rem; color:var(--mid-grey); line-height:1.7;">Business leaders, assembly leaders, and senior professionals (8+ years) with a clear goal, a specific sector, and the commitment to build. We decline applications where the fit is unclear — so that every cohort member leaves with a plan that actually works.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <script>
-    function submitWaitlist(e) {
-      e.preventDefault();
-      const name    = document.getElementById('wl-name').value;
-      const email   = document.getElementById('wl-email').value;
-      const role    = document.getElementById('wl-role').value;
-      const goal    = document.getElementById('wl-goal').value;
-      const barrier = document.getElementById('wl-barrier').value;
-      const ai      = document.getElementById('wl-ai').value;
-      const success = document.getElementById('wl-success').value;
-
-      // Submit to Google Sheets
-      fetch('https://script.google.com/macros/s/AKfycbxNXb7IVk32SSYLrmhmyw83_d_dAWmJX-Vr8nl9RY08zBbS51FwztqFr5OlPwuelb_d/exec', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          form_type: 'application',
-          name, email,
-          role, goal, barrier, ai, success
-        })
-      }).catch(() => {});
-
-      // Hide form fields, show confirmation
-      const form = document.getElementById('challenge-waitlist');
-      Array.from(form.querySelectorAll('label, input, textarea, select, button')).forEach(el => {
-        el.style.display = 'none';
-      });
-      document.getElementById('wl-confirm').style.display = 'block';
-    }
-  </script>
-
-  <!-- BOOKS PLACEHOLDER -->
-  <section class="books">
-    <div class="container">
-      <div class="books-inner">
-        <span class="tag">Coming Soon</span>
-        <h2>Books and Reading</h2>
-        <p>The Influence School library will include curated reading: books, papers, and frameworks that support the three-layer methodology. Recommendations grounded in the cases and research Stella uses in every session.</p>
-        <div class="books-coming">
-          <p>Reading List · Coming Shortly</p>
+      <div class="offer-band-inner">
+        <span class="tag">What Is Currently Open</span>
+        <h2>Start with Level 1. Start with Voice to Leads.</h2>
+        <p>The Voice to Leads Sprint is a live, practical sprint for founders, consultants, SMEs and expert-led businesses. In four weeks, you clarify your positioning, sharpen your message and build a simple online lead pathway. It is the foundation everything else is built on.</p>
+        <div class="offer-ctas">
+          <a href="voice-to-leads-score.html" class="btn-gold">Take the Voice to Leads Score</a>
+          <a href="voice-to-leads.html" class="btn-outline">See the full Voice to Leads Sprint</a>
         </div>
       </div>
     </div>
@@ -524,14 +225,16 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <h3>Strategy Shepherds</h3>
-          <p>Influence infrastructure for African organisations and Africa-facing institutions. Building the authority, trust networks, and agenda position that turn expertise into impact.</p>
+          <p>Influence strategy for African companies and leaders. Building the authority, trust networks, and agenda position that turn expertise into competitive advantage.</p>
         </div>
         <div class="footer-col">
           <h4>Work</h4>
           <ul>
-            <li><a href="influence-strategy.html">The Influence Strategy</a></li>
-            <li><a href="audit.html">Influence Audit</a></li>
+            <li><a href="influence-strategy.html">Influence Strategy</a></li>
             <li><a href="influence-school.html">Influence School</a></li>
+            <li><a href="voice-to-leads.html">Voice to Leads</a></li>
+            <li><a href="influence-research.html">Influence Research</a></li>
+            <li><a href="audit.html">Influence Audit</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -539,21 +242,22 @@
           <ul>
             <li><a href="about.html">About Stella</a></li>
             <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
-            <li><a href="mailto:stella@stellanjogo.com">Contact</a></li>
+            <li><a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener">Digital Africa Signals</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Strategy Shepherds. All rights reserved.</span>
+        <span>&#169; 2026 Strategy Shepherds. All rights reserved.</span>
         <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
       </div>
     </div>
   </footer>
 
   <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobile-nav');
-    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('mobile-nav').classList.toggle('open');
+    });
   </script>
 </body>
 </html>

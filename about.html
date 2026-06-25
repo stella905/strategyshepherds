@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Stella Njogo — Strategy Shepherds</title>
-  <meta name="description" content="Stella Njogo is an influence strategist and the founder of Strategy Shepherds, building influence infrastructure for African organisations.">
+  <title>About — Strategy Shepherds</title>
+  <meta name="description" content="Strategy Shepherds was built for the expertise Africa already has. Meet Stella Njogo and learn how we think about influence as competitive strategy.">
 
   <!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your Measurement ID -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -17,7 +17,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -30,30 +30,26 @@
       --light-grey:  #E8E4DD;
       --hero-grad:   linear-gradient(135deg, #261050 0%, #361965 60%, #C9A84C 100%);
     }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body { font-family: 'Jost', sans-serif; background: var(--off-white); color: var(--near-black); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    html { font-size: 16px; }
+    body {
+      font-family: 'Jost', sans-serif;
+      background: var(--off-white);
+      color: var(--near-black);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
     a { text-decoration: none; color: inherit; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
-    h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
-    h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
-    h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
-    p  { font-size: 1.05rem; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
-    section { padding: 6rem 0; }
-    .tag { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
-    .btn-gold { display: inline-block; background: var(--gold); color: var(--near-black); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.9rem 2.2rem; border-radius: 3px; transition: opacity 0.2s, transform 0.15s; }
-    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
-    .btn-ghost-white { display: inline-block; border: 1.5px solid rgba(255,255,255,0.45); color: #fff; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 3px; transition: border-color 0.2s, background 0.2s; }
-    .btn-ghost-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+    h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
 
     /* Nav */
     nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,248,244,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-grey); }
     .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
     .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--purple); }
     .nav-logo span { color: var(--gold); }
-    .nav-links { display: flex; align-items: center; gap: 2.2rem; list-style: none; }
-    .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a { font-size: 0.87rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
     .nav-links a:hover { color: var(--purple); }
     .nav-links a.active { color: var(--purple); font-weight: 600; }
     .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 600 !important; }
@@ -63,99 +59,60 @@
     .mobile-nav a { display: block; padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid var(--light-grey); color: var(--near-black); }
     .mobile-nav.open { display: flex; }
 
+    /* Shared */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 6rem 0; }
+    .tag { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--near-black); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.9rem; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, transform 0.15s; }
+    .btn-gold:hover { background: #b8963e; transform: translateY(-1px); }
+    .btn-outline { display: inline-block; border: 2px solid var(--purple); color: var(--purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.9rem; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; }
+    .btn-outline:hover { background: var(--purple); color: #fff; }
+
     /* Hero */
-    .hero { background: var(--hero-grad); padding: 10rem 0 6rem; position: relative; overflow: hidden; }
-    .hero::before { content: ''; position: absolute; top: -15%; right: -10%; width: 500px; height: 500px; border: 1px solid rgba(201,168,76,0.18); border-radius: 50%; }
-    .hero-inner { position: relative; z-index: 2; max-width: 680px; }
+    .hero { background: var(--hero-grad); padding: 10rem 0 7rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -15%; right: -10%; width: 500px; height: 500px; border: 1px solid rgba(201,168,76,0.15); border-radius: 50%; }
+    .hero::after { content: ''; position: absolute; bottom: -25%; right: 5%; width: 320px; height: 320px; border: 1px solid rgba(201,168,76,0.08); border-radius: 50%; }
+    .hero-inner { position: relative; z-index: 2; max-width: 720px; }
     .hero .tag { color: rgba(201,168,76,0.85); }
-    .hero h1 { color: #fff; margin-bottom: 1.2rem; }
-    .hero-sub { font-size: 1.12rem; color: rgba(255,255,255,0.78); margin-bottom: 2.5rem; font-weight: 300; line-height: 1.8; max-width: 520px; }
+    .hero h1 { color: #fff; font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 1.4rem; }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.75); font-weight: 300; line-height: 1.8; }
 
-    /* Bio section */
-    .bio { background: #fff; }
-    .bio-grid { display: grid; grid-template-columns: 1fr 1.8fr; gap: 5rem; align-items: start; }
-    .bio-left { position: sticky; top: 100px; }
-    .bio-photo-placeholder {
-      width: 100%;
-      aspect-ratio: 3/4;
-      background: var(--purple);
-      display: flex;
-      align-items: flex-end;
-      padding: 1.5rem;
-      position: relative;
-      overflow: hidden;
-    }
-    .bio-photo-placeholder::before {
-      content: '';
-      position: absolute;
-      top: -20%; right: -20%;
-      width: 200px; height: 200px;
-      border: 1px solid rgba(201,168,76,0.25);
-      border-radius: 50%;
-    }
-    .bio-photo-caption {
-      font-family: 'DM Mono', monospace;
-      font-size: 0.68rem;
-      letter-spacing: 0.1em;
-      color: rgba(255,255,255,0.5);
-      position: relative;
-      z-index: 2;
-    }
-    .bio-text h2 { margin-bottom: 1.5rem; }
-    .bio-text p { color: var(--mid-grey); margin-bottom: 1.2rem; line-height: 1.88; }
-    .bio-text p strong { color: var(--near-black); font-weight: 600; }
-    .bio-callout {
-      border-left: 4px solid var(--gold);
-      padding: 1.8rem 2rem;
-      background: var(--off-white);
-      margin: 2rem 0;
-    }
-    .bio-callout blockquote {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 1.2rem;
-      color: var(--near-black);
-      line-height: 1.55;
-    }
+    /* Stella section */
+    .stella { background: #fff; }
+    .stella-inner { display: grid; grid-template-columns: 1fr 1.6fr; gap: 6rem; align-items: start; }
+    .stella-portrait { aspect-ratio: 3/4; background: var(--purple); position: relative; overflow: hidden; }
+    .stella-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
+    .stella-portrait-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 2rem; background: linear-gradient(to top, rgba(38,16,80,0.92) 0%, transparent 100%); }
+    .stella-portrait-overlay p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1rem; color: rgba(255,255,255,0.88); line-height: 1.6; }
+    .stella-bio h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.6rem; }
+    .stella-bio p { color: var(--mid-grey); line-height: 1.9; margin-bottom: 1.3rem; }
+    .stella-bio p strong { color: var(--near-black); font-weight: 600; }
+    .stella-links { display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; }
 
-    /* Method section */
-    .method { background: var(--off-white); }
-    .method-inner { max-width: 720px; }
-    .method-inner h2 { margin-bottom: 1.4rem; }
-    .method-inner > p { color: var(--mid-grey); margin-bottom: 2.5rem; line-height: 1.85; }
-    .method-layers { display: grid; gap: 0; }
-    .method-layer {
-      display: grid; grid-template-columns: 180px 1fr; gap: 2.5rem;
-      padding: 2rem 0; border-bottom: 1px solid var(--light-grey); align-items: start;
-    }
-    .method-layer:last-child { border-bottom: none; }
-    .layer-label { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; color: var(--gold); padding-top: 0.2rem; }
-    .layer-body h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--purple); margin-bottom: 0.5rem; }
-    .layer-body p { font-size: 0.93rem; color: var(--mid-grey); line-height: 1.75; }
+    /* Why section */
+    .why { background: var(--off-white); }
+    .why-inner { max-width: 760px; }
+    .why-inner h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.6rem; }
+    .why-inner p { color: var(--mid-grey); line-height: 1.9; margin-bottom: 1.3rem; }
 
-    /* Sectors / Geography */
-    .context { background: var(--purple); padding: 5rem 0; }
-    .context-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
-    .context-col .tag { color: rgba(201,168,76,0.8); }
-    .context-col h3 { color: #fff; margin-bottom: 1rem; }
-    .context-col p { color: rgba(255,255,255,0.7); line-height: 1.8; margin-bottom: 1rem; }
-    .context-list { list-style: none; display: grid; gap: 0.5rem; }
-    .context-list li {
-      font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.08em;
-      color: rgba(255,255,255,0.65); padding: 0.55rem 0.9rem;
-      border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.04);
-    }
+    /* How we work */
+    .approach { background: var(--purple); padding: 6rem 0; }
+    .approach .tag { color: rgba(201,168,76,0.8); }
+    .approach-header { max-width: 580px; margin-bottom: 4rem; }
+    .approach-header h2 { color: #fff; margin-bottom: 1rem; }
+    .approach-header p { color: rgba(255,255,255,0.68); line-height: 1.8; }
+    .approach-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    .pillar { border-top: 2px solid rgba(201,168,76,0.4); padding-top: 1.8rem; }
+    .pillar-num { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 0.8rem; display: block; }
+    .pillar h3 { color: #fff; font-size: 1.15rem; margin-bottom: 0.8rem; }
+    .pillar p { color: rgba(255,255,255,0.62); font-size: 0.93rem; line-height: 1.75; }
 
     /* CTA */
-    .cta-section { background: var(--off-white); }
-    .cta-inner { max-width: 640px; margin: 0 auto; text-align: center; }
-    .cta-inner h2 { margin-bottom: 1rem; }
-    .cta-inner p { color: var(--mid-grey); margin-bottom: 2rem; font-size: 1.05rem; }
-    .cta-buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
-    .btn-purple { display: inline-block; background: var(--purple); color: #fff; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.9rem 2.2rem; border-radius: 3px; transition: background 0.2s, transform 0.15s; }
-    .btn-purple:hover { background: var(--purple-deep); transform: translateY(-1px); }
-    .btn-outline-purple { display: inline-block; border: 1.5px solid var(--purple); color: var(--purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; }
-    .btn-outline-purple:hover { background: var(--purple); color: #fff; }
+    .cta-band { background: #fff; text-align: center; }
+    .cta-band-inner { max-width: 580px; margin: 0 auto; }
+    .cta-band h2 { margin-bottom: 1.2rem; }
+    .cta-band p { color: var(--mid-grey); line-height: 1.8; margin-bottom: 2.5rem; }
+    .cta-actions { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
 
     /* Footer */
     footer { background: var(--near-black); color: rgba(255,255,255,0.55); padding: 5rem 0 2.5rem; }
@@ -167,16 +124,14 @@
     .footer-col ul li { margin-bottom: 0.65rem; }
     .footer-col ul a { font-size: 0.9rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
     .footer-col ul a:hover { color: var(--gold); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; flex-wrap: wrap; gap: 1rem; }
     .footer-bottom a { color: rgba(255,255,255,0.38); }
     .footer-bottom a:hover { color: var(--gold); }
 
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
-      .bio-grid, .context-inner, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .bio-left { position: static; }
-      .method-layer { grid-template-columns: 1fr; gap: 0.5rem; }
+      .stella-inner, .approach-pillars, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
     }
     @media (max-width: 600px) {
       section { padding: 4rem 0; }
@@ -186,27 +141,28 @@
 </head>
 <body>
 
-  <!-- NAVIGATION -->
   <nav>
     <div class="nav-inner">
       <a href="index.html" class="nav-logo">Strategy<span>.</span>Shepherds</a>
       <ul class="nav-links">
-        <li><a href="influence-strategy.html">The Influence Strategy</a></li>
-        <li><a href="audit.html">Influence Audit</a></li>
+        <li><a href="influence-strategy.html">Influence Strategy</a></li>
         <li><a href="influence-school.html">Influence School</a></li>
+        <li><a href="influence-research.html">Influence Research</a></li>
         <li><a href="about.html" class="active">About</a></li>
-        <li><a href="https://selar.com/influencestrategy" target="_blank" rel="noopener" class="nav-cta">Work With Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="audit.html" class="nav-cta">Take the Audit</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Open menu">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-nav" id="mobile-nav">
-      <a href="influence-strategy.html">The Influence Strategy</a>
-      <a href="audit.html">Influence Audit</a>
+      <a href="influence-strategy.html">Influence Strategy</a>
       <a href="influence-school.html">Influence School</a>
+      <a href="influence-research.html">Influence Research</a>
       <a href="about.html">About</a>
-      <a href="https://selar.com/influencestrategy" target="_blank" rel="noopener">Work With Us →</a>
+      <a href="contact.html">Contact</a>
+      <a href="audit.html">Take the Audit</a>
     </div>
   </nav>
 
@@ -214,160 +170,92 @@
   <section class="hero">
     <div class="container">
       <div class="hero-inner">
-        <span class="tag">The Strategist</span>
-        <h1>Stella Njogo</h1>
-        <p class="hero-sub">Influence strategist. Founder of Strategy Shepherds. Building the infrastructure that helps serious African organisations become impossible to ignore.</p>
-        <a href="https://selar.com/influencestrategy" target="_blank" rel="noopener" class="btn-gold">Work With Stella</a>
+        <span class="tag">About Strategy Shepherds</span>
+        <h1>Built for the expertise Africa already has.</h1>
+        <p class="hero-sub">African companies and leaders are sitting on decades of hard-won knowledge. Most of it never leaves the room. Strategy Shepherds exists to change that.</p>
       </div>
     </div>
   </section>
 
-  <!-- BIO -->
-  <section class="bio">
+  <!-- STELLA BIO -->
+  <section class="stella">
     <div class="container">
-      <div class="bio-grid">
-        <div class="bio-left">
-          <img
-            src="https://stellanjogo.com/assets/images/image02.jpg?v=3152bf9e"
-            alt="Stella Njogo, Influence Strategist"
-            style="width:100%; display:block; object-fit:cover; aspect-ratio:3/4;"
-            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
-          >
-          <div class="bio-photo-placeholder" style="display:none;">
-            <span class="bio-photo-caption">Stella Njogo<br>Influence Strategist</span>
+      <div class="stella-inner">
+        <div class="stella-portrait">
+          <img src="https://stellanjogo.com/assets/images/image02.jpg?v=3152bf9e" alt="Stella Njogo, Founder of Strategy Shepherds">
+          <div class="stella-portrait-overlay">
+            <p>"Influence is the ultimate competitive advantage in the age of AI."</p>
           </div>
         </div>
-        <div class="bio-text">
-          <span class="tag">Background</span>
-          <h2>12+ years turning complex work into influence.</h2>
-          <p>Stella Njogo is a strategic communications, influence, and Africa partnerships leader based in Nairobi. She is the founder of Strategy Shepherds and the creator of the Influence Infrastructure Method, a three-layer framework that turns expertise into structured, sustainable influence.</p>
-          <p>Over more than twelve years, Stella has advised senior leaders, shaped multi-market narratives, translated research into influence platforms, and led strategic communications across public health, SRHR, food systems, youth, philanthropy, and the digital economy.</p>
-          <div class="bio-callout">
-            <blockquote>"Stella has the uncanny ability to translate what youth on the ground need, truly getting fresh insights, while simultaneously translating those insights to internal teams who make programme decisions, to leadership who determine priorities, and to funders who need to understand the importance of the work."</blockquote>
-          </div>
-          <p>Her work has reached the world's most significant platforms. She led Shujaaz Inc's TED Countdown engagement from inception through execution, including the Unseen Heroes report and film. She co-designed the Youth Climate Lab, represented the organisation on a global panel, and the film later travelled to COP. She led storytelling and communications strategy for Reclaiming Tomorrow, a politically sensitive youth futures project shared through UN partners at UNGA. She has spoken at and facilitated sessions for Nation Media Group, the WordPress Community, and policy and knowledge-sharing forums involving government, civil society, philanthropy, and the private sector.</p>
-          <p>On the evidence-to-influence side: Stella turned seven years of research and more than 13,000 interviews with young Kenyans into the Young and Kenyan influence platform, work that helped establish Shujaaz Inc as a trusted authority and influenced the securing of more than US$2 million for long-term gender norms programming. She advised Tiko's C-suite on the strategic direction and messaging architecture for a multi-year adolescent health fundraising campaign across six African markets.</p>
-          <p><strong>Strategy Shepherds is Stella's consultancy practice.</strong> For bespoke, ongoing engagements, she activates a collective of senior strategists, communications specialists, and sector experts. The team is right-sized to each mandate. Stella leads every engagement personally.</p>
-          <p>The Influence School and the Stella Njogo YouTube channel are the public education arm of the Influence Infrastructure Method: case-study-led, evidence-based, and built for African professionals who trust content that respects their intelligence.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CREDENTIALS BAR -->
-  <section style="background:var(--purple); padding:3rem 0;">
-    <div class="container">
-      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; gap:2rem; align-items:center;">
-        <div style="text-align:center;">
-          <div style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--gold); line-height:1;">12+</div>
-          <div style="font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-top:0.4rem;">Years Experience</div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--gold); line-height:1;">$2M+</div>
-          <div style="font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-top:0.4rem;">Funding Influenced</div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--gold); line-height:1;">6</div>
-          <div style="font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-top:0.4rem;">African Markets</div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-family:'Playfair Display',serif; font-size:2rem; font-weight:700; color:var(--gold); line-height:1;">13K+</div>
-          <div style="font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-top:0.4rem;">Interviews Distilled</div>
-        </div>
-        <div style="text-align:center;">
-          <div style="font-family:'Playfair Display',serif; font-size:1rem; font-weight:700; color:var(--gold); line-height:1.2;">TED · UNGA<br>COP · Skoll</div>
-          <div style="font-family:'DM Mono',monospace; font-size:0.65rem; letter-spacing:0.12em; color:rgba(255,255,255,0.55); margin-top:0.4rem;">Global Platforms</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- METHOD -->
-  <section class="method">
-    <div class="container">
-      <div class="method-inner">
-        <span class="tag">The Framework</span>
-        <h2>The Influence Infrastructure Method</h2>
-        <p>Every engagement, masterclass, and piece of content Stella produces is built on the same three-layer framework. Not motivation. Not personal branding. Infrastructure.</p>
-        <div class="method-layers">
-          <div class="method-layer">
-            <span class="layer-label">Layer 01 · Authority System</span>
-            <div class="layer-body">
-              <h4>What makes expertise legible</h4>
-              <p>Your organisation's distinctive point of view, made publicly legible, AI-indexable, and recognisable to the people who need to find you. A position that earns sustained attention.</p>
-            </div>
-          </div>
-          <div class="method-layer">
-            <span class="layer-label">Layer 02 · Trust Network</span>
-            <div class="layer-body">
-              <h4>Who carries expertise forward</h4>
-              <p>The designed community of validators, carriers, and interpreters who move your expertise into rooms you cannot enter directly. The difference between being known inside your organisation and being cited outside it.</p>
-            </div>
-          </div>
-          <div class="method-layer">
-            <span class="layer-label">Layer 03 · Agenda Position</span>
-            <div class="layer-body">
-              <h4>Where decisions get made</h4>
-              <p>Deliberate positioning inside the specific policy, market, or sector conversations where your expertise must be decisive. Enter before the decision window opens, not after it closes.</p>
-            </div>
+        <div class="stella-bio">
+          <span class="tag">The Founder</span>
+          <h2>Stella Njogo</h2>
+          <p>Stella Njogo has spent 12 years at the intersection of strategy, content, and African business. She has worked with companies, founders, and public figures across East and West Africa to build the kind of presence that opens doors before the pitch begins.</p>
+          <p>Strategy Shepherds grew out of a simple observation: <strong>African expertise is underrepresented online.</strong> Not because it does not exist. Because there has been no structured system to surface it, amplify it, and make it visible to the people who need to see it.</p>
+          <p>The result is that African companies consistently outperform their influence. They win contracts and lose narratives. They lead sectors and miss the conversation. Stella built Strategy Shepherds to solve exactly that problem.</p>
+          <p>Her clients have included <strong>Shujaaz Inc, Tiko Health, the Food Culture Alliance Kenya,</strong> and global institutions including TED Countdown and UN partners at UNGA. Results include influencing over $2 million in gender norms programming funding through research-led positioning, shaping a multi-year adolescent health fundraising narrative for Tiko across six African markets, and leading strategic communications work that travelled from Nairobi to TED Countdown and COP. The pattern is consistent: organisations that invested in influence stopped chasing opportunities and started attracting them.</p>
+          <p>Beyond client work, Stella publishes research on African digital markets and the creator economy through <strong>Digital Africa Signals</strong> on Substack, and releases weekly frameworks and field observations on YouTube.</p>
+          <div class="stella-links">
+            <a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener" class="btn-gold">Watch on YouTube</a>
+            <a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener" class="btn-outline">Read Digital Africa Signals</a>
+            <a href="https://stellanjogo.com" target="_blank" rel="noopener" class="btn-outline">More About Stella</a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CONTEXT -->
-  <section class="context">
+  <!-- WHY THIS EXISTS -->
+  <section class="why">
     <div class="container">
-      <div class="context-inner">
-        <div class="context-col">
-          <span class="tag">Geography</span>
-          <h3>Africa-first. Africa-facing.</h3>
-          <p>Strategy Shepherds works primarily with East African organisations and professionals, with a broader reach across the African continent and diaspora.</p>
-          <p>Every engagement is designed for the specific dynamics of influence in African professional contexts, where expertise is often abundant and infrastructure can be deliberately built.</p>
-        </div>
-        <div class="context-col">
-          <span class="tag">Sectors</span>
-          <h3>Where we work.</h3>
-          <ul class="context-list">
-            <li>Global Health</li>
-            <li>Development Finance</li>
-            <li>Technology · Fintech</li>
-            <li>Energy · Climate</li>
-            <li>Policy</li>
-            <li>Impact · NGO</li>
-          </ul>
-        </div>
+      <div class="why-inner">
+        <span class="tag">The Problem We Solve</span>
+        <h2>The internet is overwhelmingly Western. AI learns from what exists.</h2>
+        <p>When African companies are absent from online conversations, they are absent from the models and algorithms that now shape global decision-making. That is not just a representation problem. It is a business problem.</p>
+        <p>Buyers do research before they buy. Partners Google before they commit. Investors look for signals before they move. If your company is not building visible authority, you are losing deals before the conversation starts.</p>
+        <p>The companies that build serious influence now will own the narrative for their sector. That is what we are here to help you do.</p>
       </div>
     </div>
   </section>
 
-  <!-- YOUTUBE -->
-  <section style="background:var(--off-white); padding:6rem 0;">
+  <!-- HOW WE WORK -->
+  <section class="approach">
     <div class="container">
-      <div style="max-width:720px; margin:0 auto; text-align:center;">
-        <span class="tag" style="display:block; text-align:center;">Free Education · Weekly</span>
-        <h2 style="margin-bottom:1.2rem;">Watch the method in action.</h2>
-        <p style="color:var(--mid-grey); line-height:1.85; margin-bottom:0.8rem; font-size:1.05rem;">The Stella Njogo YouTube channel is where 12+ years of experience in African influence becomes practical, weekly content. Case studies, frameworks, and field observations, built for professionals who trust content that respects their intelligence.</p>
-        <p style="color:var(--mid-grey); margin-bottom:2.5rem;">New video every week. No fluff. No motivation. Just the method.</p>
-        <a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener" style="display:inline-flex; align-items:center; gap:0.7rem; background:var(--purple); color:#fff; font-family:'Jost',sans-serif; font-weight:600; font-size:0.95rem; padding:1rem 2.2rem; border-radius:3px; transition:background 0.2s;" onmouseover="this.style.background='var(--purple-deep)'" onmouseout="this.style.background='var(--purple)'">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-          Subscribe on YouTube
-        </a>
+      <div class="approach-header">
+        <span class="tag">How We Work</span>
+        <h2>We do not do branding. We build influence infrastructure.</h2>
+        <p>There is a difference between looking credible and being the name people cite when decisions are being made. We focus on the latter.</p>
+      </div>
+      <div class="approach-pillars">
+        <div class="pillar">
+          <span class="pillar-num">01 / Diagnose</span>
+          <h3>Start with the audit.</h3>
+          <p>Every engagement begins with an honest read of where you currently stand. What is working, what is misdirected, and where the highest-leverage gaps are.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">02 / Build</span>
+          <h3>Co-create the roadmap.</h3>
+          <p>We do not hand you a slide deck and disappear. We sit with you to build an influence strategy that fits your sector, your audience, and your resources.</p>
+        </div>
+        <div class="pillar">
+          <span class="pillar-num">03 / Compound</span>
+          <h3>Make influence a system.</h3>
+          <p>The goal is not one good piece of content. It is an authority system that produces results long after the engagement ends. Influence that compounds over time.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section class="cta-section">
+  <section class="cta-band">
     <div class="container">
-      <div class="cta-inner">
-        <span class="tag" style="text-align:center; display:block;">Ready to begin?</span>
-        <h2>Start with the audit. Or come straight to the strategy.</h2>
-        <p>The Influence Audit is free and takes five minutes. The Influence Strategy is a five-week engagement at $5,000. Both are designed to produce a clear next step.</p>
-        <div class="cta-buttons">
-          <a href="https://selar.com/influencestrategy" target="_blank" rel="noopener" class="btn-purple">Book The Influence Strategy</a>
-          <a href="audit.html" class="btn-outline-purple">Take the Free Audit</a>
+      <div class="cta-band-inner">
+        <span class="tag">Ready to start?</span>
+        <h2>Find out where your influence stands today.</h2>
+        <p>The Influence Audit is free and takes 2 minutes. It tells you whether you are Scattered, Building, or Compounding. Most companies that take it are surprised by the result.</p>
+        <div class="cta-actions">
+          <a href="audit.html" class="btn-gold">Take the Free Influence Audit</a>
+          <a href="influence-strategy.html" class="btn-outline">Explore the Influence Strategy</a>
         </div>
       </div>
     </div>
@@ -379,14 +267,16 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <h3>Strategy Shepherds</h3>
-          <p>Influence infrastructure for African organisations and Africa-facing institutions. Building the authority, trust networks, and agenda position that turn expertise into impact.</p>
+          <p>Influence strategy for African companies and leaders. Building the authority, trust networks, and agenda position that turn expertise into competitive advantage.</p>
         </div>
         <div class="footer-col">
           <h4>Work</h4>
           <ul>
-            <li><a href="influence-strategy.html">The Influence Strategy</a></li>
-            <li><a href="audit.html">Influence Audit</a></li>
+            <li><a href="influence-strategy.html">Influence Strategy</a></li>
             <li><a href="influence-school.html">Influence School</a></li>
+            <li><a href="voice-to-leads.html">Voice to Leads</a></li>
+            <li><a href="influence-research.html">Influence Research</a></li>
+            <li><a href="audit.html">Influence Audit</a></li>
           </ul>
         </div>
         <div class="footer-col">
@@ -394,7 +284,8 @@
           <ul>
             <li><a href="about.html">About Stella</a></li>
             <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
-            <li><a href="mailto:stella@stellanjogo.com">Contact</a></li>
+            <li><a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener">Digital Africa Signals</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
       </div>
@@ -410,5 +301,6 @@
     const mobileNav = document.getElementById('mobile-nav');
     hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
   </script>
+
 </body>
 </html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Influence Research — Strategy Shepherds</title>
+  <meta name="description" content="Strategy Shepherds researches the intersection of influence strategy, the creator economy, and Digital Africa. Commissions and sector collaborations open.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple:      #361965;
+      --purple-deep: #261050;
+      --gold:        #C9A84C;
+      --off-white:   #FAF8F4;
+      --near-black:  #0D0D0D;
+      --mid-grey:    #6B6B6B;
+      --light-grey:  #E8E4DD;
+      --hero-grad:   linear-gradient(135deg, #261050 0%, #361965 60%, #C9A84C 100%);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--off-white); color: var(--near-black); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+    h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
+    p  { font-size: 1.05rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 6rem 0; }
+    .tag { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--near-black); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.9rem 2.2rem; border-radius: 3px; transition: opacity 0.2s, transform 0.15s; }
+    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-outline { display: inline-block; border: 1.5px solid var(--purple); color: var(--purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; }
+    .btn-outline:hover { background: var(--purple); color: #fff; }
+    .btn-ghost-white { display: inline-block; border: 1.5px solid rgba(255,255,255,0.45); color: #fff; font-family: 'Jost', sans-serif; font-weight: 500; font-size: 0.95rem; padding: 0.85rem 2rem; border-radius: 3px; transition: border-color 0.2s, background 0.2s; }
+    .btn-ghost-white:hover { border-color: #fff; background: rgba(255,255,255,0.08); }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,248,244,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-grey); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--purple); }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a { font-size: 0.87rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .nav-links a.active { font-weight: 600; }
+    .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 600 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--near-black); border-radius: 2px; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--off-white); border-bottom: 1px solid var(--light-grey); }
+    .mobile-nav a { display: block; padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid var(--light-grey); color: var(--near-black); }
+    .mobile-nav.open { display: flex; }
+
+    .hero { background: var(--hero-grad); padding: 10rem 0 6rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -15%; right: -10%; width: 500px; height: 500px; border: 1px solid rgba(201,168,76,0.15); border-radius: 50%; }
+    .hero::after { content: ''; position: absolute; bottom: -25%; right: 5%; width: 320px; height: 320px; border: 1px solid rgba(201,168,76,0.08); border-radius: 50%; }
+    .hero-inner { position: relative; z-index: 2; max-width: 680px; }
+    .hero .tag { color: rgba(201,168,76,0.85); }
+    .hero h1 { color: #fff; margin-bottom: 1.2rem; }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; font-weight: 300; line-height: 1.8; }
+
+    .hero-scroll-prompt { margin-top: 1.6rem; font-size: 0.85rem; color: rgba(255,255,255,0.45); letter-spacing: 0.04em; }
+
+    /* The Gap */
+    .the-gap { background: #fff; }
+    .the-gap-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .the-gap-left h2 { margin-bottom: 1.4rem; }
+    .the-gap-left p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 1.2rem; }
+    .gap-stat-box { background: var(--purple); padding: 2.5rem; }
+    .gap-stat-box .tag { color: rgba(201,168,76,0.8); }
+    .gap-stat-box h3 { color: #fff; font-size: 1.5rem; margin-bottom: 1rem; }
+    .gap-stat-box p { color: rgba(255,255,255,0.72); font-size: 0.95rem; line-height: 1.8; margin-bottom: 1.4rem; }
+
+    /* Work with us */
+    .work-with-us { background: var(--off-white); }
+    .work-with-us h2 { margin-bottom: 3rem; }
+    .work-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3rem; }
+    .work-card { background: #fff; padding: 2.5rem; border-top: 4px solid var(--gold); }
+    .work-card h3 { font-size: 1.1rem; color: var(--purple); margin-bottom: 0.8rem; }
+    .work-card p { color: var(--mid-grey); font-size: 0.95rem; line-height: 1.78; }
+    .work-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* How we activate */
+    .activate { background: #fff; }
+    .activate-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .activate-left h2 { margin-bottom: 1.4rem; }
+    .activate-left p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 1.2rem; }
+    .activate-steps { display: grid; gap: 0; }
+    .activate-step { display: flex; gap: 1.5rem; padding: 1.4rem 0; border-bottom: 1px solid var(--light-grey); align-items: flex-start; }
+    .activate-step:last-child { border-bottom: none; }
+    .step-num { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; color: var(--gold); white-space: nowrap; padding-top: 0.2rem; min-width: 28px; }
+    .step-text h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.93rem; color: var(--near-black); margin-bottom: 0.3rem; }
+    .step-text p { font-size: 0.88rem; color: var(--mid-grey); line-height: 1.7; }
+
+    /* Substack */
+    .substack-section { background: var(--purple); padding: 6rem 0; }
+    .substack-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .substack-text .tag { color: rgba(201,168,76,0.8); }
+    .substack-text h2 { color: #fff; margin-bottom: 1.2rem; }
+    .substack-text p { color: rgba(255,255,255,0.72); line-height: 1.85; margin-bottom: 1.8rem; }
+    .substack-visual { background: rgba(255,255,255,0.06); border: 1px solid rgba(201,168,76,0.2); padding: 3rem 2.5rem; }
+    .substack-visual .pub-name { font-family: 'Playfair Display', serif; font-size: 1.6rem; font-weight: 700; color: #fff; margin-bottom: 0.6rem; line-height: 1.2; }
+    .substack-visual .pub-sub { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.12em; color: rgba(201,168,76,0.75); margin-bottom: 1.2rem; }
+    .substack-visual .pub-desc { color: rgba(255,255,255,0.65); font-size: 0.92rem; line-height: 1.75; margin-bottom: 1.5rem; }
+
+    footer { background: var(--near-black); color: rgba(255,255,255,0.55); padding: 5rem 0 2.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.75; }
+    .footer-col h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul a { font-size: 0.9rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.38); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .the-gap-inner, .activate-inner, .substack-inner, .work-cards, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 4rem 0; }
+      .hero { padding: 8rem 0 5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Strategy<span>.</span>Shepherds</a>
+      <ul class="nav-links">
+        <li><a href="influence-strategy.html">Influence Strategy</a></li>
+        <li><a href="influence-school.html">Influence School</a></li>
+        <li><a href="influence-research.html" class="active">Influence Research</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="audit.html" class="nav-cta">Take the Audit</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="influence-strategy.html">Influence Strategy</a>
+      <a href="influence-school.html">Influence School</a>
+      <a href="influence-research.html">Influence Research</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="audit.html">Take the Audit</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <span class="tag">Research and Intelligence</span>
+        <h1>African sectors and the creator economy are sitting on an untapped opportunity. Nobody is connecting the dots.</h1>
+        <p class="hero-sub">Strategy Shepherds researches the intersection of influence strategy, the creator economy, and Digital Africa. We surface what the data says, build the case for sector collaboration, and activate the partnerships that make it real.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScGYmYxpfaElpduP9OBaxtZOGESyjmaNCjzd1Qm3Z9HtOPhlg/viewform?usp=sharing" target="_blank" rel="noopener" class="btn-gold">Get In Touch</a>
+        <p class="hero-scroll-prompt">Scroll down to see how we work and what we are building.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE GAP -->
+  <section class="the-gap">
+    <div class="container">
+      <div class="the-gap-inner">
+        <div class="the-gap-left">
+          <span class="tag">Why We Do This</span>
+          <h2>The creator economy is the most powerful influence infrastructure in the world. African businesses are largely absent from it.</h2>
+          <p>Creators are not influencers in the old sense. They are trusted voices with loyal audiences that brands, institutions, and sectors spend years trying to build from scratch.</p>
+          <p>The businesses and sectors that learn to work with the creator economy gain something their competitors cannot buy. Distribution. Trust. Cultural relevance. All three are components of influence, and all three are sitting in the creator economy right now, waiting to be activated.</p>
+          <p>African sectors have been slow to see this. Strategy Shepherds exists to close that gap, starting with research that makes the opportunity impossible to ignore.</p>
+        </div>
+        <div class="gap-stat-box">
+          <span class="tag">The Bigger Opportunity</span>
+          <h3>Business and the creator economy grew up apart. That separation is now a business risk.</h3>
+          <p>For most of the past decade, African businesses and African creators operated in parallel. Different conversations. Different networks. Different metrics of success.</p>
+          <p>That separation is closing fast. The companies that bridge it first will have a structural advantage that is very hard to replicate.</p>
+          <p>Strategy Shepherds is building that bridge. Through research that makes the case. Through partnerships that activate it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORK WITH US -->
+  <section class="work-with-us">
+    <div class="container">
+      <span class="tag">Work With Us</span>
+      <h2>Two ways to engage with our research work.</h2>
+      <div class="work-cards">
+        <div class="work-card">
+          <span class="tag">Commissions</span>
+          <h3>Thought Piece Commissions</h3>
+          <p>We accept commissions for original research and thought leadership on influence strategy, the creator economy, and Digital Africa. If your organisation needs rigorous, well-argued thinking for a publication, conference, or internal strategy use, we write it.</p>
+        </div>
+        <div class="work-card">
+          <span class="tag">Partnerships</span>
+          <h3>Sector Collaborations</h3>
+          <p>We partner with sector groups, associations, and programmes ready to explore how the creator economy can become part of their influence strategy. We map the creator landscape in your vertical, identify the collaboration opportunities, and build the activation plan that brings both sides together.</p>
+        </div>
+      </div>
+      <div class="work-ctas">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScGYmYxpfaElpduP9OBaxtZOGESyjmaNCjzd1Qm3Z9HtOPhlg/viewform?usp=sharing" target="_blank" rel="noopener" class="btn-gold">Request specific influence research</a>
+        <a href="https://calendar.app.google/Tp5UxNFaP7AgPRNH6" target="_blank" rel="noopener" class="btn-outline">Book a discovery call</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE ACTIVATE -->
+  <section class="activate">
+    <div class="container">
+      <div class="activate-inner">
+        <div class="activate-left">
+          <span class="tag">Our Approach</span>
+          <h2>Research that builds the case. Partnerships that activate it.</h2>
+          <p>We work in two modes. First we research. Then we activate. The goal is not a campaign. It is a shift in how African sectors build influence, long term.</p>
+        </div>
+        <div class="activate-steps">
+          <div class="activate-step">
+            <span class="step-num">01</span>
+            <div class="step-text">
+              <h4>We Research</h4>
+              <p>We document the creator economy landscape within specific African sectors, identify the gaps between where sector influence currently sits and where it could be, and publish findings that give decision-makers the evidence they need to act.</p>
+            </div>
+          </div>
+          <div class="activate-step">
+            <span class="step-num">02</span>
+            <div class="step-text">
+              <h4>We Activate</h4>
+              <p>We connect sectors to creator economy opportunities through structured partnerships. We work with the associations, programmes, and institutions that have the convening power to bring both sides together and the ambition to do something serious with it.</p>
+            </div>
+          </div>
+          <div class="activate-step">
+            <span class="step-num">03</span>
+            <div class="step-text">
+              <h4>We Publish</h4>
+              <p>Our findings and observations go into Digital Africa Signals, our Substack publication, and into the sector reports and thought pieces we produce for clients and partners.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIGITAL AFRICA SIGNALS -->
+  <section class="substack-section">
+    <div class="container">
+      <div class="substack-inner">
+        <div class="substack-text">
+          <span class="tag">The Publication</span>
+          <h2>Digital Africa Signals.</h2>
+          <p>Digital Africa Signals is Stella Njogo's Substack. It explores the ideas, observations, and opportunities emerging from Africa's digital economy. Each edition covers a development worth paying attention to across digital governance, the creator economy, platform dynamics, and influence strategy in African markets.</p>
+          <a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener" class="btn-gold">Subscribe to Digital Africa Signals</a>
+        </div>
+        <div class="substack-visual">
+          <div class="pub-name">Digital Africa Signals</div>
+          <div class="pub-sub">A Substack by Stella Njogo</div>
+          <div class="pub-desc">Ideas, observations, and opportunities from Africa's digital economy. Published for business leaders and sector professionals who want to understand what is actually happening.</div>
+          <a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener" class="btn-ghost-white" style="font-size:0.88rem;">Read on Substack</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strategy Shepherds</h3>
+          <p>Influence strategy for African companies and leaders. Building the authority, trust networks, and agenda position that turn expertise into competitive advantage.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="influence-strategy.html">Influence Strategy</a></li>
+            <li><a href="influence-school.html">Influence School</a></li>
+            <li><a href="voice-to-leads.html">Voice to Leads</a></li>
+            <li><a href="influence-research.html">Influence Research</a></li>
+            <li><a href="audit.html">Influence Audit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Stella</a></li>
+            <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener">Digital Africa Signals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Strategy Shepherds. All rights reserved.</span>
+        <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  </script>
+</body>
+</html>

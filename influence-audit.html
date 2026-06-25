@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Influence Audit — Strategy Shepherds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        :root {
+            --navy:    #1C3144;
+            --navy-dk: #142333;
+            --gold:    #B8933F;
+            --gold-lt: #F0EBE0;
+            --bg:      #F7F5F1;
+            --white:   #FFFFFF;
+            --text:    #1A1A1A;
+            --muted:   #6B7280;
+            --border:  #E2DED7;
+            --green:   #166534;
+            --green-bg:#F0FDF4;
+            --green-bd:#BBF7D0;
+            --red:     #DC2626;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            padding: 18px 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .brand {
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.07em;
+            text-transform: uppercase;
+            color: var(--navy);
+        }
+
+        #headerMeta {
+            font-size: 13px;
+            color: var(--muted);
+            font-weight: 400;
+        }
+
+        /* Main */
+        main {
+            width: 100%;
+            max-width: 660px;
+            padding: 56px 24px 96px;
+            flex: 1;
+        }
+
+        /* Screens */
+        .screen { display: none; }
+        .screen.active { display: block; animation: fadeUp 0.25s ease; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Progress bar */
+        .progress-rail {
+            width: 100%;
+            height: 3px;
+            background: var(--border);
+            border-radius: 2px;
+            margin-bottom: 48px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--gold);
+            border-radius: 2px;
+            transition: width 0.4s ease;
+        }
+
+        /* Typography */
+        .eyebrow {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 14px;
+        }
+
+        .serif-title {
+            font-family: 'Lora', Georgia, serif;
+            font-weight: 700;
+            color: var(--navy);
+            line-height: 1.2;
+        }
+
+        /* Welcome screen */
+        #screen-welcome .serif-title { font-size: 38px; margin-bottom: 20px; }
+
+        .welcome-intro {
+            font-size: 16px;
+            line-height: 1.75;
+            color: #4A4A4A;
+            margin-bottom: 36px;
+            max-width: 540px;
+        }
+
+        .welcome-intro strong { color: var(--navy); font-weight: 600; }
+
+        /* Form */
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .form-group { display: flex; flex-direction: column; gap: 6px; }
+        .form-group.span2 { grid-column: 1 / -1; }
+
+        .form-group label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--navy);
+        }
+
+        .form-group input {
+            padding: 12px 14px;
+            border: 1.5px solid var(--border);
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            background: var(--white);
+            color: var(--text);
+            transition: border-color 0.15s;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .form-group input:focus { border-color: var(--navy); }
+        .form-group input::placeholder { color: #C0BAB1; }
+
+        .field-note {
+            font-size: 13px;
+            line-height: 1.6;
+            color: var(--muted);
+            margin-bottom: 28px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.15s, transform 0.1s;
+            border: none;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .btn:active { transform: scale(0.98); }
+
+        .btn-navy { background: var(--navy); color: var(--white); }
+        .btn-navy:hover { background: var(--navy-dk); }
+
+        .btn-gold { background: var(--gold); color: var(--white); }
+        .btn-gold:hover { background: #A07B35; }
+
+        /* Error */
+        .err {
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--red);
+            display: none;
+        }
+        .err.show { display: block; }
+
+        /* Layer header */
+        .layer-hd { margin-bottom: 36px; }
+        .layer-hd .serif-title { font-size: 27px; margin-bottom: 10px; }
+        .layer-desc {
+            font-size: 15px;
+            line-height: 1.65;
+            color: var(--muted);
+        }
+
+        /* Questions */
+        .q-block {
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--border);
+        }
+        .q-block:last-of-type { border-bottom: none; }
+
+        .q-num {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 6px;
+        }
+
+        .q-text {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 1.6;
+            color: var(--text);
+            margin-bottom: 18px;
+        }
+
+        /* Likert */
+        .likert {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 7px;
+        }
+
+        .likert label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            cursor: pointer;
+            gap: 0;
+        }
+
+        .likert input[type="radio"] { display: none; }
+
+        .likert-btn {
+            width: 100%;
+            padding: 11px 3px;
+            border: 1.5px solid var(--border);
+            border-radius: 6px;
+            background: var(--white);
+            text-align: center;
+            font-size: 11px;
+            font-weight: 500;
+            color: var(--muted);
+            transition: all 0.12s;
+            cursor: pointer;
+            line-height: 1.35;
+            user-select: none;
+        }
+
+        .likert label:hover .likert-btn {
+            border-color: var(--navy);
+            color: var(--navy);
+        }
+
+        .likert input[type="radio"]:checked ~ .likert-btn {
+            background: var(--navy);
+            border-color: var(--navy);
+            color: var(--white);
+            font-weight: 600;
+        }
+
+        /* Results */
+        .results-card {
+            background: var(--navy);
+            color: var(--white);
+            padding: 44px 40px;
+            border-radius: 12px;
+            margin-bottom: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .results-card::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            border: 50px solid rgba(184,147,63,0.12);
+            pointer-events: none;
+        }
+
+        .results-card .eyebrow { color: var(--gold); }
+
+        .profile-name {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 44px;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+
+        .profile-score {
+            font-size: 17px;
+            font-weight: 300;
+            opacity: 0.75;
+            margin-bottom: 22px;
+            letter-spacing: 0.01em;
+        }
+
+        .profile-desc {
+            font-size: 15px;
+            line-height: 1.75;
+            opacity: 0.9;
+        }
+
+        /* Layer breakdown */
+        .breakdown { margin-bottom: 32px; }
+
+        .breakdown-label {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .bk-item { margin-bottom: 18px; }
+
+        .bk-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 7px;
+        }
+
+        .bk-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--navy);
+        }
+
+        .bk-score {
+            font-size: 13px;
+            color: var(--muted);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .bk-rail {
+            height: 7px;
+            background: var(--border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .bk-fill {
+            height: 100%;
+            background: var(--navy);
+            border-radius: 4px;
+            transition: width 1s cubic-bezier(.25,.8,.25,1);
+        }
+
+        /* Analysis box */
+        .analysis-box {
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            padding: 28px 30px;
+            margin-bottom: 24px;
+        }
+
+        .analysis-box h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 14px;
+        }
+
+        .analysis-box p {
+            font-size: 15px;
+            line-height: 1.75;
+            color: #3D3D3D;
+            margin-bottom: 14px;
+        }
+
+        .analysis-box p:last-child { margin-bottom: 0; }
+
+        /* CTA box */
+        .cta-box {
+            background: var(--gold-lt);
+            border-radius: 10px;
+            padding: 36px 32px;
+            margin-bottom: 32px;
+        }
+
+        .cta-box h3 {
+            font-family: 'Lora', Georgia, serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .cta-box .cta-meta {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .cta-box p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #4A4440;
+            margin-bottom: 24px;
+        }
+
+        /* Submission note */
+        .sub-note {
+            display: none;
+            align-items: center;
+            gap: 9px;
+            padding: 13px 16px;
+            background: var(--green-bg);
+            border: 1px solid var(--green-bd);
+            border-radius: 6px;
+            margin-bottom: 24px;
+            font-size: 13px;
+            color: var(--green);
+            font-weight: 500;
+        }
+
+        /* Footer */
+        .results-footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .results-footer p {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .results-footer a {
+            color: var(--navy);
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .results-footer a:hover { border-bottom-color: var(--navy); }
+
+        /* Print */
+        @media print {
+            header, .progress-rail, .cta-box, .results-footer { display: none !important; }
+            body { background: white; }
+            .results-card { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+            .bk-fill { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+
+        /* Mobile */
+        @media (max-width: 580px) {
+            #screen-welcome .serif-title { font-size: 28px; }
+            .form-grid { grid-template-columns: 1fr; }
+            .form-group.span2 { grid-column: 1; }
+            .likert { gap: 4px; }
+            .likert-btn { padding: 9px 2px; font-size: 10px; }
+            .results-card { padding: 30px 24px; }
+            .profile-name { font-size: 34px; }
+            .cta-box { padding: 28px 22px; }
+            .analysis-box { padding: 22px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="brand">Strategy Shepherds</div>
+    <div id="headerMeta">The Influence Audit</div>
+</header>
+
+<main>
+
+    <!-- SCREEN 0: Welcome -->
+    <div class="screen active" id="screen-welcome">
+        <p class="eyebrow">Influence Infrastructure Diagnostic</p>
+        <h1 class="serif-title">The Influence Audit</h1>
+
+        <p class="welcome-intro">
+            Fifteen questions. Three layers. A precise reading of where your organisation's
+            influence infrastructure is <strong>operational</strong>, where it is <strong>partial</strong>,
+            and where investment is not yet compounding.<br><br>
+            Most organisations with deep expertise have a gap between what they know and the
+            authority, access, and trust their strategy requires. That gap is almost always
+            structural: the infrastructure required to make expertise travel has not been built.
+        </p>
+
+        <div class="form-grid">
+            <div class="form-group">
+                <label for="inp-fname">First name</label>
+                <input type="text" id="inp-fname" autocomplete="given-name" placeholder="Your first name">
+            </div>
+            <div class="form-group">
+                <label for="inp-org">Organisation</label>
+                <input type="text" id="inp-org" autocomplete="organization" placeholder="Your organisation">
+            </div>
+            <div class="form-group">
+                <label for="inp-role">Title / Role</label>
+                <input type="text" id="inp-role" autocomplete="organization-title" placeholder="e.g. CEO, Country Director">
+            </div>
+            <div class="form-group">
+                <label for="inp-email">Work email</label>
+                <input type="email" id="inp-email" autocomplete="email" placeholder="your@organisation.com">
+            </div>
+        </div>
+
+        <p class="field-note">
+            The audit takes approximately four minutes. Your results are displayed immediately.
+            A copy will be sent to your email alongside the <em>Influence Infrastructure Field Guide</em>
+            once the email automation is configured.
+        </p>
+
+        <button class="btn btn-navy" onclick="startAudit()">Begin the audit →</button>
+        <p class="err" id="err-welcome">Please complete all fields before continuing.</p>
+    </div>
+
+
+    <!-- SCREEN 1: Layer 1 -->
+    <div class="screen" id="screen-layer1">
+        <div class="progress-rail"><div class="progress-fill" style="width:25%"></div></div>
+        <div class="layer-hd">
+            <p class="eyebrow">Layer 1 of 3</p>
+            <h2 class="serif-title">Authority System</h2>
+            <p class="layer-desc">
+                Your organisation's ability to generate a distinctive, legible, AI-discoverable
+                point of view, and the proprietary IP required to organise how others in your
+                field think and speak.
+            </p>
+        </div>
+        <div id="qs-layer1"></div>
+        <button class="btn btn-navy" onclick="advanceLayer(1)">Continue →</button>
+        <p class="err" id="err-layer1">Please respond to all five statements before continuing.</p>
+    </div>
+
+
+    <!-- SCREEN 2: Layer 2 -->
+    <div class="screen" id="screen-layer2">
+        <div class="progress-rail"><div class="progress-fill" style="width:50%"></div></div>
+        <div class="layer-hd">
+            <p class="eyebrow">Layer 2 of 3</p>
+            <h2 class="serif-title">Trust Network</h2>
+            <p class="layer-desc">
+                The designed community of validators, carriers, and intermediaries who move your
+                expertise into rooms and decisions you cannot yet reach directly. They return
+                community intelligence upstream into your strategy.
+            </p>
+        </div>
+        <div id="qs-layer2"></div>
+        <button class="btn btn-navy" onclick="advanceLayer(2)">Continue →</button>
+        <p class="err" id="err-layer2">Please respond to all five statements before continuing.</p>
+    </div>
+
+
+    <!-- SCREEN 3: Layer 3 -->
+    <div class="screen" id="screen-layer3">
+        <div class="progress-rail"><div class="progress-fill" style="width:75%"></div></div>
+        <div class="layer-hd">
+            <p class="eyebrow">Layer 3 of 3</p>
+            <h2 class="serif-title">Agenda Position</h2>
+            <p class="layer-desc">
+                Your deliberate presence inside the specific policy, market, and sector conversations
+                where your expertise must be decisive, before the decision window closes.
+            </p>
+        </div>
+        <div id="qs-layer3"></div>
+        <button class="btn btn-gold" onclick="showResults()">See my results →</button>
+        <p class="err" id="err-layer3">Please respond to all five statements before continuing.</p>
+    </div>
+
+
+    <!-- SCREEN 4: Results -->
+    <div class="screen" id="screen-results">
+        <div class="progress-rail"><div class="progress-fill" style="width:100%"></div></div>
+
+        <div class="sub-note" id="sub-note">
+            <span>✓</span>
+            <span>Results recorded. You will receive a copy at <strong id="sub-email"></strong> alongside the <em>Influence Infrastructure Field Guide</em>.</span>
+        </div>
+
+        <div class="results-card" id="r-card"></div>
+
+        <div class="breakdown">
+            <p class="breakdown-label">Layer-by-layer breakdown</p>
+            <div id="r-breakdown"></div>
+        </div>
+
+        <div class="analysis-box" id="r-analysis"></div>
+        <div class="cta-box" id="r-cta"></div>
+
+        <div class="results-footer">
+            <p>
+                Strategy Shepherds &nbsp;·&nbsp;
+                <a href="#" onclick="window.print(); return false;">Save or print these results</a>
+            </p>
+        </div>
+    </div>
+
+</main>
+
+
+<script>
+/* ====================================================
+   CONFIGURATION — update before going live
+==================================================== */
+const CFG = {
+    // Formspree: create a free form at https://formspree.io
+    formspreeURL: 'https://formspree.io/f/YOUR_FORM_ID',
+
+    // CTA links
+    influenceStrategyLink: 'https://strategyshepherds.com/influence-strategy', // Scattered + Building
+    advisoryLink:          'https://strategyshepherds.com/advisory',            // Compounding
+};
+
+
+/* ====================================================
+   QUESTION DATA
+==================================================== */
+const LAYERS = [
+    {
+        id: 'layer1',
+        qs: [
+            { id: 'A1', text: 'Our organisation has a distinctive point of view that others in our sector cite, reference, or repeat.' },
+            { id: 'A2', text: 'Our expertise is findable by AI search systems, buyers, funders, and policymakers without direct introduction.' },
+            { id: 'A3', text: 'We have proprietary IP (research, frameworks, indices, or language) that organises how others think about our field.' },
+            { id: 'A4', text: 'Our leaders\' public voice is grounded in institutional expertise and IP, not personal opinion or individual profile.' },
+            { id: 'A5', text: 'When sector experts are sought for panels, briefings, or advisory roles, our organisation is likely to be consulted.' },
+        ]
+    },
+    {
+        id: 'layer2',
+        qs: [
+            { id: 'T1', text: 'We have a clear map of who validates and carries our expertise in each market or context we operate in.' },
+            { id: 'T2', text: 'Our stakeholder relationships bring community intelligence into strategy before decisions are made.' },
+            { id: 'T3', text: 'Our internal experts are active, credible voices in external sector conversations.' },
+            { id: 'T4', text: 'Our partnerships and collaborations are built around shared belief and aligned agenda.' },
+            { id: 'T5', text: 'Our ideas reach decision-makers through designed intermediary relationships.' },
+        ]
+    },
+    {
+        id: 'layer3',
+        qs: [
+            { id: 'G1', text: 'We are actively shaping at least one policy, market, or sector conversation.' },
+            { id: 'G2', text: 'We have a deliberate strategy for entering major conversations, and have acted on it in the past 12 months.' },
+            { id: 'G3', text: 'Our events, publications, and convenings produce artifacts (briefs, frameworks, indices) that generate influence after they end.' },
+            { id: 'G4', text: 'We have identified the two or three conversations we must be inside, and are building deliberately toward them.' },
+            { id: 'G5', text: 'We evaluate influence activity by agenda movement and decision access.' },
+        ]
+    }
+];
+
+const SCALE = [
+    { label: 'Strongly\nDisagree', val: 1 },
+    { label: 'Disagree',          val: 2 },
+    { label: 'Neither',           val: 3 },
+    { label: 'Agree',             val: 4 },
+    { label: 'Strongly\nAgree',   val: 5 },
+];
+
+
+/* ====================================================
+   PROFILES
+==================================================== */
+const PROFILES = {
+    scattered: {
+        name: 'Scattered',
+        range: '15–35',
+        headline: 'Activity without architecture.',
+        desc: 'Your organisation is investing in influence activity, but the investment is not compounding. The infrastructure required to make expertise travel has not yet been built. Communications strategy is not the same as influence infrastructure. Until the architecture exists, effort does not convert into authority, access, or trust at scale.',
+        analysis: [
+            'The Scattered profile is not a reflection of expertise quality or organisational commitment. It reflects the absence of the systems that convert expertise into durable influence.',
+            'Organisations at this stage typically present one or more of the following: a point of view that is not yet distinctive or AI-discoverable; stakeholder relationships that are transactional rather than designed; influence activity that produces output without agenda movement.',
+            'The highest-leverage intervention at this stage is the Authority System: establishing what you are uniquely qualified to say and making it publicly legible, indexed, and institutionally owned. Without this foundation, nothing else compounds.'
+        ],
+        ctaMeta: 'Recommended next step',
+        ctaTitle: 'The Influence Strategy',
+        ctaBody: 'Your audit has identified exactly where the gaps are. The Influence Strategy is a five-week done-with-you engagement that takes those findings and builds the architecture your organisation is missing.\n\nPhase 1: Kickoff. Phase 2: Stakeholder audit using proprietary interview methods. Phase 3: One co-creation week to build your Authority, Trust Network, and Agenda strategy. Phase 4: Stella presents the completed Influence Mandate to your leadership, making the case for the investment that follows.\n\nPrice: $5,000. If your Influence Mandate is not complete and ready to activate at the end of Week 5, the engagement continues at no additional cost.',
+        ctaBtn: 'Enquire about The Influence Strategy',
+        ctaLink: () => CFG.influenceStrategyLink,
+    },
+    building: {
+        name: 'Building',
+        range: '36–55',
+        headline: 'Meaningful infrastructure. Incomplete coverage.',
+        desc: 'Your organisation has built real influence infrastructure in at least one layer. That investment is generating return. One or two layers remain underdeveloped, and your full strategic capacity is not yet compounding. Infrastructure works as a system: partial coverage produces partial results.',
+        analysis: [
+            'The Building profile describes organisations that have moved beyond activity and begun to invest in architecture, but have not yet closed the gaps between layers.',
+            'The missing layer is typically visible in one of three patterns: strong authority without a designed trust network to carry it forward; strong relationships without the agenda positioning to make them strategically decisive; or a clear agenda position without the institutional IP to sustain credibility inside it.',
+            'The priority at this stage is identifying the weakest layer and closing it systematically, with the methodology, the relationships, and the sustained strategic focus the task requires.'
+        ],
+        ctaMeta: 'Recommended next step',
+        ctaTitle: 'The Influence Strategy',
+        ctaBody: 'You have infrastructure in at least one layer. The Influence Strategy identifies where coverage is incomplete and builds the strategy to close it, with the evidence base and the leadership presentation needed to fund what comes next.\n\nStakeholder audit, one co-creation week with your team, and a completed Influence Mandate presented to your leadership by Stella.\n\nPrice: $5,000. If your Influence Mandate is not complete and ready to activate at the end of Week 5, the engagement continues at no additional cost.',
+        ctaBtn: 'Enquire about The Influence Strategy',
+        ctaLink: () => CFG.influenceStrategyLink,
+    },
+    compounding: {
+        name: 'Compounding',
+        range: '56–75',
+        headline: 'Infrastructure operational. Ready to optimise.',
+        desc: 'All three layers of your Influence Infrastructure are operational. Your expertise is converting into authority, access, and community trust at a meaningful level. The strategic question shifts from construction to optimisation: is your infrastructure performing at the level your strategy requires, and can you measure, scale, and compound it deliberately?',
+        analysis: [
+            'Organisations at the Compounding stage have built the systems that most peers are still trying to understand. The work shifts from construction to calibration.',
+            'The most common failure at this stage is treating infrastructure as permanent rather than as a system that requires active maintenance, measurement, and evolution as organisational ambitions grow.',
+            'The priority is ensuring that authority, trust network, and agenda position are actively reinforcing one another, and that influence activity is evaluated against decision access and agenda movement rather than reach or output metrics alone.'
+        ],
+        ctaMeta: 'Recommended next step',
+        ctaTitle: 'Strategic Advisory',
+        ctaBody: 'All three layers of your Influence Infrastructure are operational. The strategic question shifts from construction to optimisation: is your infrastructure performing at the level your strategy requires, and can you measure, scale, and compound it deliberately?\n\nAdvisory is a bespoke ongoing engagement with Stella Njogo, focused on the specific optimisation, measurement, and scaling challenges your organisation faces.\n\nEngagement terms by application.',
+        ctaBtn: 'Enquire about Advisory',
+        ctaLink: () => CFG.advisoryLink,
+    }
+};
+
+
+/* ====================================================
+   STATE
+==================================================== */
+let user    = {};
+let answers = {};
+
+
+/* ====================================================
+   RENDER QUESTIONS
+==================================================== */
+function renderLayer(idx) {
+    const layer = LAYERS[idx];
+    const el    = document.getElementById(`qs-${layer.id}`);
+
+    el.innerHTML = layer.qs.map((q, i) => `
+        <div class="q-block">
+            <p class="q-num">${i + 1} of 5</p>
+            <p class="q-text">${q.text}</p>
+            <div class="likert" role="radiogroup">
+                ${SCALE.map(opt => `
+                    <label>
+                        <input type="radio" name="${q.id}" value="${opt.val}"
+                            onchange="answers['${q.id}'] = ${opt.val}"
+                            ${answers[q.id] === opt.val ? 'checked' : ''}>
+                        <span class="likert-btn">${opt.label.replace('\n', '<br>')}</span>
+                    </label>
+                `).join('')}
+            </div>
+        </div>
+    `).join('');
+}
+
+
+/* ====================================================
+   NAVIGATION
+==================================================== */
+function show(screenId) {
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+    document.getElementById(`screen-${screenId}`).classList.add('active');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function startAudit() {
+    const fname = document.getElementById('inp-fname').value.trim();
+    const org   = document.getElementById('inp-org').value.trim();
+    const role  = document.getElementById('inp-role').value.trim();
+    const email = document.getElementById('inp-email').value.trim();
+    const errEl = document.getElementById('err-welcome');
+
+    if (!fname || !org || !role || !email) {
+        errEl.textContent = 'Please complete all fields before continuing.';
+        errEl.classList.add('show'); return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        errEl.textContent = 'Please enter a valid email address.';
+        errEl.classList.add('show'); return;
+    }
+
+    errEl.classList.remove('show');
+    user = { fname, org, role, email };
+    document.getElementById('headerMeta').textContent = 'Section 1 of 3';
+
+    renderLayer(0);
+    show('layer1');
+}
+
+function advanceLayer(n) {
+    const layer   = LAYERS[n - 1];
+    const missing = layer.qs.filter(q => answers[q.id] === undefined);
+    const errEl   = document.getElementById(`err-layer${n}`);
+
+    if (missing.length) { errEl.classList.add('show'); return; }
+    errEl.classList.remove('show');
+
+    if (n < 3) {
+        document.getElementById('headerMeta').textContent = `Section ${n + 1} of 3`;
+        renderLayer(n);
+        show(`layer${n + 1}`);
+    }
+}
+
+function showResults() {
+    const layer3  = LAYERS[2];
+    const missing = layer3.qs.filter(q => answers[q.id] === undefined);
+    const errEl   = document.getElementById('err-layer3');
+
+    if (missing.length) { errEl.classList.add('show'); return; }
+    errEl.classList.remove('show');
+
+    const aScore = LAYERS[0].qs.reduce((s, q) => s + (answers[q.id] || 0), 0);
+    const tScore = LAYERS[1].qs.reduce((s, q) => s + (answers[q.id] || 0), 0);
+    const gScore = LAYERS[2].qs.reduce((s, q) => s + (answers[q.id] || 0), 0);
+    const total  = aScore + tScore + gScore;
+
+    const profile = total <= 35 ? PROFILES.scattered
+                  : total <= 55 ? PROFILES.building
+                  :               PROFILES.compounding;
+
+    document.getElementById('headerMeta').textContent = 'Your results';
+    renderResultsPage(profile, total, aScore, tScore, gScore);
+    show('results');
+
+    submitLead({ ...user, profile: profile.name, total, aScore, tScore, gScore });
+}
+
+
+/* ====================================================
+   RENDER RESULTS
+==================================================== */
+function renderResultsPage(profile, total, a, t, g) {
+
+    document.getElementById('r-card').innerHTML = `
+        <p class="eyebrow">Your Influence Audit result</p>
+        <div class="profile-name">${profile.name}</div>
+        <div class="profile-score">Score: ${total} / 75 &nbsp;·&nbsp; Profile range: ${profile.range}</div>
+        <p class="profile-desc">${profile.desc}</p>
+    `;
+
+    const breakdownData = [
+        { name: 'Authority System', score: a },
+        { name: 'Trust Network',    score: t },
+        { name: 'Agenda Position',  score: g },
+    ];
+
+    document.getElementById('r-breakdown').innerHTML = breakdownData.map(d => `
+        <div class="bk-item">
+            <div class="bk-row">
+                <span class="bk-name">${d.name}</span>
+                <span class="bk-score">${d.score} / 25</span>
+            </div>
+            <div class="bk-rail">
+                <div class="bk-fill" style="width:${(d.score / 25) * 100}%"></div>
+            </div>
+        </div>
+    `).join('');
+
+    document.getElementById('r-analysis').innerHTML = `
+        <h3>What this means</h3>
+        ${profile.analysis.map(p => `<p>${p}</p>`).join('')}
+    `;
+
+    document.getElementById('r-cta').innerHTML = `
+        <p class="cta-meta">${profile.ctaMeta}</p>
+        <h3>${profile.ctaTitle}</h3>
+        <p style="white-space:pre-line;">${profile.ctaBody}</p>
+        <a href="${profile.ctaLink()}" class="btn btn-navy" target="_blank" rel="noopener">${profile.ctaBtn} →</a>
+    `;
+}
+
+
+/* ====================================================
+   LEAD SUBMISSION
+   Replace CFG.formspreeURL with your Formspree endpoint.
+   For ConvertKit, replace the fetch below with a POST to:
+   https://api.convertkit.com/v3/forms/FORM_ID/subscribe
+==================================================== */
+async function submitLead(data) {
+    try {
+        const res = await fetch(CFG.formspreeURL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+            body: JSON.stringify({
+                _subject:        `Influence Audit: ${data.profile} — ${data.fname} at ${data.org}`,
+                name:            data.fname,
+                organization:    data.org,
+                role:            data.role,
+                email:           data.email,
+                profile:         data.profile,
+                total_score:     data.total,
+                authority_score: data.aScore,
+                trust_score:     data.tScore,
+                agenda_score:    data.gScore,
+            })
+        });
+
+        if (res.ok) {
+            document.getElementById('sub-email').textContent = data.email;
+            document.getElementById('sub-note').style.display = 'flex';
+        }
+    } catch (_) {
+        // Silent fail — results are already displayed
+    }
+}
+
+
+/* ====================================================
+   INIT
+==================================================== */
+document.addEventListener('DOMContentLoaded', () => renderLayer(0));
+</script>
+</body>
+</html>

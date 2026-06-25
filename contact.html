@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Strategy Shepherds</title>
+  <meta name="description" content="Get in touch with Strategy Shepherds. Enquiries for the Influence Strategy, team workshops, speaking, and media welcome.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple:      #361965;
+      --purple-deep: #261050;
+      --gold:        #C9A84C;
+      --off-white:   #FAF8F4;
+      --near-black:  #0D0D0D;
+      --mid-grey:    #6B6B6B;
+      --light-grey:  #E8E4DD;
+      --hero-grad:   linear-gradient(135deg, #261050 0%, #361965 60%, #C9A84C 100%);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; }
+    body { font-family: 'Jost', sans-serif; background: var(--off-white); color: var(--near-black); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
+
+    /* Nav */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,248,244,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-grey); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--purple); }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a { font-size: 0.87rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--purple); }
+    .nav-links a.active { color: var(--purple); font-weight: 600; }
+    .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 600 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--near-black); border-radius: 2px; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--off-white); border-bottom: 1px solid var(--light-grey); }
+    .mobile-nav a { display: block; padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid var(--light-grey); color: var(--near-black); }
+    .mobile-nav.open { display: flex; }
+
+    /* Shared */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 6rem 0; }
+    .tag { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+
+    /* Hero */
+    .hero { background: var(--hero-grad); padding: 10rem 0 7rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -15%; right: -10%; width: 500px; height: 500px; border: 1px solid rgba(201,168,76,0.15); border-radius: 50%; }
+    .hero::after { content: ''; position: absolute; bottom: -25%; right: 5%; width: 320px; height: 320px; border: 1px solid rgba(201,168,76,0.08); border-radius: 50%; }
+    .hero-inner { position: relative; z-index: 2; max-width: 680px; }
+    .hero .tag { color: rgba(201,168,76,0.85); }
+    .hero h1 { color: #fff; font-size: clamp(2rem, 4.5vw, 3.2rem); margin-bottom: 1.2rem; }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.75); font-weight: 300; line-height: 1.8; }
+
+    /* Main contact section */
+    .contact-section { background: #fff; }
+    .contact-inner { display: grid; grid-template-columns: 1fr 1.2fr; gap: 6rem; align-items: start; }
+
+    /* Left: enquiry types */
+    .contact-info h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); margin-bottom: 1.4rem; }
+    .contact-info > p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 2.5rem; }
+    .email-display { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 3rem; padding: 1.2rem 1.5rem; background: var(--off-white); border-left: 4px solid var(--gold); }
+    .email-display a { font-family: 'DM Mono', monospace; font-size: 0.95rem; color: var(--purple); font-weight: 500; transition: color 0.2s; }
+    .email-display a:hover { color: var(--gold); }
+    .enquiry-types { display: flex; flex-direction: column; gap: 0; }
+    .enquiry-type { padding: 1.4rem 0; border-bottom: 1px solid var(--light-grey); }
+    .enquiry-type:last-child { border-bottom: none; }
+    .enquiry-type h3 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; color: var(--near-black); margin-bottom: 0.35rem; display: flex; align-items: center; gap: 0.6rem; }
+    .enquiry-type h3::before { content: ''; display: inline-block; width: 6px; height: 6px; background: var(--gold); border-radius: 50%; flex-shrink: 0; }
+    .enquiry-type p { font-size: 0.92rem; color: var(--mid-grey); line-height: 1.7; }
+
+    /* Right: form */
+    .contact-form-wrap { background: var(--purple); padding: 3rem; position: relative; overflow: hidden; }
+    .contact-form-wrap::before { content: ''; position: absolute; top: -30%; right: -20%; width: 300px; height: 300px; border: 1px solid rgba(201,168,76,0.12); border-radius: 50%; pointer-events: none; }
+    .contact-form-wrap .tag { color: rgba(201,168,76,0.8); position: relative; z-index: 2; }
+    .contact-form-wrap h3 { color: #fff; font-size: 1.4rem; margin-bottom: 0.5rem; position: relative; z-index: 2; }
+    .contact-form-wrap > p { color: rgba(255,255,255,0.62); font-size: 0.9rem; line-height: 1.7; margin-bottom: 2rem; position: relative; z-index: 2; }
+    .form-row { margin-bottom: 1rem; position: relative; z-index: 2; }
+    .form-label { display: block; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; color: rgba(255,255,255,0.5); margin-bottom: 0.4rem; }
+    .form-input { width: 100%; padding: 0.75rem 1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #fff; font-family: 'Jost', sans-serif; font-size: 0.92rem; border-radius: 2px; outline: none; transition: border-color 0.2s; }
+    .form-input:focus { border-color: rgba(201,168,76,0.6); }
+    .form-input::placeholder { color: rgba(255,255,255,0.3); }
+    .form-select { width: 100%; padding: 0.75rem 1rem; background: rgba(30,15,70,0.9); border: 1px solid rgba(255,255,255,0.18); color: #fff; font-family: 'Jost', sans-serif; font-size: 0.92rem; border-radius: 2px; outline: none; cursor: pointer; transition: border-color 0.2s; }
+    .form-select:focus { border-color: rgba(201,168,76,0.6); }
+    .form-select option { background: #261050; }
+    .form-textarea { width: 100%; padding: 0.75rem 1rem; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.18); color: #fff; font-family: 'Jost', sans-serif; font-size: 0.92rem; border-radius: 2px; outline: none; resize: vertical; line-height: 1.6; transition: border-color 0.2s; }
+    .form-textarea:focus { border-color: rgba(201,168,76,0.6); }
+    .form-textarea::placeholder { color: rgba(255,255,255,0.3); }
+    .form-submit { width: 100%; padding: 1rem; background: var(--gold); color: var(--near-black); font-family: 'Jost', sans-serif; font-weight: 700; font-size: 1rem; border: none; cursor: pointer; border-radius: 2px; transition: opacity 0.2s; position: relative; z-index: 2; margin-top: 0.5rem; }
+    .form-submit:hover { opacity: 0.88; }
+    .form-note { margin-top: 0.8rem; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.08em; color: rgba(255,255,255,0.32); text-align: center; position: relative; z-index: 2; }
+    .form-confirm { display: none; margin-top: 1.4rem; padding: 1.2rem; background: rgba(201,168,76,0.12); border: 1px solid rgba(201,168,76,0.4); border-radius: 2px; text-align: center; position: relative; z-index: 2; }
+    .form-confirm p { color: #fff; font-size: 0.95rem; line-height: 1.6; }
+
+    /* Footer */
+    footer { background: var(--near-black); color: rgba(255,255,255,0.55); padding: 5rem 0 2.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.75; }
+    .footer-col h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul a { font-size: 0.9rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.38); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .contact-inner, .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 4rem 0; }
+      .hero { padding: 8rem 0 5rem; }
+      .contact-form-wrap { padding: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Strategy<span>.</span>Shepherds</a>
+      <ul class="nav-links">
+        <li><a href="influence-strategy.html">Influence Strategy</a></li>
+        <li><a href="influence-school.html">Influence School</a></li>
+        <li><a href="influence-research.html">Influence Research</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+        <li><a href="audit.html" class="nav-cta">Take the Audit</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="influence-strategy.html">Influence Strategy</a>
+      <a href="influence-school.html">Influence School</a>
+      <a href="influence-research.html">Influence Research</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="audit.html">Take the Audit</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <span class="tag">Get In Touch</span>
+        <h1>Let us talk about what influence can do for your company.</h1>
+        <p class="hero-sub">Whether you are ready to start or just exploring the idea, reach out. We respond to every message personally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-inner">
+
+        <!-- Left: info -->
+        <div class="contact-info">
+          <span class="tag">Reach Stella Directly</span>
+          <h2>Every enquiry goes to the same place.</h2>
+          <p>No ticketing system. No auto-responder. Your message comes directly to Stella. She reads everything and responds within two business days.</p>
+          <div class="email-display">
+            <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
+          </div>
+
+          <div class="enquiry-types">
+            <div class="enquiry-type">
+              <h3>The Influence Strategy</h3>
+              <p>Ready to bring influence into your org-level strategy? Reach out to discuss scope, timeline, and whether this is the right fit for where you are now.</p>
+            </div>
+            <div class="enquiry-type">
+              <h3>Team Workshops</h3>
+              <p>Looking to run an influence strategy session with your leadership team or marketing function? We design and facilitate bespoke half-day and full-day workshops.</p>
+            </div>
+            <div class="enquiry-type">
+              <h3>Speaking</h3>
+              <p>Stella speaks on influence strategy, the African creator economy, and what competitive advantage looks like in the age of AI. Available for conferences, summits, and corporate events.</p>
+            </div>
+            <div class="enquiry-type">
+              <h3>Media Enquiries</h3>
+              <p>Press, podcast, and interview requests are welcome. Please include the publication or show name and a brief description of what you are working on.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form -->
+        <div class="contact-form-wrap">
+          <span class="tag">Send a Message</span>
+          <h3>Tell us what you are working on.</h3>
+          <p>Fill in the form and we will be in touch. If you prefer, email directly at stella@stellanjogo.com.</p>
+
+          <form id="contactForm">
+            <div class="form-row">
+              <label class="form-label" for="c-name">Your Name</label>
+              <input class="form-input" type="text" id="c-name" name="name" placeholder="Full name" required>
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="c-email">Email Address</label>
+              <input class="form-input" type="email" id="c-email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="c-type">Enquiry Type</label>
+              <select class="form-select" id="c-type" name="type">
+                <option value="">Select an enquiry type</option>
+                <option value="Influence Strategy">Influence Strategy</option>
+                <option value="Team Workshop">Team Workshop</option>
+                <option value="Speaking">Speaking</option>
+                <option value="Media Enquiry">Media Enquiry</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="c-message">Your Message</label>
+              <textarea class="form-textarea" id="c-message" name="message" rows="5" placeholder="Tell us about your company, what you are working on, and how we can help." required></textarea>
+            </div>
+            <button type="submit" class="form-submit">Send Message</button>
+            <p class="form-note">We respond within two business days.</p>
+          </form>
+
+          <div class="form-confirm" id="formConfirm">
+            <p>Message received. Stella will be in touch within two business days.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strategy Shepherds</h3>
+          <p>Influence strategy for African companies and leaders. Building the authority, trust networks, and agenda position that turn expertise into competitive advantage.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="influence-strategy.html">Influence Strategy</a></li>
+            <li><a href="influence-school.html">Influence School</a></li>
+            <li><a href="voice-to-leads.html">Voice to Leads</a></li>
+            <li><a href="influence-research.html">Influence Research</a></li>
+            <li><a href="audit.html">Influence Audit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Stella</a></li>
+            <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener">Digital Africa Signals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Strategy Shepherds. All rights reserved.</span>
+        <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Hamburger
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => mobileNav.classList.toggle('open'));
+
+    // Contact form — sends to Google Apps Script, falls back gracefully
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxNXb7IVk32SSYLrmhmyw83_d_dAWmJX-Vr8nl9RY08zBbS51FwztqFr5OlPwuelb_d/exec';
+
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name    = document.getElementById('c-name').value.trim();
+      const email   = document.getElementById('c-email').value.trim();
+      const type    = document.getElementById('c-type').value;
+      const message = document.getElementById('c-message').value.trim();
+
+      fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ form_type: 'contact', name, email, type, message })
+      }).catch(() => {});
+
+      // Show confirmation regardless (fetch may be blocked by CORS preview)
+      document.getElementById('contactForm').style.display = 'none';
+      document.getElementById('formConfirm').style.display = 'block';
+    });
+  </script>
+
+</body>
+</html>

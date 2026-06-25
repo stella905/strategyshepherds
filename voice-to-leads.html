@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voice to Leads Sprint — Strategy Shepherds</title>
+  <meta name="description" content="Clarify your voice. Attract the right people. Turn attention into leads. A four-week sprint for founders, consultants and SMEs.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple:      #361965;
+      --purple-deep: #261050;
+      --gold:        #C9A84C;
+      --off-white:   #FAF8F4;
+      --near-black:  #0D0D0D;
+      --mid-grey:    #6B6B6B;
+      --light-grey:  #E8E4DD;
+      --hero-grad:   linear-gradient(135deg, #261050 0%, #361965 60%, #C9A84C 100%);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--off-white); color: var(--near-black); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+    h2 { font-size: clamp(1.6rem, 3vw, 2.4rem); }
+    h3 { font-size: clamp(1.1rem, 2vw, 1.35rem); }
+    p  { font-size: 1.05rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 6rem 0; }
+    .tag { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--near-black); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.9rem 2.2rem; border-radius: 3px; transition: opacity 0.2s, transform 0.15s; }
+    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-outline { display: inline-block; background: transparent; color: #fff; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.85rem 2.2rem; border-radius: 3px; border: 1.5px solid rgba(255,255,255,0.45); transition: border-color 0.2s; }
+    .btn-outline:hover { border-color: #fff; }
+    .btn-outline-dark { display: inline-block; background: transparent; color: var(--purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.85rem 2.2rem; border-radius: 3px; border: 1.5px solid var(--purple); transition: background 0.2s, color 0.2s; }
+    .btn-outline-dark:hover { background: var(--purple); color: #fff; }
+
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,248,244,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-grey); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--purple); }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a { font-size: 0.87rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .nav-links a.active { font-weight: 600; }
+    .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 600 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--near-black); border-radius: 2px; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--off-white); border-bottom: 1px solid var(--light-grey); }
+    .mobile-nav a { display: block; padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid var(--light-grey); color: var(--near-black); }
+    .mobile-nav.open { display: flex; }
+
+    /* HERO */
+    .hero { background: var(--hero-grad); padding: 10rem 0 6rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -15%; right: -10%; width: 500px; height: 500px; border: 1px solid rgba(201,168,76,0.15); border-radius: 50%; }
+    .hero::after { content: ''; position: absolute; bottom: -25%; right: 5%; width: 320px; height: 320px; border: 1px solid rgba(201,168,76,0.08); border-radius: 50%; }
+    .hero-inner { position: relative; z-index: 2; max-width: 680px; }
+    .hero .tag { color: rgba(201,168,76,0.85); }
+    .hero h1 { color: #fff; margin-bottom: 1.2rem; }
+    .hero-sub { font-size: 1.1rem; color: rgba(255,255,255,0.75); margin-bottom: 2.5rem; font-weight: 300; line-height: 1.8; }
+    .hero-ctas { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+
+    /* PROBLEM */
+    .problem { background: #fff; }
+    .problem-inner { max-width: 720px; }
+    .problem-inner h2 { margin-bottom: 1.5rem; }
+    .problem-inner p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 1.2rem; }
+    .problem-inner p:last-child { margin-bottom: 0; }
+
+    /* WHO IT IS FOR */
+    .for-who { background: var(--off-white); }
+    .for-who-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .for-who-left h2 { margin-bottom: 1.2rem; }
+    .for-who-left p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 1.5rem; }
+    .for-list { list-style: none; }
+    .for-list li { padding: 0.8rem 0; border-bottom: 1px solid var(--light-grey); font-size: 0.97rem; color: var(--near-black); display: flex; align-items: flex-start; gap: 0.8rem; }
+    .for-list li:last-child { border-bottom: none; }
+    .for-list li::before { content: ''; width: 5px; height: 5px; background: var(--gold); border-radius: 50%; margin-top: 0.6rem; flex-shrink: 0; }
+    .not-for-box { background: #fff; padding: 2rem; border-top: 3px solid var(--light-grey); }
+    .not-for-box h3 { font-size: 1rem; font-family: 'Jost', sans-serif; font-weight: 600; color: var(--near-black); margin-bottom: 1rem; }
+    .not-for-box ul { list-style: none; }
+    .not-for-box ul li { font-size: 0.92rem; color: var(--mid-grey); padding: 0.4rem 0; padding-left: 1.2rem; position: relative; }
+    .not-for-box ul li::before { content: 'x'; position: absolute; left: 0; color: var(--mid-grey); font-family: 'DM Mono', monospace; font-size: 0.7rem; top: 0.55rem; }
+
+    /* OUTCOMES */
+    .outcomes { background: var(--purple); padding: 6rem 0; }
+    .outcomes .tag { color: rgba(201,168,76,0.85); }
+    .outcomes h2 { color: #fff; margin-bottom: 3rem; max-width: 600px; }
+    .outcomes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .outcome-item { background: rgba(255,255,255,0.07); padding: 1.5rem 1.8rem; border-left: 3px solid var(--gold); }
+    .outcome-item p { font-size: 0.97rem; color: rgba(255,255,255,0.85); line-height: 1.65; }
+
+    /* THREE LEVELS CONDENSED */
+    .levels-context { background: var(--off-white); }
+    .levels-context-inner { max-width: 720px; }
+    .levels-context-inner h2 { margin-bottom: 1.2rem; }
+    .levels-context-inner > p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 2.5rem; }
+    .mini-levels { display: grid; gap: 1rem; }
+    .mini-level { display: grid; grid-template-columns: 80px 1fr; gap: 1.5rem; padding: 1.5rem; background: #fff; border-left: 3px solid var(--light-grey); }
+    .mini-level.active-level { border-left-color: var(--gold); }
+    .mini-level-num { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.1em; color: var(--mid-grey); padding-top: 0.2rem; }
+    .mini-level-body h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1rem; color: var(--purple); margin-bottom: 0.3rem; }
+    .mini-level-body p { font-size: 0.93rem; color: var(--mid-grey); line-height: 1.65; }
+
+    /* WHY LEVEL 1 */
+    .why-level1 { background: #fff; }
+    .why-level1-inner { max-width: 720px; }
+    .why-level1-inner h2 { margin-bottom: 1.5rem; }
+    .why-level1-inner p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 1.2rem; }
+    .why-level1-inner p:last-child { margin-bottom: 0; color: var(--near-black); font-weight: 500; }
+
+    /* HOW IT WORKS */
+    .how-it-works { background: var(--off-white); }
+    .how-header { max-width: 680px; margin-bottom: 4rem; }
+    .how-header h2 { margin-bottom: 1rem; }
+    .how-meta { display: flex; gap: 3rem; flex-wrap: wrap; margin-top: 1.5rem; }
+    .how-meta-item { display: flex; flex-direction: column; gap: 0.2rem; }
+    .how-meta-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; color: var(--gold); }
+    .how-meta-value { font-weight: 600; font-size: 1rem; color: var(--near-black); }
+    .week-list { display: grid; gap: 0; }
+    .week-item { display: flex; gap: 2rem; padding: 2rem 0; border-bottom: 1px solid var(--light-grey); align-items: flex-start; }
+    .week-item:last-child { border-bottom: none; }
+    .week-label { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.12em; color: var(--gold); white-space: nowrap; padding-top: 0.3rem; min-width: 52px; }
+    .week-content h3 { font-size: 1rem; font-family: 'Jost', sans-serif; font-weight: 600; color: var(--purple); margin-bottom: 0.4rem; }
+    .week-content p { color: var(--mid-grey); font-size: 0.93rem; line-height: 1.7; }
+
+    /* QUIZ CTA */
+    .quiz-cta { background: var(--purple); padding: 6rem 0; }
+    .quiz-cta-inner { max-width: 640px; text-align: center; margin: 0 auto; }
+    .quiz-cta .tag { color: rgba(201,168,76,0.85); }
+    .quiz-cta h2 { color: #fff; margin-bottom: 1.2rem; }
+    .quiz-cta p { color: rgba(255,255,255,0.75); line-height: 1.85; margin-bottom: 2.5rem; }
+    .quiz-cta-btns { display: flex; gap: 1.2rem; flex-wrap: wrap; justify-content: center; }
+
+    /* FAQ */
+    .faq { background: var(--off-white); }
+    .faq-header { max-width: 680px; margin-bottom: 3rem; }
+    .faq-header h2 { margin-bottom: 0.5rem; }
+    .faq-list { max-width: 720px; }
+    .faq-item { border-bottom: 1px solid var(--light-grey); padding: 1.8rem 0; }
+    .faq-item:first-child { border-top: 1px solid var(--light-grey); }
+    .faq-q { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 1rem; color: var(--near-black); margin-bottom: 0.7rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+    .faq-q span { font-family: 'DM Mono', monospace; font-size: 1rem; color: var(--gold); flex-shrink: 0; }
+    .faq-a { font-size: 0.97rem; color: var(--mid-grey); line-height: 1.8; display: none; }
+    .faq-item.open .faq-a { display: block; }
+
+    /* PRICE BAND */
+    .price-band { background: var(--off-white); padding: 0 0 6rem; }
+    .price-band-inner { background: #fff; border-top: 4px solid var(--gold); padding: 3rem; display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: center; max-width: 800px; }
+    .price-display { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; color: var(--purple); line-height: 1; }
+    .price-display span { display: block; font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; color: var(--mid-grey); font-weight: 400; margin-top: 0.5rem; }
+    .price-right p { color: var(--mid-grey); font-size: 0.97rem; line-height: 1.75; margin-bottom: 1.5rem; }
+    .price-right-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    footer { background: var(--near-black); color: rgba(255,255,255,0.55); padding: 5rem 0 2.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.75; }
+    .footer-col h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul a { font-size: 0.9rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.38); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .for-who-inner, .outcomes-grid, .price-band-inner, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 4rem 0; }
+      .hero { padding: 8rem 0 5rem; }
+      .hero-ctas, .quiz-cta-btns, .price-right-ctas { flex-direction: column; }
+      .mini-level { grid-template-columns: 1fr; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Strategy<span>.</span>Shepherds</a>
+      <ul class="nav-links">
+        <li><a href="influence-strategy.html">Influence Strategy</a></li>
+        <li><a href="influence-school.html" class="active">Influence School</a></li>
+        <li><a href="influence-research.html">Influence Research</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="audit.html" class="nav-cta">Take the Audit</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="influence-strategy.html">Influence Strategy</a>
+      <a href="influence-school.html">Influence School</a>
+      <a href="influence-research.html">Influence Research</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="audit.html">Take the Audit</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+        <span class="tag">Voice to Leads Sprint · Strategy Shepherds · Level 1</span>
+        <h1>Clarify your voice. Attract the right people. Turn attention into leads.</h1>
+        <p class="hero-sub">Most founders and SMEs are already online, but their online presence is not consistently bringing in the right leads. Voice to Leads helps you sharpen your positioning, clarify your message and build a simple lead pathway so your visibility starts doing real business work.</p>
+        <div class="hero-ctas">
+          <a href="voice-to-leads-score.html" class="btn-gold">Take the Voice to Leads Score</a>
+          <a href="#apply" class="btn-outline">Join the Next Sprint</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="problem">
+    <div class="container">
+      <div class="problem-inner">
+        <span class="tag">Why This Matters</span>
+        <h2>The problem is usually not effort. It is clarity.</h2>
+        <p>Most founders, consultants and SMEs are already online. They have a website. They post sometimes. They promote their services. They know visibility matters.</p>
+        <p>But their online presence is not consistently bringing in the right leads.</p>
+        <p>People do not quickly understand what you do, who you help, why it matters, what makes you different, or what they should do next. That gap between being visible and being understood is a Level 1 influence problem.</p>
+        <p>Before you build a community, run creator partnerships or try to become a recognised industry voice, your business needs a clear voice that attracts the right people and moves them towards a conversation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO IT IS FOR -->
+  <section class="for-who">
+    <div class="container">
+      <div class="for-who-inner">
+        <div class="for-who-left">
+          <span class="tag">Is This For You</span>
+          <h2>Built for founders, consultants and expert-led businesses.</h2>
+          <ul class="for-list">
+            <li>Founders building or repositioning their consultancy</li>
+            <li>SMEs who are already online but not getting enough qualified leads</li>
+            <li>Consultants and knowledge workers whose expertise is not translating into enquiries</li>
+            <li>Expert-led businesses where the owner is the main marketing channel</li>
+            <li>Small professional-services firms who need their online presence to work harder</li>
+            <li>Business owners who post regularly but are not sure it is leading anywhere commercial</li>
+          </ul>
+        </div>
+        <div>
+          <div class="not-for-box">
+            <h3>This is not for everyone.</h3>
+            <ul>
+              <li>People looking for viral content hacks</li>
+              <li>People who only want social media tips</li>
+              <li>People without a clear offer or business</li>
+              <li>People looking for a full rebrand</li>
+              <li>People who want to become influencers for its own sake</li>
+            </ul>
+            <p style="margin-top:1.2rem; font-size:0.93rem; color:var(--mid-grey); line-height:1.75;">The sprint is about making expertise clearer, more trusted and more commercially useful. If that is not the problem you are solving right now, the programme will not serve you well.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOMES -->
+  <section class="outcomes">
+    <div class="container">
+      <span class="tag">Sprint Outcomes</span>
+      <h2>By the end of the sprint, you will have built:</h2>
+      <div class="outcomes-grid">
+        <div class="outcome-item"><p>A clear positioning statement your audience immediately understands</p></div>
+        <div class="outcome-item"><p>A sharper definition of your best-fit buyer</p></div>
+        <div class="outcome-item"><p>A message system for website, social media, email, DMs and sales conversations</p></div>
+        <div class="outcome-item"><p>Three to five content pillars you can sustain without burning out</p></div>
+        <div class="outcome-item"><p>A simple lead magnet, enquiry trigger or call-to-action that works for your business</p></div>
+        <div class="outcome-item"><p>A pathway from content to conversation: DM, WhatsApp, email, form or consultation</p></div>
+        <div class="outcome-item"><p>Basic lead qualification and follow-up logic so you stop losing warm leads</p></div>
+        <div class="outcome-item"><p>A 30-day implementation plan ready to run the week after the sprint ends</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE LEVELS CONDENSED -->
+  <section class="levels-context">
+    <div class="container">
+      <div class="levels-context-inner">
+        <span class="tag">Where This Fits</span>
+        <h2>Voice to Leads is Level 1 of three.</h2>
+        <p>Influence is built in layers. Voice to Leads is the first layer: the Authority System. It is where your positioning gets clear and your business becomes legible to the right people. Levels 2 and 3 build on this foundation. You cannot shortcut the sequence.</p>
+        <div class="mini-levels">
+          <div class="mini-level active-level">
+            <p class="mini-level-num">Level 1<br>Open now</p>
+            <div class="mini-level-body">
+              <h4>Voice to Leads</h4>
+              <p>Clear positioning, clear message, clear lead pathway. This is what we are building now.</p>
+            </div>
+          </div>
+          <div class="mini-level">
+            <p class="mini-level-num">Level 2<br>Coming next</p>
+            <div class="mini-level-body">
+              <h4>Community Trust</h4>
+              <p>Strategic relationships, partnerships, creator collaborations and built-in advocates.</p>
+            </div>
+          </div>
+          <div class="mini-level">
+            <p class="mini-level-num">Level 3<br>Advanced</p>
+            <div class="mini-level-body">
+              <h4>Category Shaper</h4>
+              <p>Driving sector narratives and becoming the reference point your market measures itself against.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY LEVEL 1 FIRST -->
+  <section class="why-level1">
+    <div class="container">
+      <div class="why-level1-inner">
+        <span class="tag">The Foundation</span>
+        <h2>Clarity first. Everything else comes after.</h2>
+        <p>A strong community amplifies a clear message. It amplifies a confusing one too, just in the wrong direction.</p>
+        <p>Expensive brand campaigns do not fix unclear positioning. Thought leadership does not work when people are not sure what you actually do. Creator partnerships and collaborations lose their value when the audience lands on a presence that does not convert.</p>
+        <p>Level 1 is not the boring prerequisite. It is the load-bearing wall. Voice to Leads builds it properly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-it-works">
+    <div class="container">
+      <div class="how-header">
+        <span class="tag">The Sprint Format</span>
+        <h2>Four weeks. One complete lead pathway.</h2>
+        <div class="how-meta">
+          <div class="how-meta-item">
+            <span class="how-meta-label">Investment</span>
+            <span class="how-meta-value">USD 275</span>
+          </div>
+          <div class="how-meta-item">
+            <span class="how-meta-label">Format</span>
+            <span class="how-meta-value">Live cohort, small group</span>
+          </div>
+          <div class="how-meta-item">
+            <span class="how-meta-label">Application</span>
+            <span class="how-meta-value">By application</span>
+          </div>
+        </div>
+      </div>
+      <div class="week-list">
+        <div class="week-item">
+          <span class="week-label">Week 1</span>
+          <div class="week-content">
+            <h3>Voice Audit and Positioning</h3>
+            <p>Where do you stand? What does your current presence actually communicate? Who is it attracting? Week one audits your positioning clearly and identifies the gaps.</p>
+          </div>
+        </div>
+        <div class="week-item">
+          <span class="week-label">Week 2</span>
+          <div class="week-content">
+            <h3>Message Architecture</h3>
+            <p>Your position becomes a structured message system. Homepage copy direction, social bio, elevator pitch, content angles, DM opening lines. A message that works across every channel.</p>
+          </div>
+        </div>
+        <div class="week-item">
+          <span class="week-label">Week 3</span>
+          <div class="week-content">
+            <h3>Lead Pathway Build</h3>
+            <p>Your CTA, lead magnet or enquiry trigger. The journey from content to conversation. How to qualify interest before you get on a call. The follow-up logic that catches people before they fall through the gap.</p>
+          </div>
+        </div>
+        <div class="week-item">
+          <span class="week-label">Week 4</span>
+          <div class="week-content">
+            <h3>30-Day Implementation Plan</h3>
+            <p>Your content pillars. Your channel priorities. Your publishing rhythm. Your 30-day runway ready to execute the week after the sprint ends.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICE BAND + APPLY -->
+  <section class="price-band" id="apply">
+    <div class="container">
+      <div class="price-band-inner">
+        <div>
+          <div class="price-display">$275<span>USD · Four weeks · Live with Stella</span></div>
+        </div>
+        <div class="price-right">
+          <p>Accepted by application. We review each application personally to make sure the sprint will genuinely deliver the result you are after. You will hear back within 5 business days.</p>
+          <div class="price-right-ctas">
+            <a href="voice-to-leads-score.html" class="btn-gold">Take the Voice to Leads Score first</a>
+            <a href="contact.html" class="btn-outline-dark">Apply for the Next Sprint</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUIZ CTA -->
+  <section class="quiz-cta">
+    <div class="container">
+      <div class="quiz-cta-inner">
+        <span class="tag">Start Here</span>
+        <h2>Not sure where your voice currently stands?</h2>
+        <p>Take the Voice to Leads Score. It diagnoses exactly where your online presence is strong, where it is leaking leads, and what to fix first. Takes five minutes. Results are immediate.</p>
+        <div class="quiz-cta-btns">
+          <a href="voice-to-leads-score.html" class="btn-gold">Take the Voice to Leads Score</a>
+          <a href="contact.html" class="btn-outline">Apply for the Next Sprint</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container">
+      <div class="faq-header">
+        <span class="tag">Common Questions</span>
+        <h2>Questions</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-q" onclick="toggleFaq(this)">Is this for businesses at any stage? <span>+</span></div>
+          <div class="faq-a">Voice to Leads works best for founders and businesses that already have an offer, some clients or experience, and an online presence that is not working as hard as it should be. If you are still figuring out what your business is, it is too early for the sprint.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">How is this different from a branding or marketing course? <span>+</span></div>
+          <div class="faq-a">Voice to Leads is not a general marketing education. It is a structured sprint with a specific outcome: a clear message and a working lead pathway. You leave with deliverables, not just frameworks.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Is there an application process? <span>+</span></div>
+          <div class="faq-a">Yes. We review every application to make sure the sprint will genuinely serve you. You will hear back within 5 business days.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Can I join if I am not in Africa? <span>+</span></div>
+          <div class="faq-a">Yes. The sprint is open to founders, SMEs and consultants globally. Strategy Shepherds has particular depth in African markets and emerging market contexts, but the Voice to Leads system applies wherever you operate.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">What is the investment? <span>+</span></div>
+          <div class="faq-a">The Voice to Leads Sprint is USD 275. Payment details are confirmed once your application is accepted.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strategy Shepherds</h3>
+          <p>Influence strategy for African companies and leaders. Building the authority, trust networks, and agenda position that turn expertise into competitive advantage.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="influence-strategy.html">Influence Strategy</a></li>
+            <li><a href="influence-school.html">Influence School</a></li>
+            <li><a href="voice-to-leads.html">Voice to Leads</a></li>
+            <li><a href="influence-research.html">Influence Research</a></li>
+            <li><a href="audit.html">Influence Audit</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Stella</a></li>
+            <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener">Digital Africa Signals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&#169; 2026 Strategy Shepherds. All rights reserved.</span>
+        <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('hamburger').addEventListener('click', function() {
+      document.getElementById('mobile-nav').classList.toggle('open');
+    });
+    function toggleFaq(el) {
+      const item = el.parentElement;
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
+</body>
+</html>
