@@ -88,6 +88,18 @@
     .level-outcome { font-size: 0.97rem; color: var(--near-black); font-weight: 500; margin-bottom: 1rem; line-height: 1.5; }
     .level-copy { font-size: 0.93rem; color: var(--mid-grey); line-height: 1.75; margin-bottom: 1.5rem; }
 
+    /* YouTube section */
+    .yt-section { background: var(--off-white); }
+    .yt-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+    .yt-text h2 { margin-bottom: 1rem; }
+    .yt-text p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 1.2rem; }
+    .yt-visual { aspect-ratio: 16/9; background: linear-gradient(135deg, #261050 0%, #361965 70%, #C9A84C 100%); border-radius: 3px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-decoration: none; transition: opacity 0.2s; position: relative; overflow: hidden; }
+    .yt-visual:hover { opacity: 0.9; }
+    .yt-play-btn { width: 72px; height: 72px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 1.2rem; flex-shrink: 0; }
+    .yt-play-btn::after { content: ''; border-left: 26px solid var(--near-black); border-top: 15px solid transparent; border-bottom: 15px solid transparent; margin-left: 6px; }
+    .yt-channel-label { font-family: 'Jost', sans-serif; font-size: 0.85rem; font-weight: 600; color: rgba(255,255,255,0.8); letter-spacing: 0.05em; }
+    @media (max-width: 900px) { .yt-inner { grid-template-columns: 1fr; gap: 2.5rem; } }
+
     .offer-band { background: var(--purple); padding: 5rem 0; }
     .offer-band-inner { max-width: 720px; }
     .offer-band .tag { color: rgba(201,168,76,0.85); }
@@ -177,7 +189,7 @@
           <p class="level-method">Public method: Find Your Voice &nbsp;&middot;&nbsp; Strategic layer: Authority System</p>
           <p class="level-outcome">Your business becomes easier to understand, easier to trust and easier to buy from.</p>
           <p class="level-copy">Most founders and SMEs are already visible online. Their website exists. They post occasionally. They promote their services. But their online presence is not consistently bringing in the right enquiries. The problem is clarity, not effort. People do not quickly understand what you do, who you help, why it matters, or what they should do next. Voice to Leads fixes that. It is the starting point for every business that wants its expertise to work harder online.</p>
-          <a href="voice-to-leads.html" class="btn-gold" style="font-size:0.88rem; padding:0.75rem 1.6rem;">Learn more about the Voice to Leads Sprint</a>
+          <a href="https://forms.gle/wDiiXupo5uVUPy3w6" target="_blank" rel="noopener noreferrer" class="btn-gold" style="font-size:0.88rem; padding:0.75rem 1.6rem;">Join Level 1</a>
         </div>
 
         <div class="level-card">
@@ -186,8 +198,8 @@
           <h3>Community Trust</h3>
           <p class="level-method">Public method: Gather Your People &nbsp;&middot;&nbsp; Strategic layer: Trust Network</p>
           <p class="level-outcome">You build deeper trust, stronger relationships, partnerships and community advantage.</p>
-          <p class="level-copy">Once your voice is clear and your lead pathway is working, the next layer is community. Strategic relationships, creator collaborations, built-in advocates and a network that carries your message into rooms you cannot enter alone. This level is not yet open. Join the waitlist to hear first when it does.</p>
-          <a href="contact.html" class="btn-outline-dark" style="font-size:0.88rem; padding:0.75rem 1.6rem;">Join the Level 2 Waitlist</a>
+          <p class="level-copy">Once your voice is clear and your lead pathway is working, the next layer is community. Strategic relationships, creator collaborations, built-in advocates and a network that carries your message into rooms you cannot enter alone. This level is not yet open.</p>
+          <p style="font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; color:var(--mid-grey); margin-top:0.5rem;">Open to Level 1 graduates only.</p>
         </div>
 
         <div class="level-card">
@@ -197,9 +209,31 @@
           <p class="level-method">Public method: Enter and Shape the Conversation &nbsp;&middot;&nbsp; Strategic layer: Agenda Position</p>
           <p class="level-outcome">You become known for shaping the conversations that define how your market thinks, buys and decides.</p>
           <p class="level-copy">The most powerful form of influence is not just being heard. It is being the one who sets the terms of the conversation. Category Shapers drive sector narratives, shape policy conversations and become the reference point their industry measures itself against. This is the advanced level. Details will be shared when Level 2 is open.</p>
-          <p style="font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; color:var(--mid-grey);">Details will be announced when Level 2 opens.</p>
+          <p style="font-family:'DM Mono',monospace; font-size:0.7rem; letter-spacing:0.1em; color:var(--mid-grey);">Unlocked after completing Level 1.</p>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- YOUTUBE SECTION -->
+  <section class="yt-section" aria-labelledby="yt-heading">
+    <div class="container">
+      <div class="yt-inner">
+        <div class="yt-text">
+          <span class="tag">The Shepherds Influence School</span>
+          <h2 id="yt-heading">The open classroom. Free. Every week.</h2>
+          <p>The YouTube channel is the living, breathing version of the Influence School. It is where we explore influence, authority, digital Africa, strategic communications, thought leadership, and the skills African experts need to build visible, trusted work in the internet era.</p>
+          <p>Use the channel as your open classroom. Watch the ideas, study the frameworks, and when you are ready to build your own influence system, start with Level 1.</p>
+          <a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener noreferrer" class="btn-gold" style="margin-top:0.5rem;">Watch The YouTube Channel</a>
+        </div>
+        <div>
+          <a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener noreferrer" class="yt-visual" aria-label="Watch Stella Njogo on YouTube">
+            <div class="yt-play-btn" aria-hidden="true"></div>
+            <span class="yt-channel-label">@stellanjogo</span>
+          </a>
+          <p style="font-family:'DM Mono',monospace; font-size:0.68rem; letter-spacing:0.1em; color:var(--mid-grey); margin-top:1rem; text-align:center;">New videos every Tuesday and Friday</p>
+        </div>
       </div>
     </div>
   </section>
