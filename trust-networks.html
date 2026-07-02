@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trust Networks | Build Level 2 Influence | Strategy Shepherds</title>
+  <meta name="description" content="Trust networks are the offline and online relationships that carry your influence into rooms you cannot enter alone. Learn how to build a competitive moat through community, creators, and social trust.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://strategyshepherds.com/trust-networks.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://strategyshepherds.com/trust-networks.html">
+  <meta property="og:title" content="Trust Networks | Strategy Shepherds">
+  <meta property="og:description" content="Influence travels through people. Build the relationships, communities, and creator networks that turn your authority into a competitive moat.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple:      #361965;
+      --purple-deep: #261050;
+      --gold:        #C9A84C;
+      --off-white:   #FAF8F4;
+      --near-black:  #0D0D0D;
+      --mid-grey:    #6B6B6B;
+      --light-grey:  #E8E4DD;
+      --hero-grad:   linear-gradient(135deg, #261050 0%, #361965 60%, #C9A84C 100%);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--off-white); color: var(--near-black); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+    h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); }
+    p  { font-size: 1.05rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 6rem 0; }
+    .tag { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--near-black); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.9rem 2.2rem; border-radius: 3px; transition: opacity 0.2s, transform 0.15s; }
+    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-outline { display: inline-block; border: 1.5px solid var(--purple); color: var(--purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; }
+    .btn-outline:hover { background: var(--purple); color: #fff; }
+    .btn-outline-white { display: inline-block; border: 1.5px solid rgba(255,255,255,0.5); color: #fff; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: border-color 0.2s, background 0.2s; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* Nav */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,248,244,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-grey); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--purple); }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a { font-size: 0.87rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .nav-links a.active { font-weight: 600; }
+    .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 600 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--near-black); border-radius: 2px; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--off-white); border-bottom: 1px solid var(--light-grey); }
+    .mobile-nav a { display: block; padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid var(--light-grey); color: var(--near-black); }
+    .mobile-nav.open { display: flex; }
+
+    /* Hero */
+    .hero { background: var(--hero-grad); padding: 9rem 0 6rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -10%; right: -8%; width: 550px; height: 550px; border: 1px solid rgba(201,168,76,0.12); border-radius: 50%; pointer-events: none; }
+    .hero-inner { position: relative; z-index: 2; max-width: 720px; }
+    .hero .tag { color: rgba(201,168,76,0.85); }
+    .hero h1 { color: #fff; margin-bottom: 1.2rem; }
+    .hero-sub { font-size: 1.15rem; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; font-weight: 300; line-height: 1.8; }
+    .hero-body { font-size: 1.05rem; color: rgba(255,255,255,0.65); line-height: 1.85; margin-bottom: 2.5rem; max-width: 600px; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* Three levels brief */
+    .levels-brief { background: var(--purple-deep); }
+    .levels-brief .tag { color: rgba(201,168,76,0.85); }
+    .levels-brief h2 { color: #fff; margin-bottom: 0.8rem; }
+    .levels-brief .levels-intro-copy { color: rgba(255,255,255,0.68); line-height: 1.85; margin-bottom: 3.5rem; max-width: 640px; }
+    .levels-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .levels-row-item { border-top: 2px solid rgba(201,168,76,0.3); padding-top: 1.8rem; }
+    .level-indicator { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.14em; color: var(--gold); display: block; margin-bottom: 0.6rem; }
+    .levels-row-item h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.6rem; }
+    .levels-row-item p { color: rgba(255,255,255,0.58); font-size: 0.93rem; line-height: 1.75; margin-bottom: 1rem; }
+    .levels-row-item a.level-link { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+    .level-active-badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; background: rgba(201,168,76,0.2); color: var(--gold); padding: 0.25rem 0.65rem; border-radius: 2px; margin-bottom: 0.6rem; }
+
+    /* Why It Matters */
+    .why { background: #fff; }
+    .why-inner { max-width: 740px; }
+    .why-inner h2 { margin-bottom: 1.2rem; }
+    .why-inner p { color: var(--mid-grey); line-height: 1.9; margin-bottom: 1.2rem; }
+    .why-inner p strong { color: var(--near-black); }
+    .why-inner p.pull-quote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem; color: var(--purple); line-height: 1.6; border-left: 3px solid var(--gold); padding-left: 1.5rem; margin: 2rem 0; }
+
+    /* Three Ways */
+    .three-ways { background: var(--off-white); }
+    .three-ways-intro { max-width: 620px; margin-bottom: 3.5rem; }
+    .three-ways-intro h2 { margin-bottom: 0.8rem; }
+    .three-ways-intro p { color: var(--mid-grey); line-height: 1.8; }
+    .ways-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .way-card { border-top: 3px solid var(--gold); padding-top: 2rem; }
+    .way-num { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.14em; color: var(--gold); display: block; margin-bottom: 0.8rem; }
+    .way-card h3 { color: var(--purple); margin-bottom: 0.8rem; }
+    .way-card p { color: var(--mid-grey); font-size: 0.95rem; line-height: 1.8; }
+
+    /* Social Good Band */
+    .social-good { background: var(--purple); padding: 7rem 0; }
+    .social-good .tag { color: rgba(201,168,76,0.8); }
+    .social-good-inner { max-width: 720px; }
+    .social-good-inner h2 { color: #fff; margin-bottom: 1.2rem; }
+    .social-good-inner p { color: rgba(255,255,255,0.7); line-height: 1.9; margin-bottom: 1.2rem; }
+    .social-good-inner p strong { color: rgba(255,255,255,0.95); }
+
+    /* Creator Day Intro */
+    .creator-intro { background: #fff; }
+    .creator-intro-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .creator-intro-left h2 { margin-bottom: 1rem; }
+    .creator-intro-left p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 1.2rem; }
+    .creator-intro-right { background: var(--purple-deep); padding: 3rem 2.5rem; border-top: 3px solid var(--gold); }
+    .creator-intro-right .tag { color: rgba(201,168,76,0.85); }
+    .creator-intro-right h3 { color: #fff; font-size: 1.4rem; margin-bottom: 0.8rem; }
+    .creator-intro-right p { color: rgba(255,255,255,0.7); font-size: 0.97rem; line-height: 1.8; margin-bottom: 0.8rem; }
+    .creator-intro-right .price-tag { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.1em; color: rgba(255,255,255,0.5); margin-bottom: 1.8rem; display: block; }
+    .creator-includes { list-style: none; margin-bottom: 2rem; }
+    .creator-includes li { font-size: 0.93rem; color: rgba(255,255,255,0.65); padding: 0.5rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; gap: 0.8rem; align-items: baseline; }
+    .creator-includes li::before { content: '—'; color: var(--gold); font-family: 'DM Mono', monospace; font-size: 0.75rem; flex-shrink: 0; }
+
+    /* Footer */
+    footer { background: var(--near-black); color: rgba(255,255,255,0.55); padding: 5rem 0 2.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.75; }
+    .footer-col h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul a { font-size: 0.9rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.38); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .levels-row, .ways-grid, .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .creator-intro-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 4rem 0; }
+      .hero { padding: 7rem 0 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Strategy Shepherds home">Strategy<span>.</span>Shepherds</a>
+      <ul class="nav-links">
+        <li><a href="build-authority.html">Build Authority</a></li>
+        <li><a href="trust-networks.html" class="active">Trust Networks</a></li>
+        <li><a href="agenda-shaping.html">Agenda Shaping</a></li>
+        <li><a href="influence-school.html">Influence School</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="voice-to-leads-score.html" class="nav-cta">Take the Authority Quiz</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <a href="build-authority.html">Build Authority</a>
+      <a href="trust-networks.html">Trust Networks</a>
+      <a href="agenda-shaping.html">Agenda Shaping</a>
+      <a href="influence-school.html">Influence School</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="voice-to-leads-score.html">Take the Authority Quiz</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="hero-inner">
+        <span class="tag">Trust Networks · Level 02 of 03</span>
+        <h1>Trust Networks</h1>
+        <p class="hero-sub">Influence does not travel alone. It travels through people, communities, and relationships. This is where you build the network that carries your influence into rooms you cannot enter on your own.</p>
+        <p class="hero-body">Authority tells people you are worth listening to. Trust networks tell people that others — people they already respect — have been listening too. The second layer of influence is about building the local and global relationships, communities, and creator ecosystems that amplify your voice beyond your immediate reach.</p>
+        <nav class="hero-ctas" aria-label="Primary calls to action">
+          <a href="creator-day.html" class="btn-gold">Explore Creator Day</a>
+          <a href="#why-networks" class="btn-outline-white">Why Trust Networks Matter</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- THREE LEVELS BRIEF -->
+  <section class="levels-brief" aria-labelledby="levels-heading">
+    <div class="container">
+      <span class="tag">Where This Fits</span>
+      <h2 id="levels-heading">Influence is built in three layers.</h2>
+      <p class="levels-intro-copy">Trust Networks is Level 2. It is what you build after you have clarity on your authority — or in parallel, as the relationships you build carry your authority further than you can carry it alone.</p>
+      <div class="levels-row">
+        <div class="levels-row-item">
+          <span class="level-indicator">Level 01</span>
+          <h3>Build Your Authority</h3>
+          <p>Become discoverable, credible, and easy to buy from. The foundation every other level is built on.</p>
+          <a href="build-authority.html" class="level-link">Start here</a>
+        </div>
+        <div class="levels-row-item">
+          <span class="level-indicator">Level 02</span>
+          <span class="level-active-badge">You are here</span>
+          <h3>Build Your Trust Network</h3>
+          <p>Activate the creator economy and your community as an influence engine. Your network becomes a moat.</p>
+          <a href="#why-networks" class="level-link">Learn how</a>
+        </div>
+        <div class="levels-row-item">
+          <span class="level-indicator">Level 03</span>
+          <h3>Agenda Shaping</h3>
+          <p>Use your authority and network to contribute to the larger conversations that define your market.</p>
+          <a href="agenda-shaping.html" class="level-link">Explore Agenda Shaping</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY TRUST NETWORKS MATTER -->
+  <section class="why" id="why-networks" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="why-inner">
+        <span class="tag">Why It Matters</span>
+        <h2 id="why-heading">Your network is not just a community. It is a competitive moat.</h2>
+        <p>In a world where anyone can publish content, the organizations and individuals with strong trust networks have an advantage that cannot be copied overnight. When your ideas travel through real relationships — through people who vouch for you, communities that rally behind you, and creators who tell your story to their own audiences — your reach compounds in ways that paid advertising cannot replicate.</p>
+        <p class="pull-quote">Influence that travels through trust is ten times more durable than influence that is bought.</p>
+        <p>The African business environment is deeply relational. Deals are made in person. Reputations travel by word of mouth. Communities drive decision-making. Organizations that understand this and deliberately build trust networks have a structural advantage over those that rely on broadcast channels alone.</p>
+        <p>Building a trust network means showing up — offline and online — in the communities where your work matters. It means supporting the people and causes that align with your values, so that when they speak about you, they speak with genuine conviction. It means building relationships that are not transactional, so that when opportunity comes, your network moves with you.</p>
+        <p><strong>Trust networks are not built overnight. They are built through consistent presence, genuine contribution, and a commitment to showing up for others before asking them to show up for you.</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE WAYS TO BUILD YOUR TRUST NETWORK -->
+  <section class="three-ways" aria-labelledby="ways-heading">
+    <div class="container">
+      <div class="three-ways-intro">
+        <span class="tag">How To Build It</span>
+        <h2 id="ways-heading">Three places to build trust — and why each one matters.</h2>
+        <p>Trust networks are built across three connected arenas. The strongest networks operate in all three — but most organizations start with one and build from there.</p>
+      </div>
+      <div class="ways-grid">
+        <div class="way-card">
+          <span class="way-num">01 · Local and Offline</span>
+          <h3>The communities in your city and sector</h3>
+          <p>The most durable trust is built in person. Industry associations, sector events, community gatherings, professional networks, alumni groups — these are the arenas where reputation is built and deals are made. Show up consistently, contribute meaningfully, and your name becomes inseparable from the work you do.</p>
+        </div>
+        <div class="way-card">
+          <span class="way-num">02 · Online Communities</span>
+          <h3>The networks where your audience already gathers</h3>
+          <p>LinkedIn groups, sector forums, creator communities, WhatsApp networks, and interest-based platforms are where influence is shared at scale. Being a genuine contributor in these spaces — not a broadcaster — builds a different kind of trust than a follower count does. Your ideas travel because people choose to share them.</p>
+        </div>
+        <div class="way-card">
+          <span class="way-num">03 · The Creator Economy</span>
+          <h3>The people with audiences who trust them</h3>
+          <p>Content creators have built the kind of personal trust with their audiences that most brands spend years trying to achieve. When a creator discovers your business, your space, or your story and shares it authentically with their audience, that trust transfers. Creator Day is one of the most direct ways to activate this.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL GOOD AND TRUST -->
+  <section class="social-good" aria-labelledby="sg-heading">
+    <div class="container">
+      <div class="social-good-inner">
+        <span class="tag">Beyond Business</span>
+        <h2 id="sg-heading">The organizations people trust most are the ones that contribute to something larger than themselves.</h2>
+        <p>There is a direct line between social contribution and social trust. When a business invests in the communities it operates in — through sponsorship, mentorship, social enterprise, or environmental commitment — it earns a form of goodwill that no advertising campaign can manufacture.</p>
+        <p>In Africa, where the relationship between business and community is often more visible and more scrutinised than in other markets, this is especially true. <strong>The businesses that are trusted are the ones that are seen — not just as economic actors, but as contributors.</strong></p>
+        <p>This does not mean every business needs a CSR budget or a foundation. It means showing up for the causes, communities, and conversations that matter to the people you are trying to serve. It means being a business with a point of view about the world you want to build.</p>
+        <p>The organizations that build the strongest trust networks are the ones that understand their influence is not just about what they do for themselves — it is about what they make possible for others.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREATOR DAY INTRO -->
+  <section class="creator-intro" id="creator-day-intro" aria-labelledby="cd-heading">
+    <div class="container">
+      <div class="creator-intro-inner">
+        <div class="creator-intro-left">
+          <span class="tag">Start With Creator Day</span>
+          <h2 id="cd-heading">The most direct way to activate the creator economy for your business.</h2>
+          <p>Creator Day is a recurring event concept where businesses open their physical premises to local content creators. The business curates an experience. Creators attend, discover, and are asked to produce at least one piece of content tagging the business.</p>
+          <p>You get authentic, organic content created by real people for their real audiences. The creators get new spaces and stories to tell. And Strategy Shepherds promotes every Creator Day on the Creator Day Instagram page — a growing platform connecting creators with Approved Creator Day Hosts across Africa.</p>
+          <p>Creator Day is a one-time setup. The momentum it builds is ongoing.</p>
+          <a href="creator-day.html" class="btn-outline" style="margin-top:0.5rem;">See the full Creator Day page</a>
+        </div>
+        <div class="creator-intro-right">
+          <span class="tag">Creator Day · Level 02 Offer</span>
+          <h3>Become an Approved Creator Day Host</h3>
+          <p>Everything you need to design and run your first Creator Day.</p>
+          <span class="price-tag">$200 one-time · Founding rate: $150 for the first 10 hosts</span>
+          <ul class="creator-includes">
+            <li>Creator Day Toolkit (experience guide, run-of-show, creator brief, checklist)</li>
+            <li>90-minute co-design session with Strategy Shepherds</li>
+            <li>Approved Creator Day Host listing</li>
+            <li>Ongoing promotion on the Creator Day Instagram page</li>
+            <li>Access to the Creator Day Host network</li>
+          </ul>
+          <a href="https://selar.com/creatordayhost" target="_blank" rel="noopener noreferrer" class="btn-gold">Become a Creator Day Host</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strategy Shepherds</h3>
+          <p>Influence strategy for African companies and leaders. Building the authority, trust networks, and agenda position that turn expertise into competitive advantage.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="build-authority.html">Build Authority</a></li>
+            <li><a href="trust-networks.html">Trust Networks</a></li>
+            <li><a href="agenda-shaping.html">Agenda Shaping</a></li>
+            <li><a href="creator-day.html">Creator Day</a></li>
+            <li><a href="influence-school.html">Influence School</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="influence-research.html">Influence Research</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Stella</a></li>
+            <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener">Digital Africa Signals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strategy Shepherds. All rights reserved.</span>
+        <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+  </script>
+
+</body>
+</html>

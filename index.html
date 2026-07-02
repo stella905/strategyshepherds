@@ -234,6 +234,22 @@
     .footer-bottom a { color: rgba(255,255,255,0.38); }
     .footer-bottom a:hover { color: var(--gold); }
 
+    /* Opportunity Section */
+    .opportunity { background: #fff; }
+    .opp-intro { max-width: 680px; color: var(--mid-grey); line-height: 1.85; margin-bottom: 2.5rem; }
+    .quiz-prompt { background: var(--off-white); border: 1px solid var(--light-grey); border-left: 3px solid var(--gold); padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-bottom: 4rem; }
+    .quiz-prompt p { color: var(--mid-grey); font-size: 0.97rem; max-width: 500px; }
+    .opp-level { padding: 3.5rem 0; border-top: 1px solid var(--light-grey); }
+    .opp-level-tag { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.6rem; }
+    .opp-level h3 { color: var(--purple); font-size: clamp(1.2rem, 2vw, 1.55rem); margin-bottom: 1rem; }
+    .opp-level > p { color: var(--mid-grey); line-height: 1.85; max-width: 680px; margin-bottom: 1.5rem; }
+    .opp-products { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .product-chip { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; color: var(--purple); border: 1px solid var(--purple); padding: 0.4rem 1rem; border-radius: 2px; transition: background 0.2s, color 0.2s; }
+    .product-chip:hover { background: var(--purple); color: #fff; }
+    .training-note { margin-top: 3rem; background: var(--purple-deep); padding: 2.5rem; border-top: 3px solid var(--gold); display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
+    .training-note p { color: rgba(255,255,255,0.8); line-height: 1.8; max-width: 560px; }
+    .training-note p strong { color: #fff; }
+
     @media (max-width: 900px) {
       .nav-links { display: none; }
       .hamburger { display: flex; }
@@ -256,24 +272,26 @@
     <div class="nav-inner">
       <a href="index.html" class="nav-logo" aria-label="Strategy Shepherds home">Strategy<span>.</span>Shepherds</a>
       <ul class="nav-links">
-        <li><a href="influence-strategy.html">Influence Strategy</a></li>
+        <li><a href="build-authority.html">Build Authority</a></li>
+        <li><a href="trust-networks.html">Trust Networks</a></li>
+        <li><a href="agenda-shaping.html">Agenda Shaping</a></li>
         <li><a href="influence-school.html">Influence School</a></li>
-        <li><a href="influence-research.html">Influence Research</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
-        <li><a href="audit.html" class="nav-cta">Take the Audit</a></li>
+        <li><a href="voice-to-leads-score.html" class="nav-cta">Take the Authority Quiz</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
     <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-      <a href="influence-strategy.html">Influence Strategy</a>
+      <a href="build-authority.html">Build Authority</a>
+      <a href="trust-networks.html">Trust Networks</a>
+      <a href="agenda-shaping.html">Agenda Shaping</a>
       <a href="influence-school.html">Influence School</a>
-      <a href="influence-research.html">Influence Research</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
-      <a href="audit.html">Take the Audit</a>
+      <a href="voice-to-leads-score.html">Take the Authority Quiz</a>
     </div>
   </nav>
 
@@ -285,8 +303,8 @@
         <h1 class="hero-wordmark">Strategy<span class="dot">.</span><br>Shepherds</h1>
         <p class="hero-oneliner">Strategy Shepherds works with African organizations to build influence as a core competitive strategy.</p>
         <nav class="hero-ctas" aria-label="Primary calls to action">
-          <a href="https://calendar.app.google/Tp5UxNFaP7AgPRNH6" target="_blank" rel="noopener" class="btn-gold">Book an Influence Strategy Sprint</a>
-          <a href="voice-to-leads.html" class="btn-outline-white">Explore Voice To Leads</a>
+          <a href="build-authority.html" class="btn-gold">Start Building Your Authority</a>
+          <a href="#opportunity" class="btn-outline-white">Explore How We Work</a>
         </nav>
       </div>
     </div>
@@ -338,102 +356,56 @@
     </div>
   </section>
 
-  <!-- OUR SERVICES -->
-  <section class="services" id="services" aria-labelledby="services-heading">
+  <!-- THE OPPORTUNITY: THREE LEVELS OF INFLUENCE -->
+  <section class="opportunity" id="opportunity" aria-labelledby="opp-heading">
     <div class="container">
-      <div class="services-intro">
-        <span class="tag">Our Services</span>
-        <h2 id="services-heading">Three ways we build influence with you.</h2>
-        <p>Influence strategy for African organizations, communications training for teams, and a school that teaches the next generation of African leaders how to build authority that converts.</p>
+      <span class="tag">The Opportunity</span>
+      <h2 id="opp-heading">Three levels of influence. One compounding system.</h2>
+      <p class="opp-intro">Influence is built in layers. Every service we offer maps to one of these three levels. Together, they build a system where each layer makes the next one stronger — and where your investment in one level pays dividends across all three.</p>
+
+      <div class="quiz-prompt">
+        <p>Not sure where to start? Take the Authority Quiz and find out exactly where your influence stands right now.</p>
+        <a href="voice-to-leads-score.html" class="btn-gold">Take the Authority Quiz</a>
       </div>
 
-      <!-- Service 1: Influence Strategy -->
-      <article class="service-block" aria-labelledby="service1-heading">
-        <div class="service-layout">
-          <div class="service-left">
-            <span class="tag service-label">Service 01</span>
-            <h3 id="service1-heading">Influence Strategy</h3>
-            <p>We help organizations turn expertise into authority, visibility, and demand.</p>
-            <p>This includes influence strategy sprints, positioning, message architecture, thought leadership systems, campaign strategy, stakeholder influence maps, and executive visibility plans.</p>
-            <a href="influence-strategy.html" class="btn-outline" style="margin-top:0.5rem;">See Influence Strategy</a>
-          </div>
-          <div class="service-right">
-            <span class="tag">Featured Product</span>
-            <h4>Influence Strategy Sprint</h4>
-            <p>A focused strategy sprint for organizations that need sharper positioning, clearer influence goals, and a practical system for becoming known for the work that matters most.</p>
-            <a href="https://calendar.app.google/Tp5UxNFaP7AgPRNH6" target="_blank" rel="noopener" class="btn-gold">Book an Influence Strategy Sprint</a>
-          </div>
+      <!-- Level 01 -->
+      <div class="opp-level">
+        <span class="opp-level-tag">Level 01 · Build Your Authority</span>
+        <h3>Become the obvious choice in your space.</h3>
+        <p>Clarity in your positioning. Content that ranks on Google and AI search. A growing body of work that makes you easy to find, trust, and buy from. We help founders, consultants, and organizations build consistent digital authority from one monthly conversation — without spending hours creating content every week.</p>
+        <div class="opp-products">
+          <a href="build-authority.html" class="product-chip">The Presence Program · $250/month</a>
+          <a href="build-authority.html" class="product-chip">The Pipeline Program · $500/month</a>
         </div>
-      </article>
-
-      <!-- Service 2: Communications Training -->
-      <article class="service-block" aria-labelledby="service2-heading">
-        <div class="service-layout">
-          <div class="service-left">
-            <span class="tag service-label">Service 02</span>
-            <h3 id="service2-heading">Communications Training And Team Upskilling</h3>
-            <p>We train teams to communicate with clarity, build influence deliberately, and turn their work into ideas people can understand, trust, and share.</p>
-            <p>Training areas include strategic communications, influence strategy, thought leadership, digital authority building, narrative development, stakeholder communication, and content systems.</p>
-            <a href="training.html" class="btn-outline" style="margin-top:0.5rem;">Explore Team Training</a>
-          </div>
-          <div class="service-right">
-            <span class="tag">Why It Matters</span>
-            <h4>Strategic communications training for African teams</h4>
-            <p>Most teams are producing work that never reaches its audience at full strength. Training builds the internal capacity to change that, permanently.</p>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe9JUnoUPSl8sx-9u_TNo7RsELBob3g8kFY5xS0RQHoBw1eSA/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="btn-gold">Request Training</a>
-          </div>
-        </div>
-      </article>
-
-      <!-- Service 3: Influence School -->
-      <article class="service-block" aria-labelledby="service3-heading">
-        <div class="service-layout">
-          <div class="service-left">
-            <span class="tag service-label">Service 03</span>
-            <h3 id="service3-heading">The Influence School</h3>
-            <p>Influence is becoming a core work skill.</p>
-            <p>In the same way reading, writing, and computer literacy became essential, the ability to build influence will become essential for leaders, founders, experts, and entrepreneurs in the digital economy.</p>
-            <p>The Influence School teaches the next generation of African entrepreneurs, experts, and professionals how to build authority, grow trust, create demand, and participate meaningfully in the internet economy.</p>
-            <a href="influence-school.html" class="btn-outline" style="margin-top:0.5rem;">See The Influence School</a>
-          </div>
-          <div class="service-right">
-            <span class="tag">Featured Product</span>
-            <h4>Voice To Leads</h4>
-            <p>Voice to Leads helps leaders build authority that converts.</p>
-            <p>For business leaders, that means authority that converts into leads, clients, partnerships, and revenue. For nonprofit, government, and social impact leaders, it means authority that converts into followers, subscribers, supporters, funders, collaborators, and public trust.</p>
-            <p>The program teaches a practical methodology for building authority, setting up an influence system, measuring the work, and creating a body of ideas that compounds over time.</p>
-            <a href="https://forms.gle/wDiiXupo5uVUPy3w6" target="_blank" rel="noopener" class="btn-gold">Join the July Cohort</a>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- OUR SIGNATURE METHOD: THE INFLUENCE TRIANGLE -->
-  <section class="triangle" id="influence-triangle" aria-labelledby="triangle-heading">
-    <div class="container">
-      <div class="triangle-header">
-        <span class="tag">Our Signature Method</span>
-        <h2 id="triangle-heading">The Influence Triangle</h2>
-        <p>Three layers. One system.</p>
+        <a href="build-authority.html" class="btn-outline">Start Building Your Authority</a>
       </div>
-      <div class="triangle-layers">
-        <div class="triangle-layer">
-          <span class="layer-num">Layer 01</span>
-          <h3>Build Your Authority System</h3>
-          <p>Clarify what you want to be known for and turn your expertise into visible proof.</p>
+
+      <!-- Level 02 -->
+      <div class="opp-level">
+        <span class="opp-level-tag">Level 02 · Build Your Trust Network</span>
+        <h3>Let creators tell your story.</h3>
+        <p>Influence travels through people. We help you activate the local creator economy as a business strategy — turning creators into organic ambassadors for your brand, your space, and your work. No paid ads. No production budgets. Just real people discovering what you do and sharing it with their audiences.</p>
+        <div class="opp-products">
+          <a href="creator-day.html" class="product-chip">Creator Day · $200 one-time</a>
         </div>
-        <div class="triangle-layer">
-          <span class="layer-num">Layer 02</span>
-          <h3>Build Your Trust Network</h3>
-          <p>Grow the relationships, platforms, and communities that make your ideas travel.</p>
+        <a href="trust-networks.html" class="btn-outline">Explore Trust Networks</a>
+      </div>
+
+      <!-- Level 03 -->
+      <div class="opp-level">
+        <span class="opp-level-tag">Level 03 · Agenda Shaping</span>
+        <h3>Shape the conversations that define your market.</h3>
+        <p>The most powerful form of influence is not just being heard — it is being the one who sets the terms of the conversation. At this level, the clarity from your authority and the connection from your trust network come together to let you contribute to larger social and global conversations. You consciously consume the issues that matter to your sector, and deliberately create your unique contribution.</p>
+        <div class="opp-products">
+          <a href="https://calendar.app.google/Tp5UxNFaP7AgPRNH6" target="_blank" rel="noopener" class="product-chip">Influence Strategy Consulting</a>
         </div>
-        <div class="triangle-layer">
-          <span class="layer-num">Layer 03</span>
-          <h3>Build Your Agenda Position</h3>
-          <p>Shape the conversation around the issues, markets, and movements you want to lead.</p>
-        </div>
+        <a href="agenda-shaping.html" class="btn-outline">Explore Agenda Shaping</a>
+      </div>
+
+      <!-- Training for teams -->
+      <div class="training-note">
+        <p><strong>Influence skills training for teams:</strong> We also offer structured influence skills training to help your whole team build authority, communicate with strategic clarity, and participate meaningfully in the conversations that shape your sector.</p>
+        <a href="training.html" class="btn-outline-white">Request a Training</a>
       </div>
     </div>
   </section>
@@ -505,12 +477,13 @@
         <div class="footer-col">
           <h4>Work</h4>
           <ul>
-            <li><a href="influence-strategy.html">Influence Strategy</a></li>
+            <li><a href="build-authority.html">Build Authority</a></li>
+            <li><a href="trust-networks.html">Trust Networks</a></li>
+            <li><a href="agenda-shaping.html">Agenda Shaping</a></li>
+            <li><a href="creator-day.html">Creator Day</a></li>
             <li><a href="influence-school.html">Influence School</a></li>
-            <li><a href="voice-to-leads.html">Voice to Leads</a></li>
             <li><a href="training.html">Training</a></li>
             <li><a href="influence-research.html">Influence Research</a></li>
-            <li><a href="audit.html">Influence Audit</a></li>
           </ul>
         </div>
         <div class="footer-col">

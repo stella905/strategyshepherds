@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Creator Day | Build Your Trust Network | Strategy Shepherds</title>
+  <meta name="description" content="Creator Day is a new model for business visibility. Open your doors to creators, curate an experience, and let them tell your story. Become an Approved Creator Day Host for $200.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://strategyshepherds.com/creator-day.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://strategyshepherds.com/creator-day.html">
+  <meta property="og:title" content="Creator Day | Strategy Shepherds">
+  <meta property="og:description" content="Open your doors to creators. Let them tell your story. Become an Approved Creator Day Host.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple:      #361965;
+      --purple-deep: #261050;
+      --gold:        #C9A84C;
+      --off-white:   #FAF8F4;
+      --near-black:  #0D0D0D;
+      --mid-grey:    #6B6B6B;
+      --light-grey:  #E8E4DD;
+      --hero-grad:   linear-gradient(135deg, #261050 0%, #361965 60%, #C9A84C 100%);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--off-white); color: var(--near-black); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+    h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); }
+    p  { font-size: 1.05rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 6rem 0; }
+    .tag { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--near-black); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.9rem 2.2rem; border-radius: 3px; transition: opacity 0.2s, transform 0.15s; }
+    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-outline { display: inline-block; border: 1.5px solid var(--purple); color: var(--purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; }
+    .btn-outline:hover { background: var(--purple); color: #fff; }
+    .btn-outline-white { display: inline-block; border: 1.5px solid rgba(255,255,255,0.5); color: #fff; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: border-color 0.2s, background 0.2s; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* Nav */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,248,244,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-grey); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--purple); }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a { font-size: 0.87rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
+    .nav-links a:hover { color: var(--purple); }
+    .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 600 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--near-black); border-radius: 2px; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--off-white); border-bottom: 1px solid var(--light-grey); }
+    .mobile-nav a { display: block; padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid var(--light-grey); color: var(--near-black); }
+    .mobile-nav.open { display: flex; }
+
+    /* Hero */
+    .hero { background: var(--hero-grad); padding: 9rem 0 6rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -10%; right: -8%; width: 550px; height: 550px; border: 1px solid rgba(201,168,76,0.12); border-radius: 50%; pointer-events: none; }
+    .hero-inner { position: relative; z-index: 2; max-width: 720px; }
+    .hero .tag { color: rgba(201,168,76,0.85); }
+    .hero h1 { color: #fff; margin-bottom: 1.2rem; }
+    .hero-sub { font-size: 1.15rem; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; font-weight: 300; line-height: 1.8; }
+    .hero-body { font-size: 1.05rem; color: rgba(255,255,255,0.65); line-height: 1.85; margin-bottom: 2.5rem; max-width: 600px; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .founding-note { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; color: rgba(201,168,76,0.75); }
+
+    /* Concept */
+    .concept { background: #fff; }
+    .concept-inner { max-width: 740px; }
+    .concept-inner h2 { margin-bottom: 1.2rem; }
+    .concept-inner p { color: var(--mid-grey); line-height: 1.9; margin-bottom: 1.2rem; }
+    .concept-inner p strong { color: var(--near-black); }
+    .pull-quote { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.2rem; color: var(--purple); line-height: 1.6; border-left: 3px solid var(--gold); padding-left: 1.5rem; margin: 2rem 0; }
+
+    /* Why It Works */
+    .why { background: var(--off-white); }
+    .why-inner { display: grid; grid-template-columns: 1.1fr 1fr; gap: 5rem; align-items: start; }
+    .why-left h2 { margin-bottom: 1rem; }
+    .why-left p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 1.2rem; }
+    .why-right { display: flex; flex-direction: column; gap: 2rem; }
+    .why-stat { border-left: 3px solid var(--gold); padding-left: 1.5rem; }
+    .why-stat h4 { font-family: 'Playfair Display', serif; font-size: 1.2rem; color: var(--purple); margin-bottom: 0.5rem; }
+    .why-stat p { color: var(--mid-grey); font-size: 0.95rem; line-height: 1.75; }
+
+    /* The Instagram Page */
+    .instagram-page { background: var(--purple); padding: 7rem 0; }
+    .instagram-page .tag { color: rgba(201,168,76,0.8); }
+    .instagram-inner { max-width: 720px; }
+    .instagram-inner h2 { color: #fff; margin-bottom: 1.2rem; }
+    .instagram-inner p { color: rgba(255,255,255,0.7); line-height: 1.9; margin-bottom: 1.2rem; }
+
+    /* What Is Included */
+    .includes { background: #fff; }
+    .includes-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
+    .includes-left h2 { margin-bottom: 1rem; }
+    .includes-left p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 2rem; }
+    .includes-list { list-style: none; }
+    .includes-list li { padding: 1rem 0; border-bottom: 1px solid var(--light-grey); display: flex; gap: 1rem; align-items: baseline; }
+    .includes-list li:first-child { border-top: 1px solid var(--light-grey); }
+    .includes-list li::before { content: '—'; color: var(--gold); font-family: 'DM Mono', monospace; font-size: 0.8rem; flex-shrink: 0; }
+    .includes-list li span { color: var(--mid-grey); font-size: 0.97rem; line-height: 1.7; }
+    .includes-right { background: var(--purple-deep); padding: 3rem 2.5rem; border-top: 3px solid var(--gold); }
+    .includes-right .tag { color: rgba(201,168,76,0.85); }
+    .includes-right h3 { color: #fff; font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .includes-right .price-main { font-family: 'DM Mono', monospace; font-size: 1.1rem; color: var(--gold); display: block; margin-bottom: 0.4rem; }
+    .includes-right .price-founding { font-family: 'DM Mono', monospace; font-size: 0.72rem; color: rgba(255,255,255,0.45); display: block; margin-bottom: 1.8rem; letter-spacing: 0.08em; }
+    .includes-right p { color: rgba(255,255,255,0.68); font-size: 0.95rem; line-height: 1.8; margin-bottom: 2rem; }
+
+    /* Who This Is For */
+    .who { background: var(--off-white); }
+    .who-intro { max-width: 600px; margin-bottom: 3.5rem; }
+    .who-intro h2 { margin-bottom: 0.8rem; }
+    .who-intro p { color: var(--mid-grey); line-height: 1.8; }
+    .sectors-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+    .sector-tag { background: #fff; border: 1px solid var(--light-grey); padding: 1.2rem 1.5rem; border-top: 2px solid var(--gold); }
+    .sector-tag p { font-size: 0.92rem; color: var(--near-black); font-weight: 500; line-height: 1.4; }
+
+    /* FAQ */
+    .faq { background: #fff; }
+    .faq-intro { max-width: 600px; margin-bottom: 3.5rem; }
+    .faq-intro h2 { margin-bottom: 0; }
+    .faq-list { display: flex; flex-direction: column; gap: 0; max-width: 740px; }
+    .faq-item { border-top: 1px solid var(--light-grey); padding: 1.8rem 0; }
+    .faq-item:last-child { border-bottom: 1px solid var(--light-grey); }
+    .faq-item h3 { color: var(--purple); margin-bottom: 0.7rem; font-size: 1.1rem; }
+    .faq-item p { color: var(--mid-grey); line-height: 1.8; font-size: 0.97rem; }
+
+    /* Final CTA */
+    .final-cta { background: var(--purple-deep); padding: 6rem 0; }
+    .final-cta .tag { color: rgba(201,168,76,0.85); }
+    .final-cta-inner { max-width: 680px; }
+    .final-cta-inner h2 { color: #fff; margin-bottom: 1rem; }
+    .final-cta-inner p { color: rgba(255,255,255,0.68); line-height: 1.85; margin-bottom: 2rem; }
+    .final-cta-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* Footer */
+    footer { background: var(--near-black); color: rgba(255,255,255,0.55); padding: 5rem 0 2.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.75; }
+    .footer-col h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul a { font-size: 0.9rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.38); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .why-inner, .includes-inner, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+      .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+      .final-cta-btns { flex-direction: column; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 4rem 0; }
+      .hero { padding: 7rem 0 4rem; }
+      .sectors-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Strategy Shepherds home">Strategy<span>.</span>Shepherds</a>
+      <ul class="nav-links">
+        <li><a href="build-authority.html">Build Authority</a></li>
+        <li><a href="trust-networks.html">Trust Networks</a></li>
+        <li><a href="agenda-shaping.html">Agenda Shaping</a></li>
+        <li><a href="influence-school.html">Influence School</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="voice-to-leads-score.html" class="nav-cta">Take the Authority Quiz</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <a href="build-authority.html">Build Authority</a>
+      <a href="trust-networks.html">Trust Networks</a>
+      <a href="agenda-shaping.html">Agenda Shaping</a>
+      <a href="influence-school.html">Influence School</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="voice-to-leads-score.html">Take the Authority Quiz</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="hero-inner">
+        <span class="tag">Build Your Trust Network · Level 02</span>
+        <h1>Creator Day</h1>
+        <p class="hero-sub">Open your doors to creators. Let them tell your story.</p>
+        <p class="hero-body">Creator Day is a new model for business visibility built for African organizations that want authentic, organic reach — without paid campaigns, production budgets, or social media managers. You design an experience. Creators come to discover it. They leave and share what they found.</p>
+        <div class="hero-ctas">
+          <a href="#pricing" class="btn-gold">Become a Creator Day Host</a>
+          <a href="#concept" class="btn-outline-white">How It Works</a>
+        </div>
+        <p class="founding-note">Founding member rate: $150 for the first 10 hosts</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- THE CONCEPT -->
+  <section class="concept" id="concept" aria-labelledby="concept-heading">
+    <div class="container">
+      <div class="concept-inner">
+        <span class="tag">What Creator Day Is</span>
+        <h2 id="concept-heading">The most powerful content is content other people make about you.</h2>
+        <p>Think of it like a members' night, but for creators. Instead of your usual audience, you open your doors to local content creators — people with phones, platforms, and engaged followings — and you give them an experience worth sharing.</p>
+        <p>The creators come to discover something new. They get access to a space, a story, and a side of your business they would never have seen otherwise. In return, every creator who attends is asked to produce at least one piece of content — a post, a video, a photo — and tag your business.</p>
+        <p class="pull-quote">No scripted testimonials. No production fees. No briefing an agency. Just real people discovering what you do and sharing it with the people who trust them.</p>
+        <p>Creator Day is a recurring event concept. The first one builds the template. The ones after it build momentum. The more you host, the more your space becomes a destination — and the more your influence in the local creator community compounds without spending a single dollar on advertising.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT WORKS -->
+  <section class="why" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="why-inner">
+        <div class="why-left">
+          <span class="tag">The Logic</span>
+          <h2 id="why-heading">Creators need new places to go. Your business is one of them.</h2>
+          <p>Content creators are always looking for new experiences, new spaces, and new stories to tell their audiences. Most of them are cycling through the same cafes, co-working spaces, and restaurants every week.</p>
+          <p>A manufacturing floor, an energy company, a healthcare facility, a research lab, an agricultural processing plant — these are worlds creators have never entered. Which is exactly what makes them interesting.</p>
+          <p>Creator Day gives your business a way into that world. You host. They create. And every piece of content they publish sends their audience to discover you.</p>
+          <p>The more Creator Days you host, the more your space becomes a destination. The more your space becomes a destination, the more influence you build in your community — without spending a cent on advertising.</p>
+        </div>
+        <div class="why-right">
+          <div class="why-stat">
+            <h4>Real people. Real audiences. Real trust.</h4>
+            <p>Creator content earns a different kind of trust than branded content. When someone's favorite creator visits your facility, tells their story, and shares what they experienced, that trust transfers. Paid ads cannot replicate it.</p>
+          </div>
+          <div class="why-stat">
+            <h4>Your most interesting spaces deserve a wider audience.</h4>
+            <p>Most businesses have stories that their customers never see. The behind-the-scenes. The production process. The people who make it happen. Creator Day surfaces those stories through the people best placed to tell them.</p>
+          </div>
+          <div class="why-stat">
+            <h4>One Creator Day. Multiple pieces of organic content.</h4>
+            <p>A single Creator Day typically produces content from multiple creators across multiple platforms. That is reach and presence you would have paid thousands to replicate through a brand content campaign.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE INSTAGRAM PAGE -->
+  <section class="instagram-page" aria-labelledby="ig-heading">
+    <div class="container">
+      <div class="instagram-inner">
+        <span class="tag">Your Amplification Network</span>
+        <h2 id="ig-heading">We promote every Creator Day on our Instagram page.</h2>
+        <p>Strategy Shepherds runs the Creator Day Instagram page — a growing platform where content creators across Africa discover the next destinations, experiences, and businesses worth visiting.</p>
+        <p>When you become an Approved Creator Day Host, your business is listed on the page and promoted to our creator community every time you host a Creator Day. As the Creator Day network grows, so does your reach to an audience of active content creators who are looking for exactly what you offer.</p>
+        <p>The longer you host, the more visible your space becomes. The more visible your space becomes, the more creators want to come — and the more content they create on your behalf.</p>
+        <p>This is a community that compounds. The early hosts benefit most.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT IS INCLUDED + PRICING -->
+  <section class="includes" id="pricing" aria-labelledby="includes-heading">
+    <div class="container">
+      <div class="includes-inner">
+        <div class="includes-left">
+          <span class="tag">What You Get</span>
+          <h2 id="includes-heading">Everything you need to design and run your first Creator Day.</h2>
+          <p>From the co-design session to the toolkit to your listing on the Creator Day Instagram page, everything is included in one setup fee.</p>
+          <ul class="includes-list">
+            <li><span><strong>Creator Day Toolkit</strong> — experience design guide, run-of-show template, creator brief, host checklist, and best practice guide</span></li>
+            <li><span><strong>90-minute co-design session</strong> with Strategy Shepherds to design your first Creator Day experience from scratch</span></li>
+            <li><span><strong>Approved Creator Day Host listing</strong> on the Strategy Shepherds Creator Day Instagram page</span></li>
+            <li><span><strong>Ongoing promotion</strong> every time you host a new Creator Day</span></li>
+            <li><span><strong>Access to the Creator Day Host network</strong></span></li>
+          </ul>
+        </div>
+        <div class="includes-right">
+          <span class="tag">Investment</span>
+          <h3>Become a Host</h3>
+          <span class="price-main">$200 one-time setup fee</span>
+          <span class="price-founding">Founding member rate: $150 for the first 10 hosts</span>
+          <p>This covers your co-design session, your Creator Day Toolkit, your Approved Host listing, and ongoing promotion on the Creator Day Instagram page. There is no monthly fee. You host, we promote.</p>
+          <a href="https://selar.com/creatordayhost" target="_blank" rel="noopener noreferrer" class="btn-gold">Become a Creator Day Host</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="who" aria-labelledby="who-heading">
+    <div class="container">
+      <div class="who-intro">
+        <span class="tag">Best Fit</span>
+        <h2 id="who-heading">Built for businesses with a physical premise and a story worth telling.</h2>
+        <p>Creator Day works especially well for organizations in sectors that do not traditionally work with creators — because that is exactly what makes them interesting to creators and their audiences.</p>
+      </div>
+      <div class="sectors-grid">
+        <div class="sector-tag"><p>Manufacturing and production</p></div>
+        <div class="sector-tag"><p>Energy and infrastructure</p></div>
+        <div class="sector-tag"><p>Healthcare and research</p></div>
+        <div class="sector-tag"><p>Agriculture and food systems</p></div>
+        <div class="sector-tag"><p>Financial services</p></div>
+        <div class="sector-tag"><p>Professional services</p></div>
+        <div class="sector-tag"><p>Education and training</p></div>
+        <div class="sector-tag"><p>Social enterprises and nonprofits with physical operations</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="faq-intro">
+        <span class="tag">Common Questions</span>
+        <h2 id="faq-heading">Frequently asked questions.</h2>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3>Do I need to have worked with creators before?</h3>
+          <p>No. The toolkit and co-design session are specifically designed to walk you through the process from scratch. We help you design the experience, brief the creators, and set expectations so your first Creator Day runs smoothly.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How do creators find out about my Creator Day?</h3>
+          <p>We promote your Creator Day on the Strategy Shepherds Creator Day Instagram page to our community of creators. You can also promote it through your own channels. We give you a creator-facing brief you can share widely.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How many creators typically attend?</h3>
+          <p>This depends on your location, sector, and the experience you design. We help you plan for the right number during the co-design session. Smaller, more curated Creator Days often produce better content than large open events.</p>
+        </div>
+        <div class="faq-item">
+          <h3>How often should I host a Creator Day?</h3>
+          <p>There is no set requirement. Some businesses host once a quarter, others monthly. We recommend starting with one, reviewing the content that comes out of it, and deciding on your cadence from there. The more you host, the stronger the compounding effect.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What if a creator does not post?</h3>
+          <p>We include a creator brief and attendance agreement in the toolkit that sets expectations clearly. Most creators are happy to post — it is content for their own channels. We help you set up the brief so participation feels natural rather than transactional.</p>
+        </div>
+        <div class="faq-item">
+          <h3>What does the founding member rate mean?</h3>
+          <p>We are building the Creator Day network and want to reward the organizations that join early. The first 10 Approved Creator Day Hosts pay $150 instead of $200 and become founding members of the network — with priority promotion as the network grows.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta" aria-labelledby="final-heading">
+    <div class="container">
+      <div class="final-cta-inner">
+        <span class="tag">Open Your Doors</span>
+        <h2 id="final-heading">Become an Approved Creator Day Host.</h2>
+        <p>The first 10 hosts pay the founding rate of $150. After that, the setup fee is $200. Either way, it is a one-time investment in a recurring source of authentic organic reach.</p>
+        <div class="final-cta-btns">
+          <a href="https://selar.com/creatordayhost" target="_blank" rel="noopener noreferrer" class="btn-gold">Become a Creator Day Host</a>
+          <a href="trust-networks.html" class="btn-outline-white">Learn more about Trust Networks</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strategy Shepherds</h3>
+          <p>Influence strategy for African companies and leaders. Building the authority, trust networks, and agenda position that turn expertise into competitive advantage.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="build-authority.html">Build Authority</a></li>
+            <li><a href="trust-networks.html">Trust Networks</a></li>
+            <li><a href="agenda-shaping.html">Agenda Shaping</a></li>
+            <li><a href="creator-day.html">Creator Day</a></li>
+            <li><a href="influence-school.html">Influence School</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="influence-research.html">Influence Research</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Stella</a></li>
+            <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener">Digital Africa Signals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strategy Shepherds. All rights reserved.</span>
+        <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+  </script>
+
+</body>
+</html>

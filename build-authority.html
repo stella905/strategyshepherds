@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build Authority | Strategy Shepherds</title>
+  <meta name="description" content="Strategy Shepherds content programs help African founders, consultants, and organizations build consistent digital authority. One monthly session. A full month of content. A compounding influence asset.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://strategyshepherds.com/build-authority.html">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://strategyshepherds.com/build-authority.html">
+  <meta property="og:title" content="Build Authority | Strategy Shepherds">
+  <meta property="og:description" content="One monthly conversation. A full month of authority-building content. A compounding influence asset that makes you the obvious choice in your space.">
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple:      #361965;
+      --purple-deep: #261050;
+      --gold:        #C9A84C;
+      --off-white:   #FAF8F4;
+      --near-black:  #0D0D0D;
+      --mid-grey:    #6B6B6B;
+      --light-grey:  #E8E4DD;
+      --hero-grad:   linear-gradient(135deg, #261050 0%, #361965 60%, #C9A84C 100%);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { font-family: 'Jost', sans-serif; background: var(--off-white); color: var(--near-black); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { text-decoration: none; color: inherit; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
+    h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
+    h3 { font-size: clamp(1.05rem, 2vw, 1.35rem); }
+    p  { font-size: 1.05rem; }
+    .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
+    section { padding: 6rem 0; }
+    .tag { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
+
+    .btn-gold { display: inline-block; background: var(--gold); color: var(--near-black); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.9rem 2.2rem; border-radius: 3px; transition: opacity 0.2s, transform 0.15s; }
+    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
+    .btn-outline { display: inline-block; border: 1.5px solid var(--purple); color: var(--purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; }
+    .btn-outline:hover { background: var(--purple); color: #fff; }
+    .btn-outline-white { display: inline-block; border: 1.5px solid rgba(255,255,255,0.5); color: #fff; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: border-color 0.2s, background 0.2s; }
+    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
+
+    /* Nav */
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,248,244,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-grey); }
+    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--purple); }
+    .nav-logo span { color: var(--gold); }
+    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
+    .nav-links a { font-size: 0.87rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--purple); }
+    .nav-links a.active { font-weight: 600; }
+    .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 600 !important; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: var(--near-black); border-radius: 2px; }
+    .mobile-nav { display: none; flex-direction: column; background: var(--off-white); border-bottom: 1px solid var(--light-grey); }
+    .mobile-nav a { display: block; padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid var(--light-grey); color: var(--near-black); }
+    .mobile-nav.open { display: flex; }
+
+    /* Hero */
+    .hero { background: var(--hero-grad); padding: 9rem 0 6rem; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: -10%; right: -8%; width: 500px; height: 500px; border: 1px solid rgba(201,168,76,0.12); border-radius: 50%; pointer-events: none; }
+    .hero-inner { position: relative; z-index: 2; max-width: 720px; }
+    .hero .tag { color: rgba(201,168,76,0.85); }
+    .hero h1 { color: #fff; margin-bottom: 1.2rem; }
+    .hero-sub { font-size: 1.15rem; color: rgba(255,255,255,0.75); margin-bottom: 1.5rem; font-weight: 300; line-height: 1.8; }
+    .hero-body { font-size: 1.05rem; color: rgba(255,255,255,0.65); line-height: 1.85; margin-bottom: 2.5rem; max-width: 580px; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    /* Authority Quiz CTA */
+    .quiz-band { background: var(--off-white); border-top: 3px solid var(--gold); }
+    .quiz-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+    .quiz-band-text .tag { margin-bottom: 0.5rem; }
+    .quiz-band-text h2 { font-size: clamp(1.3rem, 2.5vw, 1.75rem); margin-bottom: 0.7rem; }
+    .quiz-band-text p { color: var(--mid-grey); max-width: 520px; line-height: 1.75; }
+
+    /* Three Levels Brief */
+    .levels-brief { background: var(--purple-deep); }
+    .levels-brief .tag { color: rgba(201,168,76,0.85); }
+    .levels-brief h2 { color: #fff; margin-bottom: 0.8rem; }
+    .levels-brief .levels-intro-copy { color: rgba(255,255,255,0.68); line-height: 1.85; margin-bottom: 3.5rem; max-width: 640px; }
+    .levels-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+    .levels-row-item { border-top: 2px solid rgba(201,168,76,0.35); padding-top: 1.8rem; }
+    .level-indicator { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.14em; color: var(--gold); display: block; margin-bottom: 0.6rem; }
+    .levels-row-item h3 { color: #fff; font-size: 1.1rem; margin-bottom: 0.6rem; }
+    .levels-row-item p { color: rgba(255,255,255,0.6); font-size: 0.93rem; line-height: 1.75; margin-bottom: 1rem; }
+    .levels-row-item a.level-link { font-family: 'DM Mono', monospace; font-size: 0.7rem; letter-spacing: 0.08em; color: var(--gold); text-decoration: underline; text-underline-offset: 3px; }
+    .level-active-badge { display: inline-block; font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; background: rgba(201,168,76,0.2); color: var(--gold); padding: 0.25rem 0.65rem; border-radius: 2px; margin-bottom: 0.6rem; }
+
+    /* How It Works */
+    .how { background: #fff; }
+    .how-inner { max-width: 680px; }
+    .how-inner h2 { margin-bottom: 1rem; }
+    .how-intro { color: var(--mid-grey); line-height: 1.85; margin-bottom: 3rem; }
+    .steps { display: flex; flex-direction: column; gap: 2.5rem; }
+    .step { display: grid; grid-template-columns: 60px 1fr; gap: 1.5rem; align-items: start; }
+    .step-num { font-family: 'DM Mono', monospace; font-size: 1.2rem; color: var(--gold); font-weight: 500; padding-top: 0.1rem; }
+    .step-content h3 { margin-bottom: 0.5rem; color: var(--purple); }
+    .step-content p { color: var(--mid-grey); line-height: 1.8; }
+
+    /* Programs */
+    .programs { background: var(--off-white); }
+    .programs-intro { max-width: 600px; margin-bottom: 4rem; }
+    .programs-intro h2 { margin-bottom: 0.8rem; }
+    .programs-intro p { color: var(--mid-grey); line-height: 1.8; }
+    .programs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .program-card { background: #fff; border-top: 3px solid var(--gold); padding: 3rem 2.5rem; display: flex; flex-direction: column; }
+    .program-card.featured { background: var(--purple); border-top-color: var(--gold); }
+    .program-card .tag { margin-bottom: 0.4rem; }
+    .program-card.featured .tag { color: rgba(201,168,76,0.85); }
+    .program-price { font-family: 'DM Mono', monospace; font-size: 0.8rem; letter-spacing: 0.1em; color: var(--mid-grey); margin-bottom: 1.2rem; }
+    .program-card.featured .program-price { color: rgba(255,255,255,0.55); }
+    .program-card h3 { font-size: 1.5rem; margin-bottom: 0.7rem; color: var(--near-black); }
+    .program-card.featured h3 { color: #fff; }
+    .program-card .program-oneliner { color: var(--mid-grey); line-height: 1.7; margin-bottom: 2rem; }
+    .program-card.featured .program-oneliner { color: rgba(255,255,255,0.72); }
+    .program-includes { list-style: none; margin-bottom: 2rem; flex: 1; }
+    .program-includes li { font-size: 0.93rem; color: var(--mid-grey); padding: 0.5rem 0; border-bottom: 1px solid var(--light-grey); display: flex; gap: 0.8rem; align-items: baseline; }
+    .program-card.featured .program-includes li { color: rgba(255,255,255,0.68); border-bottom-color: rgba(255,255,255,0.12); }
+    .program-includes li::before { content: '—'; color: var(--gold); font-family: 'DM Mono', monospace; font-size: 0.75rem; flex-shrink: 0; }
+    .program-also { font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; color: var(--mid-grey); margin-bottom: 1.5rem; }
+    .program-card.featured .program-also { color: rgba(255,255,255,0.45); }
+
+    /* Social SEO */
+    .seo { background: var(--purple); }
+    .seo .tag { color: rgba(201,168,76,0.8); }
+    .seo-inner { max-width: 720px; }
+    .seo-inner h2 { color: #fff; margin-bottom: 1rem; }
+    .seo-inner p { color: rgba(255,255,255,0.7); line-height: 1.85; margin-bottom: 1.2rem; }
+
+    /* Discovery CTA */
+    .discovery { background: var(--off-white); }
+    .discovery-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
+    .discovery-text h2 { margin-bottom: 0.8rem; }
+    .discovery-text p { color: var(--mid-grey); max-width: 500px; line-height: 1.75; }
+
+    /* Footer */
+    footer { background: var(--near-black); color: rgba(255,255,255,0.55); padding: 5rem 0 2.5rem; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem; }
+    .footer-brand p { font-size: 0.9rem; line-height: 1.75; }
+    .footer-col h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 0.65rem; }
+    .footer-col ul a { font-size: 0.9rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
+    .footer-col ul a:hover { color: var(--gold); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; flex-wrap: wrap; gap: 1rem; }
+    .footer-bottom a { color: rgba(255,255,255,0.38); }
+    .footer-bottom a:hover { color: var(--gold); }
+
+    @media (max-width: 900px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .levels-row, .programs-grid, .footer-grid { grid-template-columns: 1fr; gap: 2rem; }
+      .quiz-band-inner, .discovery-inner { flex-direction: column; }
+    }
+    @media (max-width: 600px) {
+      section { padding: 4rem 0; }
+      .hero { padding: 7rem 0 4rem; }
+      .step { grid-template-columns: 44px 1fr; gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Strategy Shepherds home">Strategy<span>.</span>Shepherds</a>
+      <ul class="nav-links">
+        <li><a href="build-authority.html" class="active">Build Authority</a></li>
+        <li><a href="trust-networks.html">Trust Networks</a></li>
+        <li><a href="agenda-shaping.html">Agenda Shaping</a></li>
+        <li><a href="influence-school.html">Influence School</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="voice-to-leads-score.html" class="nav-cta">Take the Authority Quiz</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
+      <a href="build-authority.html">Build Authority</a>
+      <a href="trust-networks.html">Trust Networks</a>
+      <a href="agenda-shaping.html">Agenda Shaping</a>
+      <a href="influence-school.html">Influence School</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="voice-to-leads-score.html">Take the Authority Quiz</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero" id="top">
+    <div class="container">
+      <div class="hero-inner">
+        <span class="tag">Build Your Authority · Level 01 of 03</span>
+        <h1>Build Authority</h1>
+        <p class="hero-sub">One conversation a month. A full month of content. A growing body of authority that makes you the obvious choice in your space.</p>
+        <p class="hero-body">Most founders and organization leaders know they should be showing up online with consistent, credible content. Most of them do not — not because they lack ideas, but because creating content consistently is a full-time job they do not have time for. Our content programs solve that. You sit down with us once a month. We do the rest.</p>
+        <nav class="hero-ctas" aria-label="Primary calls to action">
+          <a href="#programs" class="btn-gold">See the Programs</a>
+          <a href="voice-to-leads-score.html" class="btn-outline-white">Take the Authority Quiz First</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- AUTHORITY QUIZ BAND -->
+  <section class="quiz-band" aria-labelledby="quiz-heading">
+    <div class="container">
+      <div class="quiz-band-inner">
+        <div class="quiz-band-text">
+          <span class="tag">Start Here</span>
+          <h2 id="quiz-heading">Find out where your authority stands before you build.</h2>
+          <p>The Authority Quiz is a free five-minute diagnostic that tells you exactly how discoverable, credible, and conversion-ready your current digital presence is. It will show you where to focus first — and which program fits where you are right now.</p>
+        </div>
+        <a href="voice-to-leads-score.html" class="btn-gold" style="white-space:nowrap; flex-shrink:0;">Take the Authority Quiz</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THREE LEVELS BRIEF -->
+  <section class="levels-brief" aria-labelledby="levels-heading">
+    <div class="container">
+      <span class="tag">Where This Fits</span>
+      <h2 id="levels-heading">Influence is built in three layers.</h2>
+      <p class="levels-intro-copy">Building authority is Level 1 of a three-level influence system. Each layer makes the next one more powerful. You do not need to do all three at once — but understanding how they connect helps you build with the right intent from the start.</p>
+      <div class="levels-row">
+        <div class="levels-row-item">
+          <span class="level-indicator">Level 01</span>
+          <span class="level-active-badge">You are here</span>
+          <h3>Build Your Authority</h3>
+          <p>Become discoverable, credible, and easy to buy from. This is the foundation every other level is built on.</p>
+          <a href="#programs" class="level-link">See the programs</a>
+        </div>
+        <div class="levels-row-item">
+          <span class="level-indicator">Level 02</span>
+          <h3>Build Your Trust Network</h3>
+          <p>Activate the creator economy and your community as an influence engine. Influence travels through people.</p>
+          <a href="trust-networks.html" class="level-link">Explore Trust Networks</a>
+        </div>
+        <div class="levels-row-item">
+          <span class="level-indicator">Level 03</span>
+          <h3>Agenda Shaping</h3>
+          <p>Use your authority and your network to contribute to the larger conversations that define your market.</p>
+          <a href="agenda-shaping.html" class="level-link">Explore Agenda Shaping</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how-it-works" aria-labelledby="how-heading">
+    <div class="container">
+      <div class="how-inner">
+        <span class="tag">The Process</span>
+        <h2 id="how-heading">One session. A full month of content.</h2>
+        <p class="how-intro">Both programs follow the same simple process. You show up once a month for a recorded conversation. Our team turns that conversation into a full month of authority-building content.</p>
+        <div class="steps">
+          <div class="step">
+            <span class="step-num">01</span>
+            <div class="step-content">
+              <h3>Clarify — Month One Only</h3>
+              <p>We start with a kickoff positioning session to get clear on what you want to be known for, who you are speaking to, and what your authority should stand for. This happens once and sets the foundation for everything that follows.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">02</span>
+            <div class="step-content">
+              <h3>Record — Every Month</h3>
+              <p>Each month, you sit down with us for one recorded session. One conversation. That is all we need from you. We come prepared with questions, prompts, and a structure that pulls out your best thinking.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">03</span>
+            <div class="step-content">
+              <h3>We Produce Everything</h3>
+              <p>Our team takes your recording and turns it into a full month of content: a long-form video, short-form videos, blog posts, and LinkedIn posts — all written and edited in your voice, and optimised for Social SEO so your ideas rank on Google and AI search.</p>
+            </div>
+          </div>
+          <div class="step">
+            <span class="step-num">04</span>
+            <div class="step-content">
+              <h3>You Publish and Grow</h3>
+              <p>You receive everything ready to publish. You post, your audience grows, and your authority compounds. The longer you show up consistently, the stronger your influence becomes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE TWO PROGRAMS -->
+  <section class="programs" id="programs" aria-labelledby="programs-heading">
+    <div class="container">
+      <div class="programs-intro">
+        <span class="tag">The Programs</span>
+        <h2 id="programs-heading">Choose the program that matches where you are.</h2>
+        <p>Both programs are built on the same monthly recording process. The difference is what happens underneath the content — whether you are building visibility, or building visibility and a lead generation system at the same time.</p>
+      </div>
+      <div class="programs-grid">
+
+        <!-- Presence Program -->
+        <div class="program-card" id="presence">
+          <span class="tag">Foundation</span>
+          <p class="program-price">$250 / month · 3-month minimum</p>
+          <h3>The Presence Program</h3>
+          <p class="program-oneliner">For founders and consultants building their digital leadership footprint. Consistent visibility. A growing body of authority. An online presence that works while you focus on your business.</p>
+          <ul class="program-includes">
+            <li>Kickoff positioning session (month one only)</li>
+            <li>1 long-form video, edited and ready to publish</li>
+            <li>4 short-form videos optimised for social platforms</li>
+            <li>2 blog posts written in your voice</li>
+            <li>20 LinkedIn posts spread across the month</li>
+            <li>Social SEO applied to all content</li>
+          </ul>
+          <a href="https://selar.com/thepresenceprogram" target="_blank" rel="noopener noreferrer" class="btn-outline">Start Building Your Presence · $250/month</a>
+        </div>
+
+        <!-- Pipeline Program -->
+        <div class="program-card featured" id="pipeline">
+          <span class="tag">Growth</span>
+          <p class="program-price">$500 / month · 6-month minimum · Annual: $4,500</p>
+          <h3>The Pipeline Program</h3>
+          <p class="program-oneliner">For SMEs and growing organizations ready to turn digital authority into a qualified lead generation engine. Your content does two jobs: it builds your authority and fills your pipeline.</p>
+          <ul class="program-includes">
+            <li>Everything in The Presence Program</li>
+            <li>Lead magnet creation</li>
+            <li>Automated lead capture and nurture sequences</li>
+            <li>Qualified lead pipeline setup</li>
+            <li>Prospect and subscriber database building</li>
+            <li>Conversion-optimised video SEO</li>
+            <li>Monthly performance review</li>
+          </ul>
+          <p class="program-also">ANNUAL OPTION: $4,500 (save $1,500)</p>
+          <a href="https://selar.com/thepipelineprogram" target="_blank" rel="noopener noreferrer" class="btn-gold">Start Building Your Pipeline · $500/month</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL SEO EXPLAINED -->
+  <section class="seo" aria-labelledby="seo-heading">
+    <div class="container">
+      <div class="seo-inner">
+        <span class="tag">Rank Without A Website</span>
+        <h2 id="seo-heading">How your content gets found on Google and AI search.</h2>
+        <p>Most people think SEO means having a blog on your website. It does not.</p>
+        <p>Social SEO is the practice of optimising video titles, descriptions, thumbnails, hashtags, and posting patterns so your content surfaces in Google search results, YouTube search, and increasingly in AI answer engines like ChatGPT, Gemini, and Perplexity.</p>
+        <p>We apply Social SEO to every piece of content we produce for you. Over time, when someone searches for the problem you solve, your name and your ideas start showing up — without you running a single ad.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- DISCOVERY CALL CTA -->
+  <section class="discovery" aria-labelledby="discovery-heading">
+    <div class="container">
+      <div class="discovery-inner">
+        <div class="discovery-text">
+          <span class="tag">Not Sure Which Program</span>
+          <h2 id="discovery-heading">Book a free 20-minute call. We will tell you exactly which program fits.</h2>
+          <p>If you are not sure whether The Presence Program or The Pipeline Program is right for where you are, book a discovery call. We will look at your current presence, ask a few questions, and give you a clear recommendation.</p>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:1rem; align-items:flex-start; flex-shrink:0;">
+          <a href="https://calendar.app.google/Tp5UxNFaP7AgPRNH6" target="_blank" rel="noopener noreferrer" class="btn-gold">Book a Discovery Call</a>
+          <a href="voice-to-leads-score.html" class="btn-outline" style="font-size:0.88rem;">Or take the Authority Quiz first</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Strategy Shepherds</h3>
+          <p>Influence strategy for African companies and leaders. Building the authority, trust networks, and agenda position that turn expertise into competitive advantage.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Work</h4>
+          <ul>
+            <li><a href="build-authority.html">Build Authority</a></li>
+            <li><a href="trust-networks.html">Trust Networks</a></li>
+            <li><a href="agenda-shaping.html">Agenda Shaping</a></li>
+            <li><a href="creator-day.html">Creator Day</a></li>
+            <li><a href="influence-school.html">Influence School</a></li>
+            <li><a href="training.html">Training</a></li>
+            <li><a href="influence-research.html">Influence Research</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About Stella</a></li>
+            <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
+            <li><a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener">Digital Africa Signals</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Strategy Shepherds. All rights reserved.</span>
+        <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+    hamburger.addEventListener('click', () => {
+      const open = mobileNav.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', open);
+    });
+  </script>
+
+</body>
+</html>
