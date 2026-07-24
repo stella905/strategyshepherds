@@ -1,516 +1,266 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="en-GB">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Influence Strategy for African Organizations | Strategy Shepherds</title>
-  <meta name="description" content="Strategy Shepherds helps African organizations build influence as a core competitive strategy through strategy sprints, communications training, authority systems, and influence research.">
-  <meta name="robots" content="index, follow">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strategy Shepherds | Impact Storytelling for African Nonprofits</title>
+  <meta name="description" content="Strategy Shepherds helps African nonprofits turn evidence, expertise and community trust into stronger funding cases, deeper trust and sector influence.">
+  <meta name="author" content="Strategy Shepherds">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="theme-color" content="#361965">
   <link rel="canonical" href="https://strategyshepherds.com/">
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://strategyshepherds.com/">
-  <meta property="og:title" content="Influence Strategy for African Organizations | Strategy Shepherds">
-  <meta property="og:description" content="Strategy Shepherds helps African organizations build influence as a core competitive strategy through strategy sprints, communications training, authority systems, and influence research.">
   <meta property="og:site_name" content="Strategy Shepherds">
-
-  <!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your Measurement ID -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
-
-  <!-- JSON-LD Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "Organization",
-        "@id": "https://strategyshepherds.com/#organization",
-        "name": "Strategy Shepherds",
-        "url": "https://strategyshepherds.com",
-        "description": "Strategy Shepherds helps African organizations build influence as a core competitive strategy through influence strategy sprints, communications training, authority systems, and influence research.",
-        "founder": {
-          "@type": "Person",
-          "@id": "https://strategyshepherds.com/#stella-njogo",
-          "name": "Stella Njogo",
-          "url": "https://stellanjogo.com",
-          "jobTitle": "Founder",
-          "worksFor": { "@id": "https://strategyshepherds.com/#organization" },
-          "sameAs": [
-            "https://www.youtube.com/@stellanjogo",
-            "https://substack.com/@digitalafricasignals",
-            "https://stellanjogo.com"
-          ]
-        },
-        "sameAs": [
-          "https://www.youtube.com/@stellanjogo"
-        ],
-        "areaServed": "Africa",
-        "knowsAbout": [
-          "influence strategy",
-          "thought leadership",
-          "strategic communications",
-          "authority building",
-          "African digital economy",
-          "executive visibility"
-        ]
-      },
-      {
-        "@type": "Service",
-        "@id": "https://strategyshepherds.com/influence-strategy.html#service",
-        "name": "Influence Strategy Sprint",
-        "provider": { "@id": "https://strategyshepherds.com/#organization" },
-        "description": "A focused strategy sprint for organizations that need sharper positioning, clearer influence goals, and a practical system for becoming known for the work that matters most.",
-        "url": "https://strategyshepherds.com/influence-strategy.html",
-        "areaServed": "Africa"
-      },
-      {
-        "@type": "Service",
-        "@id": "https://strategyshepherds.com/voice-to-leads.html#service",
-        "name": "Voice To Leads",
-        "provider": { "@id": "https://strategyshepherds.com/#organization" },
-        "description": "Voice to Leads helps leaders build authority that converts into leads, clients, partnerships, revenue, followers, funders, and public trust.",
-        "url": "https://strategyshepherds.com/voice-to-leads.html",
-        "areaServed": "Africa"
-      }
-    ]
-  }
-  </script>
-
+  <meta property="og:title" content="Strategy Shepherds | Impact Storytelling for African Nonprofits">
+  <meta property="og:description" content="Strategy Shepherds helps African nonprofits turn evidence, expertise and community trust into stronger funding cases, deeper trust and sector influence.">
+  <meta property="og:url" content="https://strategyshepherds.com/">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Strategy Shepherds | Impact Storytelling for African Nonprofits">
+  <meta name="twitter:description" content="Strategy Shepherds helps African nonprofits turn evidence, expertise and community trust into stronger funding cases, deeper trust and sector influence.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=Jost:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <style>
-    :root {
-      --purple:      #361965;
-      --purple-deep: #261050;
-      --gold:        #C9A84C;
-      --off-white:   #FAF8F4;
-      --near-black:  #0D0D0D;
-      --mid-grey:    #6B6B6B;
-      --light-grey:  #E8E4DD;
-      --hero-grad:   linear-gradient(135deg, #261050 0%, #361965 60%, #C9A84C 100%);
-    }
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { font-size: 16px; scroll-behavior: smooth; }
-    body { font-family: 'Jost', sans-serif; background: var(--off-white); color: var(--near-black); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    a { text-decoration: none; color: inherit; }
-    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; line-height: 1.2; }
-    h1 { font-size: clamp(2rem, 4.5vw, 3.2rem); }
-    h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); }
-    h3 { font-size: clamp(1.05rem, 2vw, 1.3rem); }
-    p  { font-size: 1.05rem; }
-    .container { max-width: 1000px; margin: 0 auto; padding: 0 2rem; }
-    section { padding: 6rem 0; }
-    .tag { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 1rem; }
-
-    .btn-gold { display: inline-block; background: var(--gold); color: var(--near-black); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.95rem; padding: 0.9rem 2.2rem; border-radius: 3px; transition: opacity 0.2s, transform 0.15s; }
-    .btn-gold:hover { opacity: 0.88; transform: translateY(-1px); }
-    .btn-outline { display: inline-block; border: 1.5px solid var(--purple); color: var(--purple); font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: background 0.2s, color 0.2s; }
-    .btn-outline:hover { background: var(--purple); color: #fff; }
-    .btn-outline-white { display: inline-block; border: 1.5px solid rgba(255,255,255,0.5); color: #fff; font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.92rem; padding: 0.85rem 2rem; border-radius: 3px; transition: border-color 0.2s, background 0.2s; }
-    .btn-outline-white:hover { border-color: #fff; background: rgba(255,255,255,0.1); }
-
-    /* Nav */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(250,248,244,0.96); backdrop-filter: blur(10px); border-bottom: 1px solid var(--light-grey); }
-    .nav-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 68px; }
-    .nav-logo { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; color: var(--purple); }
-    .nav-logo span { color: var(--gold); }
-    .nav-links { display: flex; align-items: center; gap: 1.8rem; list-style: none; }
-    .nav-links a { font-size: 0.87rem; font-weight: 500; color: var(--near-black); transition: color 0.2s; }
-    .nav-links a:hover { color: var(--purple); }
-    .nav-cta { background: var(--purple) !important; color: #fff !important; padding: 0.5rem 1.3rem !important; border-radius: 3px; font-weight: 600 !important; }
-    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-    .hamburger span { display: block; width: 22px; height: 2px; background: var(--near-black); border-radius: 2px; }
-    .mobile-nav { display: none; flex-direction: column; background: var(--off-white); border-bottom: 1px solid var(--light-grey); }
-    .mobile-nav a { display: block; padding: 0.9rem 2rem; font-size: 0.95rem; font-weight: 500; border-bottom: 1px solid var(--light-grey); color: var(--near-black); }
-    .mobile-nav.open { display: flex; }
-
-    /* Hero */
-    .hero { background: var(--hero-grad); padding: 10rem 0 7rem; position: relative; overflow: hidden; min-height: 90vh; display: flex; align-items: center; }
-    .hero::before { content: ''; position: absolute; top: 10%; right: -5%; width: 700px; height: 700px; border: 1px solid rgba(201,168,76,0.1); border-radius: 50%; pointer-events: none; }
-    .hero::after { content: ''; position: absolute; bottom: -15%; right: 15%; width: 400px; height: 400px; border: 1px solid rgba(201,168,76,0.07); border-radius: 50%; pointer-events: none; }
-    .hero-inner { position: relative; z-index: 2; width: 100%; max-width: 760px; }
-    .hero .tag { color: rgba(201,168,76,0.85); }
-    .hero-wordmark { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(4rem, 12vw, 10rem); font-weight: 700; color: #fff; line-height: 0.9; letter-spacing: -0.02em; margin-bottom: 2rem; }
-    .hero-wordmark .dot { color: var(--gold); }
-    .hero-oneliner { font-size: 1.15rem; color: rgba(255,255,255,0.78); font-weight: 300; line-height: 1.8; margin-bottom: 2.8rem; max-width: 580px; }
-    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; }
-
-    /* Mission & Vision */
-    .mission { background: #fff; }
-    .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-    .mission-block { border-top: 3px solid var(--gold); padding-top: 2rem; }
-    .mission-block h3 { color: var(--purple); margin-bottom: 1rem; }
-    .mission-block p { color: var(--mid-grey); line-height: 1.85; }
-
-    /* Who This Is For */
-    .clients { background: var(--off-white); }
-    .clients-inner { max-width: 760px; }
-    .clients-inner h2 { margin-bottom: 1.4rem; }
-    .clients-inner p { color: var(--mid-grey); line-height: 1.9; margin-bottom: 1.2rem; }
-
-    /* The Gap */
-    .gap { background: var(--purple-deep); padding: 7rem 0; }
-    .gap .tag { color: rgba(201,168,76,0.85); }
-    .gap-inner { max-width: 760px; }
-    .gap-inner h2 { color: #fff; margin-bottom: 1.6rem; }
-    .gap-inner p { color: rgba(255,255,255,0.7); line-height: 1.9; margin-bottom: 1.3rem; }
-    .gap-inner p strong { color: rgba(255,255,255,0.95); font-weight: 600; }
-    .gap-inner p.gap-close { color: var(--gold); font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.25rem; line-height: 1.6; margin-top: 2rem; }
-
-    /* Services */
-    .services { background: var(--off-white); }
-    .services-intro { max-width: 600px; margin-bottom: 4rem; }
-    .services-intro h2 { margin-bottom: 1rem; }
-    .services-intro p { color: var(--mid-grey); line-height: 1.8; }
-    .service-block { border-top: 1px solid var(--light-grey); padding: 4rem 0; }
-    .service-block:last-child { border-bottom: 1px solid var(--light-grey); }
-    .service-layout { display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start; }
-    .service-label { margin-bottom: 1.2rem; }
-    .service-left h3 { font-size: clamp(1.3rem, 2.5vw, 1.8rem); margin-bottom: 1rem; color: var(--purple); }
-    .service-left p { color: var(--mid-grey); line-height: 1.85; margin-bottom: 1.2rem; }
-    .service-right { background: #fff; border-top: 3px solid var(--gold); padding: 2.5rem; }
-    .service-right .tag { margin-bottom: 0.5rem; }
-    .service-right h4 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: var(--near-black); margin-bottom: 0.8rem; }
-    .service-right p { color: var(--mid-grey); font-size: 0.97rem; line-height: 1.8; margin-bottom: 1.8rem; }
-
-    /* Influence Triangle */
-    .triangle { background: var(--purple); padding: 7rem 0; }
-    .triangle .tag { color: rgba(201,168,76,0.8); }
-    .triangle-header { max-width: 580px; margin-bottom: 4.5rem; }
-    .triangle-header h2 { color: #fff; margin-bottom: 0.5rem; }
-    .triangle-header p { color: rgba(255,255,255,0.65); font-size: 1.05rem; }
-    .triangle-layers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-    .triangle-layer { border-top: 2px solid rgba(201,168,76,0.4); padding-top: 2rem; }
-    .layer-num { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.14em; color: var(--gold); display: block; margin-bottom: 1rem; }
-    .triangle-layer h3 { color: #fff; font-size: 1.15rem; margin-bottom: 0.8rem; }
-    .triangle-layer p { color: rgba(255,255,255,0.62); font-size: 0.95rem; line-height: 1.8; }
-
-    /* About Founder */
-    .founder { background: #fff; }
-    .founder-inner { display: grid; grid-template-columns: 1fr 1.7fr; gap: 6rem; align-items: start; }
-    .founder-portrait { aspect-ratio: 3/4; background: var(--purple); position: relative; overflow: hidden; }
-    .founder-portrait img { width: 100%; height: 100%; object-fit: cover; object-position: top center; display: block; }
-    .founder-portrait-overlay { position: absolute; bottom: 0; left: 0; right: 0; padding: 1.8rem; background: linear-gradient(to top, rgba(38,16,80,0.92) 0%, transparent 100%); }
-    .founder-portrait-overlay p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: rgba(255,255,255,0.88); line-height: 1.6; }
-    .founder-bio h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin-bottom: 1.4rem; }
-    .founder-bio p { color: var(--mid-grey); line-height: 1.9; margin-bottom: 1.2rem; }
-    .founder-bio p strong { color: var(--near-black); font-weight: 600; }
-    .founder-links { display: flex; gap: 1rem; margin-top: 2.2rem; flex-wrap: wrap; }
-
-    /* Research band */
-    .research-band { background: var(--off-white); }
-    .research-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
-    .research-band-text .tag { }
-    .research-band-text h2 { margin-bottom: 0.8rem; }
-    .research-band-text p { color: var(--mid-grey); max-width: 520px; line-height: 1.75; }
-
-    /* Audit CTA band */
-    .audit-band { background: var(--purple); padding: 5rem 0; }
-    .audit-band-inner { display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap; }
-    .audit-band-text .tag { color: rgba(201,168,76,0.8); }
-    .audit-band-text h2 { color: #fff; margin-bottom: 0.8rem; }
-    .audit-band-text p { color: rgba(255,255,255,0.7); max-width: 500px; line-height: 1.75; }
-
-    /* Footer */
-    footer { background: var(--near-black); color: rgba(255,255,255,0.55); padding: 5rem 0 2.5rem; }
-    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
-    .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 1.25rem; color: #fff; margin-bottom: 0.8rem; }
-    .footer-brand p { font-size: 0.9rem; line-height: 1.75; }
-    .footer-col h4 { font-family: 'Jost', sans-serif; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.85); margin-bottom: 1.2rem; }
-    .footer-col ul { list-style: none; }
-    .footer-col ul li { margin-bottom: 0.65rem; }
-    .footer-col ul a { font-size: 0.9rem; color: rgba(255,255,255,0.52); transition: color 0.2s; }
-    .footer-col ul a:hover { color: var(--gold); }
-    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; font-size: 0.82rem; flex-wrap: wrap; gap: 1rem; }
-    .footer-bottom a { color: rgba(255,255,255,0.38); }
-    .footer-bottom a:hover { color: var(--gold); }
-
-    /* Opportunity Section */
-    .opportunity { background: #fff; }
-    .opp-intro { max-width: 680px; color: var(--mid-grey); line-height: 1.85; margin-bottom: 2.5rem; }
-    .quiz-prompt { background: var(--off-white); border: 1px solid var(--light-grey); border-left: 3px solid var(--gold); padding: 1.5rem 2rem; display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; margin-bottom: 4rem; }
-    .quiz-prompt p { color: var(--mid-grey); font-size: 0.97rem; max-width: 500px; }
-    .opp-level { padding: 3.5rem 0; border-top: 1px solid var(--light-grey); }
-    .opp-level-tag { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 0.6rem; }
-    .opp-level h3 { color: var(--purple); font-size: clamp(1.2rem, 2vw, 1.55rem); margin-bottom: 1rem; }
-    .opp-level > p { color: var(--mid-grey); line-height: 1.85; max-width: 680px; margin-bottom: 1.5rem; }
-    .opp-products { display: flex; gap: 0.8rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
-    .product-chip { font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.08em; color: var(--purple); border: 1px solid var(--purple); padding: 0.4rem 1rem; border-radius: 2px; transition: background 0.2s, color 0.2s; }
-    .product-chip:hover { background: var(--purple); color: #fff; }
-    .training-note { margin-top: 3rem; background: var(--purple-deep); padding: 2.5rem; border-top: 3px solid var(--gold); display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap; }
-    .training-note p { color: rgba(255,255,255,0.8); line-height: 1.8; max-width: 560px; }
-    .training-note p strong { color: #fff; }
-
-    @media (max-width: 900px) {
-      .nav-links { display: none; }
-      .hamburger { display: flex; }
-      .mission-grid, .triangle-layers, .footer-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-      .service-layout { grid-template-columns: 1fr; gap: 2.5rem; }
-      .founder-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .founder-portrait { aspect-ratio: 4/3; }
-      .audit-band-inner, .research-band-inner { flex-direction: column; }
-    }
-    @media (max-width: 600px) {
-      section { padding: 4rem 0; }
-      .hero { padding: 8rem 0 5rem; min-height: auto; }
-      .hero-wordmark { font-size: clamp(3rem, 16vw, 5rem); }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Jost:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://strategyshepherds.com/#organization","name":"Strategy Shepherds","url":"https://strategyshepherds.com","email":"stella@stellanjogo.com","description":"A strategic communications and impact storytelling firm helping African nonprofits and mission-led organisations win funding, build trust and lead sector conversations.","founder":{"@id":"https://strategyshepherds.com/#stella-njogo"},"areaServed":{"@type":"Place","name":"Africa"},"knowsAbout":["impact storytelling","strategic communications","fundraising narrative","research translation","community engagement","thought leadership","African nonprofit communications"],"sameAs":["https://www.youtube.com/@stellanjogo","https://substack.com/@digitalafricasignals","https://stellanjogo.com"]},{"@type":"Person","@id":"https://strategyshepherds.com/#stella-njogo","name":"Stella Njogo","url":"https://stellanjogo.com","image":"https://stellanjogo.com/assets/images/image02.jpg?v=3152bf9e","jobTitle":"Founder and Strategic Communications Leader","worksFor":{"@id":"https://strategyshepherds.com/#organization"},"knowsAbout":["strategic communications in Africa","impact storytelling","fundraising narrative","youth and culture strategy","creator economy in Africa"],"sameAs":["https://www.youtube.com/@stellanjogo","https://substack.com/@digitalafricasignals"]},{"@type":"WebPage","@id":"https://strategyshepherds.com/#webpage","url":"https://strategyshepherds.com/","name":"Strategy Shepherds | Impact Storytelling for African Nonprofits","description":"Strategy Shepherds helps African nonprofits turn evidence, expertise and community trust into stronger funding cases, deeper trust and sector influence.","isPartOf":{"@id":"https://strategyshepherds.com/#website"},"about":{"@id":"https://strategyshepherds.com/#organization"},"inLanguage":"en-GB"},{"@type":"WebSite","@id":"https://strategyshepherds.com/#website","url":"https://strategyshepherds.com","name":"Strategy Shepherds","publisher":{"@id":"https://strategyshepherds.com/#organization"},"inLanguage":"en-GB"},{"@type":"ProfessionalService","name":"Strategy Shepherds","url":"https://strategyshepherds.com","areaServed":"Africa","serviceType":"Strategic communications and impact storytelling","founder":{"@id":"https://strategyshepherds.com/#stella-njogo"}}]}</script>
 </head>
 <body>
 
-  <nav aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-logo" aria-label="Strategy Shepherds home">Strategy<span>.</span>Shepherds</a>
-      <ul class="nav-links">
-        <li><a href="build-authority.html">Build Authority</a></li>
-        <li><a href="trust-networks.html">Trust Networks</a></li>
-        <li><a href="agenda-shaping.html">Agenda Shaping</a></li>
-        <li><a href="influence-school.html">Influence School</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="voice-to-leads-score.html" class="nav-cta">Take the Authority Quiz</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-    <div class="mobile-nav" id="mobile-nav" role="navigation" aria-label="Mobile navigation">
-      <a href="build-authority.html">Build Authority</a>
-      <a href="trust-networks.html">Trust Networks</a>
-      <a href="agenda-shaping.html">Agenda Shaping</a>
-      <a href="influence-school.html">Influence School</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="voice-to-leads-score.html">Take the Authority Quiz</a>
-    </div>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="site-header">
+  <nav class="container nav-shell" aria-label="Main navigation">
+    <a class="brand" href="index.html" aria-label="Strategy Shepherds home">Strategy<span class="brand-dot">.</span>Shepherds</a>
+    <button class="menu-button" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="main-menu" data-menu-button>
+      <span class="menu-lines" aria-hidden="true"></span>
+    </button>
+    <ul class="nav-links" id="main-menu" data-nav-links>
+      <li><a href="work-with-us.html">Work With Us</a></li>
+      <li><a href="storytelling-library.html">Storytelling Library</a></li>
+      <li><a href="creator-day-africa.html">Creator Day Africa</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a class="nav-cta" href="impact-story-audit.html">Take the Impact Story Audit</a></li>
+    </ul>
   </nav>
+</header>
+<main id="main">
 
-  <!-- HERO -->
-  <header class="hero" id="top">
-    <div class="container">
-      <div class="hero-inner">
-        <span class="tag">Influence Strategy for African Organizations</span>
-        <h1 class="hero-wordmark">Strategy<span class="dot">.</span><br>Shepherds</h1>
-        <p class="hero-oneliner">Strategy Shepherds works with African organizations to build influence as a core competitive strategy.</p>
-        <nav class="hero-ctas" aria-label="Primary calls to action">
-          <a href="build-authority.html" class="btn-gold">Start Building Your Authority</a>
-          <a href="#opportunity" class="btn-outline-white">Explore How We Work</a>
-        </nav>
+
+<header class="hero">
+  <div class="container">
+    <div class="hero-inner">
+      <span class="eyebrow">Strategic communications and impact storytelling for African nonprofits</span>
+      <h1>Your impact is bigger than your current story. <em>Let’s make it impossible to miss.</em></h1>
+      <p class="lede">Strategy Shepherds helps African nonprofits turn evidence, expertise and community trust into a case funders can back, a coalition people want to join and a point of view that moves the sector forward.</p>
+      
+      <div class="button-row">
+        <a class="button primary" href="sovereign-story-intensive-application.html">Apply for the Sovereign Story Intensive</a>
+        <a class="button secondary" href="impact-story-audit.html">Take the Free Impact Story Audit</a>
+      </div>
+      <p class="trust-line">For nonprofits, foundations, intermediaries and mission-led organisations building Africa’s next chapter.</p>
+    </div>
+  </div>
+</header>
+
+<section class="section paper">
+  <div class="container split">
+    <div class="sticky-copy">
+      <span class="eyebrow">When strong work is being undersold</span>
+      <h2>Good programmes can still be difficult to fund when the institutional story is unclear.</h2>
+    </div>
+    <div class="stack prose">
+      <p>Your organisation may be creating real change. But if the story has not kept pace, funders see projects instead of an institution worth backing. Evidence stays trapped in reports. Leaders with hard-won expertise remain invisible. Teams tell different versions of the same story. Communities are invited into campaigns, but not into the mission.</p>
+      <div class="callout"><p>The problem is not that your work is too small. The story around it has become too small.</p></div>
+      <ul class="feature-list">
+        <li>Funders appreciate the work but struggle to repeat why your organisation is distinct.</li>
+        <li>Your proposals explain activities more clearly than the future you are building.</li>
+        <li>Your strongest proof is buried in research, evaluations and internal decks.</li>
+        <li>Different teams describe the organisation in different ways.</li>
+        <li>Your leaders have a valuable point of view, but the sector rarely hears it.</li>
+        <li>You are responding to the sector conversation instead of helping to lead it.</li>
+        <li>You are preparing for a new strategy, funding push, leadership transition or stage of growth.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="section cream">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">What changes</span>
+      <h2>Turn strong work into an institution people understand, trust and choose to back.</h2>
+      <p class="lede">We clarify the story beneath the programmes: the future you are building, the problem you uniquely understand, what your evidence proves and why your institution is essential to the solution.</p>
+    </div>
+    <div class="grid three">
+      <article class="card"><h3>A stronger funding case</h3><p>Give funders a clear institutional proposition they can understand, repeat and confidently champion.</p></article>
+      <article class="card"><h3>One aligned story</h3><p>Equip leadership, fundraising, programme and communications teams to tell the same consequential story.</p></article>
+      <article class="card"><h3>A position worth following</h3><p>Turn evidence and expertise into ideas that help your organisation lead the field forward.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section purple">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">The Strategy Shepherds method</span>
+      <h2>Make the Case. Build the Coalition. Shape the Agenda.</h2>
+      <p class="lede">Influence is not built by publishing more. It is built by making a clear case, equipping the right people to carry it and contributing ideas that move the field forward.</p>
+    </div>
+    <div class="grid three">
+      <article class="card number-card" data-number="01 / Make the Case"><h3>Give people a reason to invest.</h3><p>Clarify why your organisation matters, what it uniquely understands, what its evidence proves and why funders should back the institution, not only the next project.</p></article>
+      <article class="card number-card" data-number="02 / Build the Coalition"><h3>Give people a role in the mission.</h3><p>Engage communities, funders, employees, creators, researchers, partners, policymakers and allies as active participants.</p></article>
+      <article class="card number-card" data-number="03 / Shape the Agenda"><h3>Help define the field.</h3><p>Turn research, community knowledge and leadership expertise into ideas, convenings and coalitions that influence attention, capital and policy.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section paper">
+  <div class="container split">
+    <div>
+      <span class="eyebrow">The flagship engagement</span>
+      <h2>One focused leadership day. A story built for your organisation’s next stage.</h2>
+      <div class="button-row"><a class="button secondary" href="sovereign-story-intensive.html">Explore the Intensive</a></div>
+    </div>
+    <div class="prose">
+      <p>The Sovereign Story Intensive is for organisations whose mandate, ambition or impact has outgrown the way they currently describe themselves.</p>
+      <p>Before the day, we review your strategy, evidence, fundraising materials and public story. During the executive intensive, your leadership team makes the decisions that matter. Afterwards, you receive the institutional narrative, funding case, message architecture, proof map, coalition direction and action plan needed to move forward with confidence.</p>
+      <div class="callout"><p>Leave with the clarity to become easier to understand, more compelling to fund and better positioned to lead.</p></div>
+      <div class="button-row"><a class="button primary" href="sovereign-story-intensive-application.html" target="_blank" rel="noopener">Apply for an Intensive</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section cream">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">Ways to start</span><h2>Start where the gap is most visible.</h2></div>
+    <div class="grid three form-link-grid">
+      <article class="card"><span class="label">Free self-assessment</span><h3>Impact Story Audit</h3><p>Find the gaps weakening your funding case, community trust and sector influence. Get a clear diagnosis and one practical next step.</p><div class="button-row"><a class="text-link" href="impact-story-audit.html" target="_blank" rel="noopener">Take the Free Audit →</a></div></article>
+      <article class="card"><span class="label">Team capability</span><h3>Impact Storytelling Workshop</h3><p>Help your team turn impact into a clearer case for funding, stronger stakeholder trust and a story everyone can tell.</p><div class="button-row"><a class="text-link" href="impact-storytelling-workshop.html">Explore the Workshop →</a></div></article>
+      <article class="card"><span class="label">Professional resources</span><h3>African Impact Storytelling Library</h3><p>Give your team practical tools for turning evidence, expertise and community knowledge into stronger communications.</p><div class="button-row"><a class="text-link" href="storytelling-library.html">Explore the Library →</a></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section paper">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">Who we work with</span><h2>Built for organisations doing serious work across Africa.</h2><p class="lede">We are nonprofit-first, with deep relevance for organisations whose work depends on evidence, trust, coalition building and long-term funding.</p></div>
+    <div class="grid three">
+      <article class="card"><h3>Youth, education and livelihoods</h3><p>Organisations equipping Africa’s young people to learn, earn and shape the future.</p></article>
+      <article class="card"><h3>Climate, food and energy</h3><p>Institutions advancing resilient systems, a just transition and African-led solutions.</p></article>
+      <article class="card"><h3>Health, gender and social equity</h3><p>Evidence-led organisations changing access, agency, norms and opportunity.</p></article>
+      <article class="card"><h3>Foundations and intermediaries</h3><p>Funders, networks and field builders strengthening entire portfolios and ecosystems.</p></article>
+      <article class="card"><h3>Mission-led companies</h3><p>Select businesses that need to build trust and participate credibly in public conversations.</p></article>
+      <article class="card"><h3>Regional organisations</h3><p>Teams working across African markets that need one coherent institutional story.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="section gold-wash">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">Experience that connects strategy to opportunity</span><h2>When the story gets stronger, the work travels further.</h2><p class="lede">Work led by founder Stella Njogo, who has 12 years of experience helping organisations sharpen their institutional position, translate complex evidence and carry African perspectives into wider funding and sector conversations.</p></div>
+    <div class="proof-grid">
+      <div class="proof"><strong>US$2M+</strong><span>in gender-norms programming funding influenced through research-led positioning.</span></div>
+      <div class="proof"><strong>Six African markets</strong><span>connected through a multi-year adolescent-health fundraising narrative.</span></div>
+      <div class="proof"><strong>Nairobi to TED</strong><span>Strategic storytelling carried into TED Countdown and climate conversations around COP.</span></div>
+      <div class="proof"><strong>Cross-sector depth</strong><span>Experience spanning youth, health, gender, food systems, climate and the creator economy.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section paper">
+  <div class="container split">
+    <figure class="portrait">
+      <img src="https://stellanjogo.com/assets/images/image02.jpg?v=3152bf9e" alt="Stella Njogo, founder of Strategy Shepherds" width="800" height="1000" loading="lazy">
+      <figcaption>“Define the story. Shape the future.”</figcaption>
+    </figure>
+    <div class="prose">
+      <span class="eyebrow">Meet the founder</span>
+      <h2>Twelve years turning complex work into stories people can understand, trust and act on.</h2>
+      <p>Stella Njogo is a strategic communications leader focused on Africa. She has worked across youth, health, gender, food systems, climate and the creator economy, helping organisations connect evidence, culture and public storytelling to funding, partnerships and influence.</p>
+      <p>She founded Strategy Shepherds after seeing the same pattern repeatedly: African organisations were doing sophisticated work, but too much of their expertise remained invisible, under-explained or locked inside reports.</p>
+      <p><strong>Strategy Shepherds exists to change that.</strong></p>
+      <div class="button-row"><a class="button secondary" href="about.html">Meet Stella and Learn Why We Built This</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="section purple">
+  <div class="container grid two">
+    <article class="card">
+      <span class="eyebrow">The thinking behind the work</span>
+      <h3>Sovereign Stories</h3>
+      <p><strong>Why Africa’s Next Economy Will Belong to Those Who Define It.</strong> A forthcoming book for leaders ready to define the future they are creating and build institutions capable of carrying it forward.</p>
+      <div class="button-row"><a class="button primary" href="sovereign-stories.html">Explore the Book</a></div>
+    </article>
+    <article class="card">
+      <span class="eyebrow">A public movement</span>
+      <h3>Creator Day Africa</h3>
+      <p>Open nonprofits, businesses and community organisations to the creators who can help more people discover the work happening inside.</p>
+      <div class="button-row"><a class="button secondary" href="creator-day-africa.html">Explore Creator Day Africa</a></div>
+    </article>
+  </div>
+</section>
+
+
+<section class="cta-band">
+  <div class="container cta-band-inner">
+    <div>
+      <span class="eyebrow">Your next chapter</span>
+      <h2>Your organisation has done the work. Now build the story that can carry it forward.</h2>
+      <p>If your mandate, evidence or ambition has outgrown the way you currently describe it, the Sovereign Story Intensive gives your leadership team the clarity to move into the next chapter.</p>
+    </div>
+    <div class="button-row">
+      <a class="button primary" href="sovereign-story-intensive-application.html">Apply for the Sovereign Story Intensive</a>
+      <a class="button secondary" href="impact-story-audit.html">Take the Impact Story Audit First</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h2>Strategy Shepherds</h2>
+        <p>Strategy Shepherds helps African nonprofits make a stronger institutional case, build the coalition around their mission and lead the conversations shaping their fields.</p>
+      </div>
+      <div class="footer-column">
+        <h3>Work</h3>
+        <ul>
+          <li><a href="sovereign-story-intensive.html">Sovereign Story Intensive</a></li>
+          <li><a href="impact-storytelling-workshop.html">Impact Storytelling Workshop</a></li>
+          <li><a href="work-with-us.html#partnership">Strategic Communications Partnership</a></li>
+          <li><a href="storytelling-library.html">Storytelling Library</a></li>
+          <li><a href="impact-story-audit.html">Impact Story Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Ideas &amp; community</h3>
+        <ul>
+          <li><a href="sovereign-stories.html">Sovereign Stories</a></li>
+          <li><a href="creator-day-africa.html">Creator Day Africa</a></li>
+          <li><a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener">Digital Africa Signals</a></li>
+          <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html#speaking">Speaking &amp; media</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="terms.html">Terms</a></li>
+        </ul>
       </div>
     </div>
-  </header>
-
-  <!-- MISSION AND VISION -->
-  <section class="mission" id="mission-vision" aria-labelledby="mission-heading">
-    <div class="container">
-      <span class="tag">Mission And Vision</span>
-      <h2 id="mission-heading" style="margin-bottom:3rem;">What we are building toward.</h2>
-      <div class="mission-grid">
-        <div class="mission-block">
-          <h3>Our Vision</h3>
-          <p>To help one million experienced African voices build influence by 2040.</p>
-        </div>
-        <div class="mission-block">
-          <h3>Our Mission</h3>
-          <p>To enable African prosperity by helping organizations, leaders, and experts build influence that compounds.</p>
-        </div>
-      </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Strategy Shepherds. All rights reserved.</span>
+      <span class="footer-line">Define the story. Shape the future.</span>
+      <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
     </div>
-  </section>
-
-  <!-- WHO THIS IS FOR -->
-  <section class="clients" id="clients" aria-labelledby="clients-heading">
-    <div class="container">
-      <div class="clients-inner">
-        <span class="tag">Who This Is For</span>
-        <h2 id="clients-heading">Built for organizations doing serious work across Africa.</h2>
-        <p>Strategy Shepherds works with organizations building, funding, shaping, or expanding work across Africa.</p>
-        <p>Our clients include African companies, regional organizations, global organizations expanding into African markets, nonprofits, multinationals, foundations, government-adjacent institutions, and sector leaders who need their work to be seen, trusted, and acted on.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- THE GAP -->
-  <section class="gap" id="gap" aria-labelledby="gap-heading">
-    <div class="container">
-      <div class="gap-inner">
-        <span class="tag">The Gap</span>
-        <h2 id="gap-heading">Good work that nobody can see is work that cannot compound.</h2>
-        <p>By 2050, one in every four people on earth will be African. Yet the internet, the knowledge economy, and the emerging AI economy still do not sufficiently reflect African voices, African research, African nuance, or African problem-solving.</p>
-        <p>Across the continent, many organizations are doing excellent work. But too much of it is invisible, unpublished, under-amplified, or trapped in silos. People repeat work because they cannot see what already exists. Good ideas fail to compound. Strong institutions miss collaboration opportunities because their thinking is not discoverable.</p>
-        <p>This is not just a visibility problem. <strong>It is a prosperity problem.</strong></p>
-        <p>In the current AI gold rush, everyone is racing to build the next tool, the next automation, the next platform. But when everyone has access to AI, tools alone will not make an organization stand out.</p>
-        <p class="gap-close">Influence will.</p>
-        <p>The organizations that win will be the ones people trust, cite, follow, invite, fund, buy from, and build with. Strategy Shepherds helps African organizations create that edge by turning their expertise, research, work, and ideas into influence that builds demand for their products, services, movements, and missions.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- THE OPPORTUNITY: THREE LEVELS OF INFLUENCE -->
-  <section class="opportunity" id="opportunity" aria-labelledby="opp-heading">
-    <div class="container">
-      <span class="tag">The Opportunity</span>
-      <h2 id="opp-heading">Three levels of influence. One compounding system.</h2>
-      <p class="opp-intro">Influence is built in layers. Every service we offer maps to one of these three levels. Together, they build a system where each layer makes the next one stronger — and where your investment in one level pays dividends across all three.</p>
-
-      <div class="quiz-prompt">
-        <p>Not sure where to start? Take the Authority Quiz and find out exactly where your influence stands right now.</p>
-        <a href="voice-to-leads-score.html" class="btn-gold">Take the Authority Quiz</a>
-      </div>
-
-      <!-- Level 01 -->
-      <div class="opp-level">
-        <span class="opp-level-tag">Level 01 · Build Your Authority</span>
-        <h3>Become the obvious choice in your space.</h3>
-        <p>Clarity in your positioning. Content that ranks on Google and AI search. A growing body of work that makes you easy to find, trust, and buy from. We help founders, consultants, and organizations build consistent digital authority from one monthly conversation — without spending hours creating content every week.</p>
-        <div class="opp-products">
-          <a href="build-authority.html" class="product-chip">The Presence Program · $250/month</a>
-          <a href="build-authority.html" class="product-chip">The Pipeline Program · $500/month</a>
-        </div>
-        <a href="build-authority.html" class="btn-outline">Start Building Your Authority</a>
-      </div>
-
-      <!-- Level 02 -->
-      <div class="opp-level">
-        <span class="opp-level-tag">Level 02 · Build Your Trust Network</span>
-        <h3>Let creators tell your story.</h3>
-        <p>Influence travels through people. We help you activate the local creator economy as a business strategy — turning creators into organic ambassadors for your brand, your space, and your work. No paid ads. No production budgets. Just real people discovering what you do and sharing it with their audiences.</p>
-        <div class="opp-products">
-          <a href="creator-day.html" class="product-chip">Creator Day · $200 one-time</a>
-        </div>
-        <a href="trust-networks.html" class="btn-outline">Explore Trust Networks</a>
-      </div>
-
-      <!-- Level 03 -->
-      <div class="opp-level">
-        <span class="opp-level-tag">Level 03 · Agenda Shaping</span>
-        <h3>Shape the conversations that define your market.</h3>
-        <p>The most powerful form of influence is not just being heard — it is being the one who sets the terms of the conversation. At this level, the clarity from your authority and the connection from your trust network come together to let you contribute to larger social and global conversations. You consciously consume the issues that matter to your sector, and deliberately create your unique contribution.</p>
-        <div class="opp-products">
-          <a href="https://calendar.app.google/Tp5UxNFaP7AgPRNH6" target="_blank" rel="noopener" class="product-chip">Influence Strategy Consulting</a>
-        </div>
-        <a href="agenda-shaping.html" class="btn-outline">Explore Agenda Shaping</a>
-      </div>
-
-      <!-- Training for teams -->
-      <div class="training-note">
-        <p><strong>Influence skills training for teams:</strong> We also offer structured influence skills training to help your whole team build authority, communicate with strategic clarity, and participate meaningfully in the conversations that shape your sector.</p>
-        <a href="training.html" class="btn-outline-white">Request a Training</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT THE FOUNDER -->
-  <section class="founder" id="about" aria-labelledby="founder-heading">
-    <div class="container">
-      <div class="founder-inner">
-        <div class="founder-portrait">
-          <img src="https://stellanjogo.com/assets/images/image02.jpg?v=3152bf9e" alt="Stella Njogo, Founder of Strategy Shepherds" loading="lazy">
-          <div class="founder-portrait-overlay">
-            <p>"Influence is the ultimate competitive advantage in the age of AI."</p>
-          </div>
-        </div>
-        <div class="founder-bio">
-          <span class="tag">About The Founder</span>
-          <h2 id="founder-heading">Stella Njogo</h2>
-          <p>Stella Njogo is a strategic communications expert focused on the Africa region, with experience working across African and global contexts.</p>
-          <p>She is a leading expert in how to build influence in a digital Africa. Through Strategy Shepherds, she works with organizations to review their strategy, sharpen their positioning, and build influence systems using proprietary frameworks she has developed and refined over time.</p>
-          <p>Stella has spent 12 years at the intersection of strategy, content, and African business, working with companies, founders, and public figures across East and West Africa to build the kind of presence that opens doors before the pitch begins.</p>
-          <p>Strategy Shepherds grew out of a simple observation: <strong>African expertise is underrepresented online.</strong> Not because it does not exist, but because there has been no structured system to surface it, amplify it, and make it visible to the people who need to see it.</p>
-          <p>Her clients have included <strong>Shujaaz Inc, Tiko Health, the Food Culture Alliance Kenya,</strong> and global institutions including TED Countdown and UN partners at UNGA. Results include influencing over $2 million in gender norms programming funding through research-led positioning, and shaping a multi-year adolescent health fundraising narrative for Tiko across six African markets.</p>
-          <p>Beyond client work, Stella publishes research on African digital markets and the creator economy through <strong>Digital Africa Signals</strong> on Substack, and releases weekly frameworks and field observations on YouTube.</p>
-          <div class="founder-links">
-            <a href="about.html" class="btn-gold">More About Stella</a>
-            <a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener" class="btn-outline">Watch on YouTube</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- INFLUENCE RESEARCH -->
-  <section class="research-band" id="research" aria-labelledby="research-heading">
-    <div class="container">
-      <div class="research-band-inner">
-        <div class="research-band-text">
-          <span class="tag">Influence Research</span>
-          <h2 id="research-heading">We study how influence works in African markets.</h2>
-          <p>Strategy Shepherds publishes original research on African digital markets, influence dynamics, and the creator economy. Our research informs client strategy and contributes to the broader conversation about African participation in the global knowledge economy.</p>
-        </div>
-        <a href="influence-research.html" class="btn-outline" style="white-space:nowrap; flex-shrink:0;">See The Research</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- AUDIT CTA BAND -->
-  <section class="audit-band" aria-labelledby="audit-heading">
-    <div class="container">
-      <div class="audit-band-inner">
-        <div class="audit-band-text">
-          <span class="tag">Start Here</span>
-          <h2 id="audit-heading">Find out where your influence actually stands.</h2>
-          <p>The Influence Audit is a free 5-minute diagnostic. It tells you whether your organization is Scattered, Building, or Compounding, and shows you exactly where the gaps are. Most organizations that take it are surprised by the result.</p>
-        </div>
-        <a href="audit.html" class="btn-gold" style="white-space:nowrap; flex-shrink:0;">Take the Free Influence Audit</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>Strategy Shepherds</h3>
-          <p>Influence strategy for African companies and leaders. Building the authority, trust networks, and agenda position that turn expertise into competitive advantage.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Work</h4>
-          <ul>
-            <li><a href="build-authority.html">Build Authority</a></li>
-            <li><a href="trust-networks.html">Trust Networks</a></li>
-            <li><a href="agenda-shaping.html">Agenda Shaping</a></li>
-            <li><a href="creator-day.html">Creator Day</a></li>
-            <li><a href="influence-school.html">Influence School</a></li>
-            <li><a href="training.html">Training</a></li>
-            <li><a href="influence-research.html">Influence Research</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul>
-            <li><a href="about.html">About Stella</a></li>
-            <li><a href="https://www.youtube.com/@stellanjogo" target="_blank" rel="noopener">YouTube</a></li>
-            <li><a href="https://substack.com/@digitalafricasignals" target="_blank" rel="noopener">Digital Africa Signals</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>© 2026 Strategy Shepherds. All rights reserved.</span>
-        <a href="mailto:stella@stellanjogo.com">stella@stellanjogo.com</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const mobileNav = document.getElementById('mobile-nav');
-    hamburger.addEventListener('click', () => {
-      const open = mobileNav.classList.toggle('open');
-      hamburger.setAttribute('aria-expanded', open);
-    });
-  </script>
-
+  </div>
+</footer>
+<script src="form-config.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
