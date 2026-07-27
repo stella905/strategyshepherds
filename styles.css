@@ -1153,6 +1153,50 @@ li + li {
   }
 }
 
+.grid.five {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.capital-grid .card {
+  padding: 1.4rem;
+}
+
+.capital-grid h3 {
+  font-size: 1.2rem;
+}
+
+.leader-pathway {
+  align-items: center;
+  background: var(--purple);
+  color: var(--paper);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1.5fr 1fr;
+  margin-top: 2rem;
+  padding: clamp(2rem, 5vw, 4rem);
+}
+
+.result-cta {
+  display: inline-flex;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 980px) {
+  .grid.five {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .leader-pathway {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .grid.five {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

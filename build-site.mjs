@@ -13,6 +13,7 @@ const forms = {
   intensive: "sovereign-story-intensive-application.html",
   workshop: "impact-storytelling-workshop-request.html",
   library: "storytelling-library-interest.html",
+  visibility: "visibility-quiz.html",
   creator: "creator-day-africa-interest.html",
   book: "sovereign-stories-waitlist.html",
   contact: "enquiry.html",
@@ -39,8 +40,9 @@ const nav = (active = "") => `
       <span class="menu-lines" aria-hidden="true"></span>
     </button>
     <ul class="nav-links" id="main-menu" data-nav-links>
-      <li><a href="work-with-us.html"${active === "work" ? ' aria-current="page"' : ""}>Work With Us</a></li>
-      <li><a href="storytelling-library.html"${active === "library" ? ' aria-current="page"' : ""}>Storytelling Library</a></li>
+      <li><a href="work-with-us.html"${active === "work" ? ' aria-current="page"' : ""}>How We Help</a></li>
+      <li><a href="storytelling-library.html"${active === "library" ? ' aria-current="page"' : ""}>Fundraising Library</a></li>
+      <li><a href="visible-expert-masterclass.html"${active === "leaders" ? ' aria-current="page"' : ""}>For Leaders</a></li>
       <li><a href="creator-day-africa.html"${active === "creator" ? ' aria-current="page"' : ""}>Creator Day Africa</a></li>
       <li><a href="about.html"${active === "about" ? ' aria-current="page"' : ""}>About</a></li>
       <li><a class="nav-cta" href="${forms.audit}"${externalAttrs(forms.audit)}>Take the Impact Story Audit</a></li>
@@ -54,16 +56,23 @@ const footer = () => `
     <div class="footer-grid">
       <div class="footer-brand">
         <h2>Strategy Shepherds</h2>
-        <p>Strategy Shepherds helps African nonprofits make a stronger institutional case, build the coalition around their mission and lead the conversations shaping their fields.</p>
+        <p>Strategy Shepherds is a fundraising communications firm helping African organisations build stories that move money, people, trust, partnerships and agendas.</p>
       </div>
       <div class="footer-column">
         <h3>Work</h3>
         <ul>
           <li><a href="sovereign-story-intensive.html">Sovereign Story Intensive</a></li>
-          <li><a href="impact-storytelling-workshop.html">Impact Storytelling Workshop</a></li>
+          <li><a href="impact-storytelling-workshop.html">Business Storytelling Workshops</a></li>
           <li><a href="work-with-us.html#partnership">Strategic Communications Partnership</a></li>
-          <li><a href="storytelling-library.html">Storytelling Library</a></li>
+          <li><a href="storytelling-library.html">Fundraising Communications Library</a></li>
           <li><a href="${forms.audit}"${externalAttrs(forms.audit)}>Impact Story Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h3>For leaders</h3>
+        <ul>
+          <li><a href="visibility-quiz.html">Visibility Quiz</a></li>
+          <li><a href="visible-expert-masterclass.html">Visible Expert Masterclass</a></li>
         </ul>
       </div>
       <div class="footer-column">
@@ -103,16 +112,16 @@ const organisationJsonLd = {
   url: siteUrl,
   email: "stella@stellanjogo.com",
   description:
-    "A strategic communications and impact storytelling firm helping African nonprofits and mission-led organisations win funding, build trust and lead sector conversations.",
+    "A fundraising communications firm helping African organisations build stories that move funding, trust, coalitions and sector agendas.",
   founder: { "@id": `${siteUrl}/#stella-njogo` },
   areaServed: { "@type": "Place", name: "Africa" },
   knowsAbout: [
-    "impact storytelling",
-    "strategic communications",
-    "fundraising narrative",
+    "fundraising communications",
+    "capital-moving narratives",
+    "business storytelling",
     "research translation",
     "community engagement",
-    "thought leadership",
+    "executive visibility",
     "African nonprofit communications",
   ],
   sameAs: [
@@ -132,7 +141,7 @@ const personJsonLd = {
   worksFor: { "@id": `${siteUrl}/#organization` },
   knowsAbout: [
     "strategic communications in Africa",
-    "impact storytelling",
+    "business storytelling",
     "fundraising narrative",
     "youth and culture strategy",
     "creator economy in Africa",
@@ -340,26 +349,44 @@ const sectorOptions = [
 const pages = {};
 
 pages["index.html"] = page({
-  title: "Strategy Shepherds | Impact Storytelling for African Nonprofits",
+  title: "Strategy Shepherds | Fundraising Communications for African Organisations",
   description:
-    "Strategy Shepherds helps African nonprofits turn evidence, expertise and community trust into stronger funding cases, deeper trust and sector influence.",
+    "Strategy Shepherds helps African organisations turn expertise, evidence and community trust into stories that move funding, coalitions and sector agendas.",
   path: "index.html",
   body: `
 ${hero({
-  eyebrow: "Strategic communications and impact storytelling for African nonprofits",
-  headline: "Your impact is bigger than your current story. <em>Let’s make it impossible to miss.</em>",
-  copy: "Strategy Shepherds helps African nonprofits turn evidence, expertise and community trust into a case funders can back, a coalition people want to join and a point of view that moves the sector forward.",
-  primary: "Apply for the Sovereign Story Intensive",
-  primaryHref: forms.intensive,
-  secondary: "Take the Free Impact Story Audit",
-  secondaryHref: forms.audit,
+  eyebrow: "Fundraising communications for African organisations",
+  headline: "Build the story that <em>moves capital.</em>",
+  copy: "Strategy Shepherds helps African organisations turn expertise, evidence and community trust into stories that attract funding, build powerful coalitions and shape what their sectors prioritise next.",
+  primary: "Take the Impact Story Audit",
+  primaryHref: forms.audit,
+  secondary: "Explore How We Help",
+  secondaryHref: "work-with-us.html",
   trust: "For nonprofits, foundations, intermediaries and mission-led organisations building Africa’s next chapter.",
 })}
+
+<section class="section cream">
+  <div class="container">
+    <div class="section-heading">
+      <span class="eyebrow">Our central belief</span>
+      <h2>Stories move capital.</h2>
+      <p class="lede">Every decision to fund, join, recommend, partner with or champion an organisation begins with a story about what is possible, who is credible and what deserves to grow. Capital is more than money.</p>
+    </div>
+    <div class="grid five capital-grid">
+      <article class="card"><h3>Financial capital</h3><p>Grants, donations, contracts and long-term funding.</p></article>
+      <article class="card"><h3>Human capital</h3><p>Talent, champions, volunteers, experts and creators.</p></article>
+      <article class="card"><h3>Community capital</h3><p>Trust, participation, legitimacy and collective ownership.</p></article>
+      <article class="card"><h3>Relationship capital</h3><p>Partnerships, referrals, introductions and institutional access.</p></article>
+      <article class="card"><h3>Agenda capital</h3><p>The power to influence what a sector notices, prioritises and funds.</p></article>
+    </div>
+    <div class="callout"><p>We help African organisations build stories strong enough to move all five—beginning with a clearer case for why their work deserves support.</p></div>
+  </div>
+</section>
 
 <section class="section paper">
   <div class="container split">
     <div class="sticky-copy">
-      <span class="eyebrow">When strong work is being undersold</span>
+      <span class="eyebrow">When important work is being undersold</span>
       <h2>Good programmes can still be difficult to fund when the institutional story is unclear.</h2>
     </div>
     <div class="stack prose">
@@ -369,9 +396,7 @@ ${hero({
         <li>Funders appreciate the work but struggle to repeat why your organisation is distinct.</li>
         <li>Your proposals explain activities more clearly than the future you are building.</li>
         <li>Your strongest proof is buried in research, evaluations and internal decks.</li>
-        <li>Different teams describe the organisation in different ways.</li>
         <li>Your leaders have a valuable point of view, but the sector rarely hears it.</li>
-        <li>You are responding to the sector conversation instead of helping to lead it.</li>
         <li>You are preparing for a new strategy, funding push, leadership transition or stage of growth.</li>
       </ul>
     </div>
@@ -398,12 +423,12 @@ ${hero({
     <div class="section-heading">
       <span class="eyebrow">The Strategy Shepherds method</span>
       <h2>Make the Case. Build the Coalition. Shape the Agenda.</h2>
-      <p class="lede">Influence is not built by publishing more. It is built by making a clear case, equipping the right people to carry it and contributing ideas that move the field forward.</p>
+      <p class="lede">Important work does not automatically attract support. Organisations must make their value understandable, build trust around it and help others see the future their work makes possible.</p>
     </div>
     <div class="grid three">
-      <article class="card number-card" data-number="01 / Make the Case"><h3>Give people a reason to invest.</h3><p>Clarify why your organisation matters, what it uniquely understands, what its evidence proves and why funders should back the institution, not only the next project.</p></article>
-      <article class="card number-card" data-number="02 / Build the Coalition"><h3>Give people a role in the mission.</h3><p>Engage communities, funders, employees, creators, researchers, partners, policymakers and allies as active participants.</p></article>
-      <article class="card number-card" data-number="03 / Shape the Agenda"><h3>Help define the field.</h3><p>Turn research, community knowledge and leadership expertise into ideas, convenings and coalitions that influence attention, capital and policy.</p></article>
+      <article class="card number-card" data-number="01 / Make the Case"><h3>Turn expertise and evidence into authority.</h3><p>Clarify what your organisation knows, what your evidence demonstrates, why your approach is distinctive and why your work deserves support.</p></article>
+      <article class="card number-card" data-number="02 / Build the Coalition"><h3>Turn your story into an invitation.</h3><p>Build meaningful relationships with the communities closest to the work and the ecosystem partners who can fund, strengthen, scale or carry it.</p></article>
+      <article class="card number-card" data-number="03 / Shape the Agenda"><h3>Turn authority and trust into influence.</h3><p>Use your evidence, networks and point of view to shape what your sector notices, discusses, prioritises and funds next.</p></article>
     </div>
   </div>
 </section>
@@ -429,8 +454,12 @@ ${hero({
     <div class="section-heading"><span class="eyebrow">Ways to start</span><h2>Start where the gap is most visible.</h2></div>
     <div class="grid three form-link-grid">
       <article class="card"><span class="label">Free self-assessment</span><h3>Impact Story Audit</h3><p>Find the gaps weakening your funding case, community trust and sector influence. Get a clear diagnosis and one practical next step.</p><div class="button-row"><a class="text-link" href="${forms.audit}" target="_blank" rel="noopener">Take the Free Audit →</a></div></article>
-      <article class="card"><span class="label">Team capability</span><h3>Impact Storytelling Workshop</h3><p>Help your team turn impact into a clearer case for funding, stronger stakeholder trust and a story everyone can tell.</p><div class="button-row"><a class="text-link" href="impact-storytelling-workshop.html">Explore the Workshop →</a></div></article>
-      <article class="card"><span class="label">Professional resources</span><h3>African Impact Storytelling Library</h3><p>Give your team practical tools for turning evidence, expertise and community knowledge into stronger communications.</p><div class="button-row"><a class="text-link" href="storytelling-library.html">Explore the Library →</a></div></article>
+      <article class="card"><span class="label">Team capability</span><h3>Business Storytelling Workshops</h3><p>Equip leadership, fundraising and communications teams to turn complex work into credible, persuasive stories.</p><div class="button-row"><a class="text-link" href="impact-storytelling-workshop.html">Explore the Workshops →</a></div></article>
+      <article class="card"><span class="label">Build it yourself</span><h3>Fundraising Communications Library</h3><p>Access practical tools, templates, examples and monthly learning resources for building stories that move capital.</p><div class="button-row"><a class="text-link" href="storytelling-library.html">Explore the Library →</a></div></article>
+    </div>
+    <div class="leader-pathway">
+      <div><span class="eyebrow">For experienced leaders</span><h2>Turn leadership expertise into recognised authority.</h2><p>The Visible Expert Masterclass helps leaders translate experience, evidence and point of view into a clear position, offer and visible body of work.</p></div>
+      <div class="button-row"><a class="button primary" href="${forms.visibility}">Take the Visibility Quiz</a><a class="button secondary" href="visible-expert-masterclass.html">Explore the Masterclass</a></div>
     </div>
   </div>
 </section>
@@ -517,14 +546,14 @@ ${finalCta({
       name: "Strategy Shepherds",
       url: siteUrl,
       areaServed: "Africa",
-      serviceType: "Strategic communications and impact storytelling",
+      serviceType: "Fundraising communications and business storytelling",
       founder: { "@id": `${siteUrl}/#stella-njogo` },
     },
   ],
 });
 
 pages["work-with-us.html"] = page({
-  title: "Work With Strategy Shepherds | Impact Storytelling and Communications Strategy",
+  title: "How We Help | Fundraising Communications by Strategy Shepherds",
   description:
     "Choose the right Strategy Shepherds engagement for a stronger funding case, aligned team, community trust and sector influence.",
   path: "work-with-us.html",
@@ -542,10 +571,10 @@ ${hero({
 })}
 <section class="section paper">
   <div class="container">
-    <div class="section-heading"><span class="eyebrow">Four ways to work together</span><h2>Start with the decision in front of you.</h2></div>
+    <div class="section-heading"><span class="eyebrow">Five ways to strengthen your story</span><h2>Start with the decision in front of you.</h2></div>
     <div class="grid two form-link-grid">
       <article class="card">
-        <span class="label">Pathway one</span><h3>Impact Storytelling Workshop</h3>
+        <span class="label">Pathway one</span><h3>Business Storytelling Workshops</h3>
         <p><strong>Best when:</strong> Your team needs a shared story, sharper skills and a practical plan it can begin using immediately.</p>
         <p><strong>What changes:</strong> Scattered messages become a clearer institutional story, stronger proof and a 90-day action plan.</p>
         <p><strong>Result:</strong> Clarity and capability across communications, fundraising, programme and leadership teams.</p>
@@ -566,10 +595,16 @@ ${hero({
         <div class="button-row"><a class="text-link" href="${forms.contact}" target="_blank" rel="noopener">Discuss an Ongoing Partnership →</a></div>
       </article>
       <article class="card">
-        <span class="label">Self-service pathway</span><h3>African Impact Storytelling Library</h3>
+        <span class="label">Self-service pathway</span><h3>Fundraising Communications Library</h3>
         <p><strong>Best when:</strong> Your team wants proven templates, practical training and regular implementation support without bespoke consulting.</p>
         <p><strong>Result:</strong> A professional resource system that helps the team work faster and improve its storytelling over time.</p>
         <div class="button-row"><a class="text-link" href="storytelling-library.html">Explore the Library →</a></div>
+      </article>
+      <article class="card">
+        <span class="label">For leaders</span><h3>Visible Expert Masterclass</h3>
+        <p><strong>Best when:</strong> An experienced leader needs a clearer position, offer and visibility system that supports their organisation, business or portfolio career.</p>
+        <p><strong>Result:</strong> Experience, evidence and point of view become recognised authority people can understand, trust and act on.</p>
+        <div class="button-row"><a class="text-link" href="visible-expert-masterclass.html">Explore the Masterclass →</a></div>
       </article>
     </div>
   </div>
@@ -690,7 +725,7 @@ ${hero({
     </article>
     <article class="phase">
       <div class="phase-number">Phase 04</div>
-      <div class="phase-copy"><h3>Leadership adoption</h3><p>The engagement includes an executive debrief, a team cascade session, follow-up advisory calls and one year of team access to the African Impact Storytelling Library. A strategy only creates value when the organisation can use it.</p></div>
+      <div class="phase-copy"><h3>Leadership adoption</h3><p>The engagement includes an executive debrief, a team cascade session, follow-up advisory calls and one year of team access to the Fundraising Communications Library. A strategy only creates value when the organisation can use it.</p></div>
     </article>
   </div>
 </section>
@@ -830,7 +865,7 @@ ${finalCta({
 });
 
 pages["impact-storytelling-workshop.html"] = page({
-  title: "Impact Storytelling Workshop | Strategy Shepherds",
+  title: "Business Storytelling Workshops | Strategy Shepherds",
   description:
     "A practical workshop helping nonprofit teams build a clearer institutional story, stronger funding case, evidence map and 90-day action plan.",
   path: "impact-storytelling-workshop.html",
@@ -839,7 +874,7 @@ pages["impact-storytelling-workshop.html"] = page({
 ${hero({
   eyebrow: "Team training that produces real organisational work",
   headline: "Help your whole team tell one stronger story.",
-  copy: "The Impact Storytelling Workshop turns your organisation’s impact into a clearer case for funding, stronger stakeholder trust and a story your leadership, programme, fundraising and communications teams can all use.",
+  copy: "Business Storytelling Workshops equip your leadership, programme, fundraising and communications teams to turn complex work into a clearer case for funding, stronger stakeholder trust and stories everyone can use.",
   outcome: "Your team leaves with decisions, first drafts and a 90-day implementation plan.",
   primary: "Bring the Workshop to Your Team",
   primaryHref: forms.workshop,
@@ -927,10 +962,10 @@ ${finalCta({
     {
       "@type": "Service",
       "@id": `${siteUrl}/impact-storytelling-workshop.html#service`,
-      name: "Impact Storytelling Workshop",
+      name: "Business Storytelling Workshops",
       provider: { "@id": `${siteUrl}/#organization` },
       areaServed: "Africa",
-      serviceType: "Nonprofit impact storytelling training",
+      serviceType: "Business storytelling and fundraising communications training",
       description:
         "A practical workshop that helps nonprofit teams build an institutional story, draft case for support, evidence map, audience messages and 90-day action plan.",
     },
@@ -938,7 +973,7 @@ ${finalCta({
 });
 
 pages["storytelling-library.html"] = page({
-  title: "African Impact Storytelling Library | Tools for Nonprofit Teams",
+  title: "Fundraising Communications Library | Strategy Shepherds",
   description:
     "Practical workshops, templates and case studies helping African impact teams turn evidence and expertise into funding, trust and influence.",
   path: "storytelling-library.html",
@@ -947,7 +982,7 @@ pages["storytelling-library.html"] = page({
 ${hero({
   eyebrow: "The professional resource system for African impact teams",
   headline: "Turn evidence into stronger stories without starting from a blank page every time.",
-  copy: "The African Impact Storytelling Library gives nonprofit and mission-led teams practical tools for turning evidence, leadership expertise and community knowledge into stronger funding, trust and influence. It is built around the realities of impact work in African contexts.",
+  copy: "The Fundraising Communications Library gives African nonprofit and mission-led teams practical tools for turning evidence, leadership expertise and community knowledge into stronger funding cases, trusted relationships and sector influence.",
   primary: "Join the Founding Library",
   primaryHref: forms.library,
   secondary: "See What Members Receive",
@@ -1053,12 +1088,12 @@ ${finalCta({
     {
       "@type": "Service",
       "@id": `${siteUrl}/storytelling-library.html#service`,
-      name: "African Impact Storytelling Library",
+      name: "Fundraising Communications Library",
       provider: { "@id": `${siteUrl}/#organization` },
       areaServed: "Africa",
       serviceType: "Professional learning and resource membership",
       description:
-        "Workshops, templates, case studies and implementation support for African nonprofit and impact storytelling teams.",
+        "Templates, examples, case studies and implementation support for African fundraising communications teams.",
     },
   ],
 });
@@ -1174,7 +1209,7 @@ ${finalCta({
 });
 
 pages["about.html"] = page({
-  title: "About Strategy Shepherds | African Impact Storytelling and Communications Strategy",
+  title: "About Strategy Shepherds | Stories That Move Capital",
   description:
     "Meet Strategy Shepherds and founder Stella Njogo. We help African organisations turn evidence and expertise into funding, trust and sector influence.",
   path: "about.html",
@@ -1293,9 +1328,9 @@ ${hero({
     <div class="section-heading"><span class="eyebrow">Find the right route</span><h2>Choose the conversation you want to start.</h2></div>
     <div class="grid three form-link-grid">
       <article class="card"><h3>Sovereign Story Intensive</h3><p>For a consequential repositioning, funding case, strategy shift or leadership decision.</p><div class="button-row"><a class="text-link" href="${forms.intensive}" target="_blank" rel="noopener">Apply for the Intensive →</a></div></article>
-      <article class="card"><h3>Impact Storytelling Workshop</h3><p>For a team, leadership retreat, grantee cohort or portfolio capability programme.</p><div class="button-row"><a class="text-link" href="${forms.workshop}" target="_blank" rel="noopener">Request a Workshop →</a></div></article>
+      <article class="card"><h3>Business Storytelling Workshops</h3><p>For a team, leadership retreat, grantee cohort or portfolio capability programme.</p><div class="button-row"><a class="text-link" href="${forms.workshop}" target="_blank" rel="noopener">Request a Workshop →</a></div></article>
       <article class="card"><h3>Strategic Communications Partnership</h3><p>For ongoing senior communications leadership and implementation after the strategy is clear.</p><div class="button-row"><a class="text-link" href="${forms.contact}" target="_blank" rel="noopener">Discuss a Partnership →</a></div></article>
-      <article class="card"><h3>Storytelling Library</h3><p>For individual, team or institutional access to practical impact storytelling resources.</p><div class="button-row"><a class="text-link" href="${forms.library}" target="_blank" rel="noopener">Request Library Access →</a></div></article>
+      <article class="card"><h3>Fundraising Communications Library</h3><p>For individual, team or institutional access to practical tools for building stories that move capital.</p><div class="button-row"><a class="text-link" href="${forms.library}" target="_blank" rel="noopener">Request Library Access →</a></div></article>
       <article class="card"><h3>Creator Day Africa</h3><p>For creators, hosts, foundations, sponsors and partners who want to join the movement.</p><div class="button-row"><a class="text-link" href="${forms.creator}" target="_blank" rel="noopener">Join Creator Day Africa →</a></div></article>
       <article class="card" id="speaking"><h3>Speaking and media</h3><p>For conferences, summits, podcasts, media interviews and strategic partnerships.</p><div class="button-row"><a class="text-link" href="mailto:stella@stellanjogo.com?subject=Speaking%20or%20media%20enquiry">Email Stella Directly →</a></div></article>
     </div>
@@ -1409,6 +1444,109 @@ ${finalCta({
   ],
 });
 
+pages["visible-expert-masterclass.html"] = page({
+  title: "Visible Expert Masterclass | Strategy Shepherds",
+  description: "Turn your experience, evidence and point of view into a clear position, offer and visible body of work.",
+  path: "visible-expert-masterclass.html",
+  active: "leaders",
+  body: `
+${hero({
+  eyebrow: "For experienced leaders and professionals",
+  headline: "Turn what you know into authority people can <em>understand, trust and act on.</em>",
+  copy: "The Visible Expert Masterclass helps you translate your experience, evidence and point of view into a clear position, compelling offer and visible body of work.",
+  primary: "Take the Visibility Quiz",
+  primaryHref: forms.visibility,
+  secondary: "Join the Masterclass Waitlist",
+  secondaryHref: "#join",
+  compact: true,
+})}
+<section class="section paper">
+  <div class="container split">
+    <div><span class="eyebrow">The invisible expert problem</span><h2>Your experience is valuable. But can other people see what it adds up to?</h2></div>
+    <div class="prose">
+      <p>Experienced leaders often have years of results, insights and hard-won judgement—but no simple way to explain what they are uniquely qualified to do next.</p>
+      <p>This practical masterclass helps you move beyond generic personal branding. You will clarify the authority territory you can credibly own and connect that visibility to a business, organisation or portfolio career.</p>
+    </div>
+  </div>
+</section>
+<section class="section cream">
+  <div class="container">
+    <div class="section-heading"><span class="eyebrow">What you will leave with</span><h2>A position you can use—not just a profile you can polish.</h2></div>
+    <div class="grid three">
+      <article class="card"><h3>Clear positioning</h3><p>Know what you are uniquely qualified to be known for and how to describe it so the right people understand.</p></article>
+      <article class="card"><h3>Evidence-backed authority</h3><p>Translate your experience, results and point of view into a credible story and a clear offer.</p></article>
+      <article class="card"><h3>Business-building visibility</h3><p>Use your personal brand to support an organisation, grow a business and prepare for a portfolio career.</p></article>
+      <article class="card"><h3>Authority themes</h3><p>Choose the ideas and conversations that should anchor your public body of work.</p></article>
+      <article class="card"><h3>Brand boundaries</h3><p>Decide what belongs to your personal platform and what belongs to the organisation you lead.</p></article>
+      <article class="card"><h3>A practical visibility plan</h3><p>Turn your knowledge into consistent content, conversations and opportunities over the next 90 days.</p></article>
+    </div>
+  </div>
+</section>
+<section class="section purple">
+  <div class="container split">
+    <div><span class="eyebrow">Built to be practical</span><h2>Complete it over a weekend or across five focused days.</h2></div>
+    <div class="prose">
+      <p>Short lessons, a guided workbook, AI-assisted extraction prompts and real examples help you turn decades of experience into one usable Visible Expert plan.</p>
+      <ul class="feature-list">
+        <li>Positioning and authority territory</li>
+        <li>Experience and evidence inventory</li>
+        <li>Point-of-view development</li>
+        <li>Offer and professional biography</li>
+        <li>Personal-to-organisational brand boundary</li>
+        <li>90-day visibility system</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<section class="section paper" id="join">
+  <div class="container narrow center">
+    <span class="eyebrow">Start with your diagnosis</span>
+    <h2>Discover what is keeping your expertise from becoming recognised authority.</h2>
+    <p class="lede">The short Visibility Quiz identifies the clearest gap between your experience and the way the market currently sees you.</p>
+    <div class="button-row center-buttons"><a class="button primary" href="${forms.visibility}">Take the Visibility Quiz</a></div>
+  </div>
+</section>`,
+  schema: [{
+    "@type": "Course",
+    name: "Visible Expert Masterclass",
+    description: "A self-guided masterclass for experienced leaders turning expertise into a clear position, offer and visibility system.",
+    provider: { "@id": `${siteUrl}/#organization` },
+  }],
+});
+
+pages["visibility-quiz.html"] = page({
+  title: "Visibility Quiz | Strategy Shepherds",
+  description: "Discover what is preventing your expertise from becoming recognised authority and what to build next.",
+  path: "visibility-quiz.html",
+  active: "leaders",
+  body: websiteForm({
+    formId: "visibility-quiz",
+    title: "How visible is the value of your expertise?",
+    description: "Answer eight quick questions to discover the clearest gap between what you know and what other people recognise you for.",
+    note: "Choose the answer that reflects where you are today. You will receive your result immediately after submitting.",
+    confirmation: "Your personalised visibility result is ready.",
+    fields: `
+      <div class="form-grid two">
+        ${inputField({ name: "full_name", label: "Full name", required: true, autocomplete: "name" })}
+        ${inputField({ name: "email", label: "Email address", type: "email", required: true, autocomplete: "email" })}
+        ${inputField({ name: "role", label: "Current role or professional identity", required: true })}
+        ${inputField({ name: "organisation", label: "Organisation or business", hint: "Optional" })}
+      </div>
+      <div class="form-divider"><h2>Rate each statement</h2><p>1 means “not true yet”; 5 means “consistently true.”</p></div>
+      ${scaleField({ name: "positioning_focus_score", label: "I can clearly name the specific problem or conversation I want to be known for." })}
+      ${scaleField({ name: "positioning_clarity_score", label: "Other people can quickly understand who I help and the value I bring." })}
+      ${scaleField({ name: "evidence_results_score", label: "I can point to concrete results, experiences or work that substantiate my expertise." })}
+      ${scaleField({ name: "evidence_assets_score", label: "My best evidence is organised into stories, examples or assets I can share." })}
+      ${scaleField({ name: "point_of_view_score", label: "I have a distinctive perspective—not only general knowledge—on my field." })}
+      ${scaleField({ name: "point_of_view_relevance_score", label: "My ideas connect my experience to an important future-facing opportunity or challenge." })}
+      ${scaleField({ name: "visibility_consistency_score", label: "I communicate my expertise consistently through content, speaking, networks or public work." })}
+      ${scaleField({ name: "visibility_conversion_score", label: "My visibility regularly creates relevant invitations, clients, partnerships or career opportunities." })}
+      ${textareaField({ name: "visibility_goal", label: "What would greater visibility make possible for you in the next 12 months?", required: true, rows: 4 })}
+      ${choiceField({ name: "email_consent", label: "May Strategy Shepherds email you your result and relevant Visible Expert resources?", required: true, options: [{ value: "Yes", label: "Yes, send me my result and relevant resources" }, { value: "No", label: "No, only show my result on this page" }] })}
+    `,
+  }),
+});
+
 pages["impact-story-audit.html"] = page({
   title: "Impact Story Audit | Strategy Shepherds",
   description: "Identify whether the biggest gap in your organisation’s story is the case, the coalition or the agenda.",
@@ -1474,12 +1612,12 @@ pages["sovereign-story-intensive-application.html"] = page({
 });
 
 pages["impact-storytelling-workshop-request.html"] = page({
-  title: "Request an Impact Storytelling Workshop | Strategy Shepherds",
-  description: "Request a practical impact storytelling workshop for a team, leadership retreat, grantee cohort or portfolio.",
+  title: "Request a Business Storytelling Workshop | Strategy Shepherds",
+  description: "Request practical business storytelling training for a team, leadership retreat, grantee cohort or portfolio.",
   path: "impact-storytelling-workshop-request.html",
   body: websiteForm({
     formId: "impact-storytelling-workshop",
-    title: "Request an Impact Storytelling Workshop.",
+    title: "Request a Business Storytelling Workshop.",
     description: "Share your team context, the change you need and your preferred delivery window. We will recommend the most useful workshop format.",
     confirmation: "We will review your workshop goals, team context and timing, then recommend the most useful format.",
     fields: `
@@ -1502,14 +1640,14 @@ pages["impact-storytelling-workshop-request.html"] = page({
 });
 
 pages["storytelling-library-interest.html"] = page({
-  title: "Join the African Impact Storytelling Library | Strategy Shepherds",
-  description: "Join the founding list for practical African impact storytelling resources, workshops, case studies and tools.",
+  title: "Join the Fundraising Communications Library | Strategy Shepherds",
+  description: "Join the founding list for practical African fundraising communications templates, examples, case studies and tools.",
   path: "storytelling-library-interest.html",
   body: websiteForm({
     formId: "storytelling-library",
-    title: "Join the African Impact Storytelling Library.",
+    title: "Join the Fundraising Communications Library.",
     description: "Tell us what kind of access and resources would be most useful for you, your team or your portfolio.",
-    confirmation: "Welcome to the founding list. We will share launch details, access options and the first resources as the African Impact Storytelling Library opens.",
+    confirmation: "Welcome to the founding list. We will share launch details, access options and the first resources as the Fundraising Communications Library opens.",
     fields: `
       ${inputField({ name: "full_name", label: "Full name", required: true, autocomplete: "name" })}
       ${inputField({ name: "work_email", label: "Work email", type: "email", required: true, autocomplete: "email" })}
@@ -1699,16 +1837,16 @@ const redirect = (target, title) => {
 };
 
 const redirects = {
-  "build-authority.html": ["storytelling-library.html", "African Impact Storytelling Library"],
+  "build-authority.html": ["visible-expert-masterclass.html", "Visible Expert Masterclass"],
   "trust-networks.html": ["creator-day-africa.html", "Creator Day Africa"],
   "agenda-shaping.html": ["sovereign-story-intensive.html", "Sovereign Story Intensive"],
-  "influence-school.html": ["storytelling-library.html", "African Impact Storytelling Library"],
+  "influence-school.html": ["visible-expert-masterclass.html", "Visible Expert Masterclass"],
   "influence-research.html": ["https://substack.com/@digitalafricasignals", "Digital Africa Signals"],
-  "training.html": ["impact-storytelling-workshop.html", "Impact Storytelling Workshop"],
+  "training.html": ["impact-storytelling-workshop.html", "Business Storytelling Workshops"],
   "audit.html": [forms.audit, "Impact Story Audit"],
   "influence-audit.html": [forms.audit, "Impact Story Audit"],
   "voice-to-leads-score.html": [forms.audit, "Impact Story Audit"],
-  "authority-quiz.html": [forms.audit, "Impact Story Audit"],
+  "authority-quiz.html": [forms.visibility, "Visibility Quiz"],
   "influence-strategy.html": ["sovereign-story-intensive.html", "Sovereign Story Intensive"],
   "creator-day.html": ["creator-day-africa.html", "Creator Day Africa"],
   "voice-to-leads.html": ["work-with-us.html", "Work With Strategy Shepherds"],
@@ -1743,6 +1881,8 @@ const sitemapPages = [
   "sovereign-story-intensive.html",
   "impact-storytelling-workshop.html",
   "storytelling-library.html",
+  "visible-expert-masterclass.html",
+  "visibility-quiz.html",
   "creator-day-africa.html",
   "about.html",
   "contact.html",
@@ -1796,7 +1936,7 @@ Sitemap: ${siteUrl}/sitemap.xml
 
 const llms = `# Strategy Shepherds
 
-> Strategy Shepherds is a strategic communications and impact storytelling firm helping African nonprofits and mission-led organisations win funding, build trust and lead the conversations shaping their sectors.
+> Strategy Shepherds is a fundraising communications firm helping African organisations build stories that move financial, human, community, relationship and agenda capital.
 
 ## Core positioning
 
@@ -1818,9 +1958,11 @@ const llms = `# Strategy Shepherds
 
 ## Other ways to work together
 
-- [Impact Storytelling Workshop](${siteUrl}/impact-storytelling-workshop.html): practical team or cohort training that produces a shared story, draft case for support, evidence map and 90-day plan.
+- [Business Storytelling Workshops](${siteUrl}/impact-storytelling-workshop.html): practical team or cohort training that produces a shared story, draft case for support, evidence map and 90-day plan.
 - [Strategic Communications Partnership](${siteUrl}/work-with-us.html#partnership): six- or twelve-month senior strategic implementation after the institutional story is clear.
-- [African Impact Storytelling Library](${siteUrl}/storytelling-library.html): workshops, tools, templates, case studies and implementation support for impact teams.
+- [Fundraising Communications Library](${siteUrl}/storytelling-library.html): tools, templates, examples, case studies and implementation support for fundraising communications teams.
+- [Visible Expert Masterclass](${siteUrl}/visible-expert-masterclass.html): a practical system for experienced leaders turning expertise into a clear position, offer and visible body of work.
+- [Visibility Quiz](${siteUrl}/visibility-quiz.html): a short diagnosis of a leader’s positioning, evidence, point of view and visibility.
 - [Creator Day Africa](${siteUrl}/creator-day-africa.html): free, open-door experiences connecting creators with organisations and communities across Africa.
 - [Sovereign Stories](${siteUrl}/sovereign-stories.html): forthcoming book by Stella Njogo about why Africa’s next economy will belong to those who define it.
 
