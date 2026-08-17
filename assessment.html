@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#16372f">
-  <title>Creator Day Africa | Strategy Shepherds</title>
-  <meta name="description" content="Creator Day Africa connects creators with organisations, industries, communities and places through genuine access and editorial independence.">
+  <title>Communications Desk Readiness Assessment | Strategy Shepherds</title>
+  <meta name="description" content="Assess your communications function across strategy, intelligence, evidence, AI, human networks, distribution and learning.">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script defer src="assets/js/config.js"></script>
   <script defer src="assets/js/site.js"></script>
-  
+  <script defer src="assets/js/assessment.js"></script>
 </head>
 <body>
 <header class="site-header">
@@ -27,10 +27,33 @@
   </div>
 </header>
 <main>
-<section class="page-hero"><div class="container"><div class="eyebrow">Connect</div><h1>Creator Day Africa</h1><p>Open the doors. Let creators discover the story. Creator Day brings creators into organisations, industries, communities and places so more African work becomes discoverable through human voices.</p><div class="cta-row"><a class="btn btn-primary" href="#" data-lead-intent="Host Creator Day" data-lead-source="Creator Day hero">Host a Creator Day</a><a class="btn btn-outline" href="#" data-lead-intent="Join Creator Day as a Creator" data-lead-source="Creator Day hero">Join the creator community</a></div></div></section>
-<section class="section"><div class="container split"><div><div class="eyebrow">How it works</div><p class="quote">Instead of giving creators a compulsory content brief, we give them access.</p></div><div><p class="kicker">Creators meet the people behind the work, experience the environment, ask questions and follow what interests them. Commissioned content remains separately commissioned and paid.</p></div></div></section>
-<section class="section dark"><div class="container"><div class="section-header"><div><div class="eyebrow">Movement principles</div><h2>Access without hidden obligations.</h2></div><p>Creator Day is not an unpaid influencer campaign. It is an experiment in what becomes possible when organisations give storytellers genuine access.</p></div><div class="creator-rules"><div class="rule">No compulsory posting</div><div class="rule">No hidden content brief</div><div class="rule">No follower threshold</div><div class="rule">Editorial independence</div><div class="rule">Clear access and filming permissions</div><div class="rule">Fair payment for commissioned work</div></div></div></section>
-<section class="section alt"><div class="container grid-2"><div class="card"><div class="eyebrow">For organisations</div><h3>Let new storytellers see your world.</h3><p>Introduce your work to new communities, build creator relationships, discover unexpected story angles and test more participatory communications.</p><div class="cta-row"><a class="btn btn-primary" href="#" data-lead-intent="Host Creator Day" data-lead-source="Creator Day organisations card">Host a Creator Day</a></div></div><div class="card"><div class="eyebrow">For creators</div><h3>Find stories in worlds you do not usually enter.</h3><p>Meet innovators, communities, industries and organisations. Come curious, ask questions, learn something new and follow the story that interests you.</p><div class="cta-row"><a class="btn btn-primary" href="#" data-lead-intent="Join Creator Day as a Creator" data-lead-source="Creator Day creators card">Join the community</a></div></div></div></section>
+<section class="page-hero"><div class="container"><div class="eyebrow">Desk Readiness Assessment</div><h1>How modern is your Communications Desk?</h1><p>21 questions. Seven capabilities. One practical score showing where your communications system is strong and where to build next.</p></div></section>
+<section class="quiz-shell">
+  <div class="quiz-card">
+    <div id="quiz-question-view">
+      <div class="progress-wrap"><span>Communications Desk Readiness</span><span id="quiz-count">1 of 21</span></div><div class="progress"><span id="quiz-progress-bar"></span></div>
+      <div class="quiz-dimension" id="quiz-dimension"></div><div class="quiz-question" id="quiz-question"></div><div class="scale" id="quiz-scale"></div>
+      <div class="quiz-nav"><button class="btn btn-outline" type="button" id="quiz-prev">Back</button><button class="btn btn-primary" type="button" id="quiz-next">Next</button></div>
+    </div>
+    <div id="quiz-lead-gate" class="hidden">
+      <div class="eyebrow">Your score is ready</div><h2 style="font-family:Georgia,serif;font-size:2.7rem;font-weight:500;margin:8px 0 12px">Where should we send your Desk profile?</h2><p class="muted">We’ll save your score so we can benchmark how communications desks are developing across sectors. You’ll see your result immediately after this step.</p>
+      <form id="quiz-gate-form"><div class="form-grid">
+        <div class="form-group"><label>Name *</label><input name="name" required autocomplete="name"></div><div class="form-group"><label>Email *</label><input id="quiz-gate-email" type="email" name="email" required autocomplete="email"></div>
+        <div class="form-group"><label>Phone / WhatsApp</label><input name="phone" autocomplete="tel"></div><div class="form-group"><label>I’m taking this as *</label><select name="leadType" required><option value="">Select</option><option>Organisation</option><option>Professional</option><option>Creator</option><option>Other</option></select></div>
+        <div class="form-group"><label>Organisation</label><input name="organisation" autocomplete="organization"></div><div class="form-group"><label>Role / title</label><input name="role" autocomplete="organization-title"></div>
+        <div class="form-group"><label>Thematic area *</label><select name="thematicArea" required><option value="">Select</option><option>Data, AI & Internet Governance</option><option>Climate & Energy</option><option>Food Systems</option><option>Health</option><option>Youth & Livelihoods</option><option>Education</option><option>Finance</option><option>Governance</option><option>Other</option></select></div><div class="form-group"><label>Country</label><input name="country" value="Kenya"></div>
+        <div class="form-group full"><label>Website / LinkedIn</label><input name="website" type="url" placeholder="https://"></div>
+        <label class="checkbox form-group full"><input type="checkbox" name="consentUpdates" value="yes"><span>Keep me updated on Strategy Shepherds Labs, Creator Day and new communications tools. Optional.</span></label>
+      </div><div class="cta-row"><button class="btn btn-primary" type="submit">Show my Desk score</button></div><div id="quiz-gate-status" class="form-status"></div><p class="notice">Your assessment is used to generate your result and improve our understanding of communications capability. See our <a href="privacy.html"><u>privacy notice</u></a>.</p></form>
+    </div>
+    <div id="quiz-result" class="quiz-result">
+      <div class="eyebrow">Your Communications Desk Score</div><div class="score-ring" id="score-ring"><strong id="result-score">0</strong></div><h2 id="result-stage" style="font-family:Georgia,serif;font-size:3rem;font-weight:500;margin:0 0 12px"></h2><p class="kicker" id="result-description"></p>
+      <div class="grid-2"><div class="card soft"><div class="eyebrow">Strongest capability</div><h3 id="result-strength"></h3></div><div class="card soft"><div class="eyebrow">Priority gap</div><h3 id="result-gap"></h3></div></div>
+      <div class="dimension-bars" id="dimension-bars"></div><div class="callout"><div class="eyebrow">Recommended next step</div><h3 id="result-next-step"></h3><p>Your result is diagnostic, not a judgement. The goal is to decide which part of the system will create the most leverage next.</p></div>
+      <div class="result-actions"><a href="#" class="btn btn-primary" id="result-cta">Talk to us</a><a href="index.html" class="btn btn-outline">Back to Strategy Shepherds</a></div>
+    </div>
+  </div>
+</section>
 </main>
 <div class="modal" id="lead-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
   <div class="modal-panel">
