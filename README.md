@@ -1,8 +1,25 @@
-# Strategy Shepherds Website v1
+# Strategy Shepherds Website — Brand Refresh
 
-A static, deployable website for the new Strategy Shepherds positioning: **Build / Learn / Connect**, with the Communications Desk as the core category.
+Static GitHub Pages-ready website for Strategy Shepherds, built around **Build / Learn / Connect** and the Communications Desk positioning.
 
-## What is included
+## Brand system applied
+
+The site now uses the attached Stella Njogo visual system as its design language while retaining the Strategy Shepherds name:
+
+- Deep Purple `#361965`
+- Brand Gold `#C9A84C`
+- Near Black `#0D0D0D`
+- Off White `#FAF8F4`
+- Purple Dark `#261050`
+- Purple Mid `#4A2485`
+- Purple Pale `#EDE8F5`
+- Light Purple Tint `#F0EEF8`
+- Playfair Display for display/headline type
+- Jost for body/UI copy
+- DM Mono for section labels and data-style accents
+- Gold rules, purple hero panels, subtle grid/circular geometry and restrained white space
+
+## Pages
 
 - `index.html` — Home
 - `build-your-desk.html` — Communications Desk Sprint
@@ -11,112 +28,20 @@ A static, deployable website for the new Strategy Shepherds positioning: **Build
 - `ideas.html` — research / thought leadership
 - `about.html` — company positioning
 - `assessment.html` — 21-question Communications Desk Readiness Assessment
-- `privacy.html` — launch-ready draft privacy notice (review before public launch)
-- `assets/css/styles.css` — responsive site design
-- `assets/js/site.js` — navigation, universal lead modal, UTM capture, submissions
-- `assets/js/assessment.js` — quiz questions, scoring and personalised result logic
-- `assets/js/config.js` — one-line form endpoint configuration
-- `backend/Code.gs` — Google Apps Script endpoint that writes into the existing Strategy Shepherds lead spreadsheet
+- `privacy.html` — privacy notice draft
 
-## Lead system already prepared
+## Lead capture
 
-The Apps Script is configured for the existing Google Sheet:
+The live Google Apps Script endpoint is already configured in `assets/js/config.js`. No URL edit is needed before upload.
 
-**Strategy Shepherds Website Leads**
+Every commercial CTA uses the shared enquiry form and records its offer/interest and source CTA. The Desk Assessment stores the overall score, maturity stage, seven dimension scores and all 21 responses.
 
-Spreadsheet ID:
-`1pJdqgsJARzrB1J3H-Ru_59jSX3W51pAqQEKhX74NEJc`
+## GitHub Pages
 
-Two new tabs have been added to the live workbook:
+This is a no-build static site. `index.html` must sit at the top level of the publishing source. A `.nojekyll` file is included to keep deployment simple.
 
-1. `Website Leads` — all enquiries and CTA conversions
-2. `Desk Readiness Responses` — detailed assessment scores and answers
+Read `UPLOAD-INSTRUCTIONS.md` before replacing the repository contents.
 
-The older `Quiz Leads` and `Voice to Leads Quiz` tabs are left untouched.
+## After deployment
 
-## Google Apps Script connection
-
-The website is already configured to submit to this deployed Google Apps Script Web App:
-
-`https://script.google.com/macros/s/AKfycbzBuylzJJaCnk_HN76z1J_n6MhCjEdV-XVCl8_8LIq3ulZq8t5fV02Tldor9HS-lv44/exec`
-
-The endpoint is set in `assets/js/config.js`; **no further URL edit is required before upload**.
-
-The Apps Script should be deployed with:
-
-- **Execute as:** Me
-- **Who has access:** Anyone (for a public website)
-
-If the Apps Script code is changed later, update the deployed version in Google Apps Script. If Google generates a different `/exec` URL, update `assets/js/config.js` accordingly.
-
-## How lead capture works
-
-Every commercial CTA opens the same lead form and automatically records:
-
-- offer / interest
-- CTA clicked
-- source page
-- lead type (Organisation / Professional / Creator / Other)
-- thematic area
-- name, email and optional phone
-- organisation and role
-- website / LinkedIn
-- message / need
-- UTM source, medium and campaign
-- optional marketing-update consent
-- new-lead status
-- raw payload for debugging / future migration
-
-The Desk Assessment also stores:
-
-- overall score
-- Desk maturity stage
-- seven dimension scores
-- strongest capability
-- priority gap
-- recommended next step
-- all 21 question responses
-
-## Quiz scoring
-
-Each of the 21 questions is scored 1–5. Scores are normalised to 0–100.
-
-Stages:
-
-- 0–39: Reactive Desk
-- 40–59: Developing Desk
-- 60–74: Structured Desk
-- 75–89: Strategic Desk
-- 90–100: Compounding Desk
-
-Dimensions:
-
-1. Strategy
-2. Intelligence
-3. Evidence
-4. AI Capability
-5. Human Networks
-6. Distribution
-7. Learning
-
-## Deployment
-
-The site is plain HTML/CSS/JS, so it can be deployed on Netlify, Vercel, GitHub Pages, Cloudflare Pages, cPanel or most ordinary web hosts without a build step.
-
-For local preview:
-
-```bash
-cd strategy-shepherds-site
-python3 -m http.server 8080
-```
-
-Then open `http://localhost:8080`.
-
-## Before public launch
-
-- The `/exec` URL is already present in `config.js`.
-- After uploading to the public host, submit one clearly labelled live test enquiry and one complete assessment; confirm both appear in the Google Sheet.
-- Replace/add the final Strategy Shepherds logo if desired; the current header uses a clean text wordmark.
-- Add real event dates/prices when the first Modern Communications Desk Lab cohort is confirmed.
-- Add formal contact details and review the privacy notice for the jurisdictions/tools used.
-- Connect analytics only if/when desired; UTM collection already works without an analytics platform.
+Run one labelled test enquiry and one full Desk Assessment, then confirm both arrive in the existing Strategy Shepherds lead workbook.
