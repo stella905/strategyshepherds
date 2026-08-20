@@ -5,35 +5,56 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta name="theme-color" content="#361965">
   <title>Privacy | Strategy Shepherds</title>
-  <meta name="description" content="How Strategy Shepherds handles information submitted through website enquiries and the Desk Readiness Assessment.">
+  <meta name="description" content="How Strategy Shepherds handles website enquiries and assessment information.">
   <link rel="stylesheet" href="assets/css/styles.css">
   <script defer src="assets/js/config.js"></script>
   <script defer src="assets/js/site.js"></script>
   
 </head>
 <body>
+
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">Strategy <span>Shepherds</span></a>
     <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">☰</button>
     <nav class="nav-links" id="nav-links" aria-label="Main navigation">
-      <a href="build-your-desk.html">Build Your Desk</a>
-      <a href="learn.html">AI Team Training</a>
+      <a href="ai-ready-teams.html">AI Ready Teams</a>
+      <a href="build-your-desk.html">Communications Desk</a>
       <a href="creator-day.html">Creator Day</a>
       <a href="ideas.html">Ideas</a>
       <a href="about.html">About</a>
-      <a class="nav-cta" href="assessment.html">Take the Desk Assessment</a>
+      <a class="nav-cta" href="assessment.html">Assess Your Organisation</a>
     </nav>
   </div>
 </header>
-<main><section class="page-hero"><div class="container"><div class="eyebrow">Privacy</div><h1>Website privacy notice</h1><p>A plain-language summary of how Strategy Shepherds handles information submitted through this website.</p></div></section><section class="section"><div class="container" style="max-width:820px"><h2>Information we collect</h2><p>When you complete an enquiry form or the Communications Desk Readiness Assessment, we collect the information you choose to submit, such as your name, email, organisation, role, thematic area and responses.</p><h2>How we use it</h2><p>We use submitted information to respond to enquiries, provide assessment results, understand demand for Strategy Shepherds offers, improve our tools and — only where you opt in — send relevant updates.</p><h2>Analytics and campaign information</h2><p>The website may record basic source information such as the page or button you used and UTM campaign parameters so we can understand which communications are useful.</p><h2>Storage</h2><p>Website enquiries and assessment responses are stored in Strategy Shepherds’ Google Workspace systems. Access should be limited to people supporting Strategy Shepherds operations.</p><h2>Your choices</h2><p>You can choose not to opt in to updates. You can also contact Strategy Shepherds through the website enquiry form to request correction or deletion of information you previously submitted.</p><div class="callout"><strong>Before public launch:</strong> have this notice reviewed against the jurisdictions and tools you ultimately use, and add the organisation’s formal contact details.</div></div></section></main>
+
+<main>
+
+<section class="page-hero"><div class="container"><div class="eyebrow">Privacy</div><h1>How we handle information you share with us.</h1><p>Strategy Shepherds collects only the information needed to respond to enquiries, provide assessment results, understand interest in our services and improve our learning products.</p></div></section>
+<section class="section"><div class="container" style="max-width:800px"><h2>Website enquiries</h2><p>When you submit a website enquiry, we collect the details you choose to provide, including your name, email, organisation, role, contact information, thematic area, message and the page or call to action that led to the enquiry. This information is stored in the Strategy Shepherds lead workbook and used to respond to you.</p><h2>Assessments</h2><p>When you complete an assessment, we collect your contact details, your responses, your calculated score and the recommendations generated from those responses. The information helps us provide your result and understand the capability needs organisations are experiencing.</p><h2>Email notifications</h2><p>New enquiries and completed assessments generate an internal notification email so that Strategy Shepherds can respond promptly. Your information is not sold to advertisers.</p><h2>Updates</h2><p>If you choose to receive occasional updates, Strategy Shepherds may contact you about relevant learning resources, events or services. You can ask to stop receiving these updates at any time.</p><h2>Questions</h2><p>If you have a question about information you submitted through this website, contact Strategy Shepherds through the website enquiry form.</p></div></section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div class="footer-brand">Strategy Shepherds</div>
+      <p>We modernise communications by building AI ready teams and the systems lean communications functions need to thrive.</p>
+    </div>
+    <div><strong>Work with us</strong><div class="footer-links"><a href="ai-ready-teams.html">AI Ready Teams</a><a href="build-your-desk.html">Communications Desk</a><a href="assessment.html">Assess Your Organisation</a></div></div>
+    <div><strong>Explore</strong><div class="footer-links"><a href="creator-day.html">Creator Day Africa</a><a href="ideas.html">Ideas</a><a href="about.html">About</a><a href="privacy.html">Privacy</a></div></div>
+  </div>
+  <div class="container footer-bottom"><span>Strategy Shepherds</span><span>Stories move capital.</span></div>
+</footer>
+
+
 <div class="modal" id="lead-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="lead-modal-title">
   <div class="modal-panel">
     <div class="modal-top">
       <div>
         <div class="eyebrow">Start a conversation</div>
         <h2 id="lead-modal-title">Tell us what you need</h2>
-        <p class="muted" id="lead-modal-intro">Share a few details and we’ll route your enquiry to the right Strategy Shepherds offer.</p>
+        <p class="muted" id="lead-modal-intro">Share a few details and we will route your enquiry to the right Strategy Shepherds offer.</p>
       </div>
       <button class="close-btn" data-close-modal aria-label="Close">×</button>
     </div>
@@ -44,33 +65,22 @@
       <div class="form-grid">
         <div class="form-group"><label for="lead-name">Name *</label><input id="lead-name" name="name" required autocomplete="name"></div>
         <div class="form-group"><label for="lead-email">Email *</label><input id="lead-email" type="email" name="email" required autocomplete="email"></div>
-        <div class="form-group"><label for="lead-phone">Phone / WhatsApp</label><input id="lead-phone" name="phone" autocomplete="tel"></div>
-        <div class="form-group"><label for="lead-type">I’m enquiring as *</label><select id="lead-type" name="leadType" required><option value="">Select</option><option>Organisation</option><option>Professional</option><option>Creator</option><option>Other</option></select></div>
-        <div class="form-group"><label for="lead-org">Organisation</label><input id="lead-org" name="organisation" autocomplete="organization"></div>
-        <div class="form-group"><label for="lead-role">Role / title</label><input id="lead-role" name="role" autocomplete="organization-title"></div>
-        <div class="form-group"><label for="lead-theme">Thematic area *</label><select id="lead-theme" name="thematicArea" required><option value="">Select</option><option>Data, AI & Internet Governance</option><option>Climate & Energy</option><option>Food Systems</option><option>Health</option><option>Youth & Livelihoods</option><option>Education</option><option>Finance</option><option>Governance</option><option>Other</option></select></div>
-        <div class="form-group"><label for="lead-country">Country</label><input id="lead-country" name="country" value="Kenya" autocomplete="country-name"></div>
-        <div class="form-group full"><label for="lead-website">Website / LinkedIn</label><input id="lead-website" name="website" type="url" placeholder="https://"></div>
-        <div class="form-group full"><label for="lead-message">What would you like help with?</label><textarea id="lead-message" name="message" placeholder="Tell us what is changing, what you need to move, or what you want to build."></textarea></div>
-        <label class="checkbox form-group full"><input type="checkbox" name="consentUpdates" value="yes"><span>Keep me updated on Strategy Shepherds Labs, Creator Day and new communications tools. Optional.</span></label>
+        <div class="form-group"><label for="lead-phone">Phone or WhatsApp</label><input id="lead-phone" name="phone" autocomplete="tel"></div>
+        <div class="form-group"><label for="lead-org">Organisation</label><input id="lead-org" name="organisation"></div>
+        <div class="form-group"><label for="lead-role">Role or title</label><input id="lead-role" name="role"></div>
+        <div class="form-group"><label for="lead-team-size">Approximate team size</label><input id="lead-team-size" name="teamSize" placeholder="For example 40 or 780"></div>
+        <div class="form-group"><label for="lead-type">I am enquiring as</label><select id="lead-type" name="leadType"><option value="Organisation">An organisation</option><option value="Professional">An individual professional</option><option value="Creator">A creator</option><option value="Other">Other</option></select></div>
+        <div class="form-group"><label for="lead-theme">Thematic area</label><select id="lead-theme" name="thematicArea"><option value="">Select one</option><option>Data, AI and Internet Governance</option><option>Climate and Energy</option><option>Food Systems</option><option>Health</option><option>Youth and Livelihoods</option><option>Education</option><option>Finance</option><option>Governance</option><option>Other</option></select></div>
+        <div class="form-group"><label for="lead-country">Country</label><input id="lead-country" name="country"></div>
+        <div class="form-group"><label for="lead-website">Website</label><input id="lead-website" name="website" placeholder="https://"></div>
+        <div class="form-group full"><label for="lead-message">What would you like help with?</label><textarea id="lead-message" name="message"></textarea></div>
+        <div class="form-group full"><label class="checkbox"><input type="checkbox" name="consentUpdates" value="yes"> <span>I would like to receive occasional Strategy Shepherds updates and learning resources.</span></label></div>
       </div>
-      <div class="cta-row"><button class="btn btn-primary" type="submit">Send enquiry</button><button class="btn btn-outline" type="button" data-close-modal>Not now</button></div>
+      <div class="cta-row"><button class="btn btn-primary" type="submit">Send enquiry</button></div>
       <div class="form-status" id="lead-form-status" aria-live="polite"></div>
-      <p class="notice">We use the information you submit to respond to your enquiry and, if you opt in, to send relevant updates. See our <a href="privacy.html"><u>privacy notice</u></a>.</p>
     </form>
   </div>
 </div>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div><div class="footer-brand">Strategy Shepherds</div><p>Building the infrastructure behind stories that move capital.</p></div>
-      <div><strong>Explore</strong><div class="footer-links"><a href="build-your-desk.html">Build Your Desk</a><a href="learn.html">AI Team Training</a><a href="creator-day.html">Creator Day</a><a href="ideas.html">Ideas</a></div></div>
-      <div><strong>Start here</strong><div class="footer-links"><a href="assessment.html">Desk Readiness Assessment</a><a href="about.html">About</a><a href="privacy.html">Privacy</a></div></div>
-    </div>
-    <div class="footer-bottom"><span>© 2026 Strategy Shepherds.</span><span>Stories move capital.</span></div>
-  </div>
-</footer>
 
 </body>
 </html>

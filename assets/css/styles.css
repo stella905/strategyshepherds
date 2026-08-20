@@ -214,3 +214,6 @@ textarea{min-height:110px;resize:vertical}
   .footer-grid>div:first-child{grid-column:auto}.quiz-card{padding:26px 22px}.bar-row{grid-template-columns:1fr;gap:6px}.bar-row strong{display:none}
   .btn{width:100%}.cta-row{align-items:stretch}.nav .nav-cta{width:auto}
 }
+
+/* Final modern communications build */
+.card p + p{margin-top:14px}.page-hero .cta-row{margin-top:28px}.quiz-card p{max-width:72ch}.quiz-card .callout p{margin:0}.card .cta-row{margin-top:22px}.section h2{letter-spacing:-.02em}
