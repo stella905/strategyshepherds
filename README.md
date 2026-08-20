@@ -1,3 +1,5 @@
-# Strategy Shepherds final website
+# Strategy Shepherds concise website
 
-This static website includes the revised Strategy Shepherds positioning, the AI Ready Teams service page, the Modern Communications Desk page, an assessment chooser, a 15 question AI Ready Teams Assessment, a 21 question Communications Desk Assessment, lead capture forms, UTM source tracking, and the configured Google Apps Script endpoint.
+This is the concise conversion focused edition of the Strategy Shepherds website. It keeps the same commercial architecture, lead capture system, Google Apps Script endpoint, AI Ready Teams Assessment and Communications Desk Assessment, while tightening the visible copy across the site.
+
+The main offers are AI Ready Teams for the wider workforce and the Modern Communications Desk for specialist communications functions.
