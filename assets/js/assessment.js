@@ -106,8 +106,9 @@
     return {name:'Compounding Desk',desc:'Your communications infrastructure is mature and connected. Your opportunity is to turn that capability into institutional advantage, learning and category leadership.'};
   }
 
-  function recommendation(score,leadType){
+  function recommendation(score,leadType,priorityGap){
     if(leadType==='Professional') return 'Modern Communications Desk Lab';
+    if(priorityGap==='AI Capability') return 'AI Training for Communications Teams';
     if(score < 75) return 'Communications Desk Sprint';
     return 'Communications Desk Review';
   }
@@ -126,7 +127,7 @@
     document.getElementById('dimension-bars').innerHTML=Object.entries(dims).map(([name,val])=>`<div class="bar-row"><span>${name}</span><div class="bar"><span style="width:${val}%"></span></div><strong>${val}</strong></div>`).join('');
     const recBtn=document.getElementById('result-cta');
     if(recBtn){
-      recBtn.textContent = data.recommendedNextStep==='Modern Communications Desk Lab' ? 'Join the Desk Lab' : 'Talk to us about your Desk';
+      recBtn.textContent = data.recommendedNextStep==='Modern Communications Desk Lab' ? 'Join the Desk Lab' : (data.recommendedNextStep==='AI Training for Communications Teams' ? 'Train your team on AI' : 'Talk to us about your Desk');
       recBtn.dataset.leadIntent = data.recommendedNextStep;
       recBtn.dataset.leadSource = `Assessment result: ${data.deskStage}`;
       recBtn.addEventListener('click',e=>{
@@ -168,7 +169,7 @@
       dimensionScores:dims,
       strongestDimension:sorted[0][0],
       priorityGap:sorted[sorted.length-1][0],
-      recommendedNextStep:recommendation(overall,leadType),
+      recommendedNextStep:recommendation(overall,leadType,sorted[sorted.length-1][0]),
       answers:questions.map((q,i)=>({dimension:q.d,question:q.q,score:answers[i]})),
       status:'New'
     };
