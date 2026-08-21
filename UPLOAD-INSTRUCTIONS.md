@@ -12,13 +12,13 @@ Do not place these files inside another folder in the repository. GitHub Pages n
 
 In the repository open Settings, then Pages. Under Build and deployment choose Deploy from a branch, select `main`, select the root folder, then save. Reconnect the custom domain in the same Pages settings if it is not already present.
 
-## App Script
+## Lead system
 
-The website already points to the existing Google Apps Script deployment URL. Replace the Apps Script code separately using the `Code.gs` file provided with this build, then create a new version of the existing deployment. Do not upload `Code.gs` to the public GitHub repository.
+This update changes website copy only. The existing Google Apps Script endpoint, assessment logic, Google Sheet routing and email notification workflow have not been changed. You do not need a new Apps Script deployment for this mission and vision update if the current lead system is already working.
 
 ## Final smoke test
 
-After the site is live, submit a general enquiry, complete the AI Ready Teams Assessment, and complete the Communications Desk Assessment. Confirm that each submission creates the correct row in the Strategy Shepherds lead workbook and that an email notification arrives at `stella@stellanjogo.com`.
+After the site is live, open the homepage and About page to confirm the new mission and vision sections are visible. Then submit one test enquiry or assessment to confirm the existing lead workflow is still operating normally.
 
 ## Protect your custom domain file
 

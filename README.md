@@ -1,5 +1,9 @@
-# Strategy Shepherds concise website
+# Strategy Shepherds Website
 
-This is the concise conversion focused edition of the Strategy Shepherds website. It keeps the same commercial architecture, lead capture system, Google Apps Script endpoint, AI Ready Teams Assessment and Communications Desk Assessment, while tightening the visible copy across the site.
+Final static website package with the mission and vision integrated into the homepage, About page, service pages and footer.
 
-The main offers are AI Ready Teams for the wider workforce and the Modern Communications Desk for specialist communications functions.
+## Core positioning
+
+Strategy Shepherds builds AI ready teams and modern communications systems, with the larger mission of building Africa's AI ready workforce.
+
+The existing lead forms, assessments, Google Apps Script endpoint and Google Sheet routing are unchanged.
